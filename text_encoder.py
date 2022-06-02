@@ -19,11 +19,11 @@ class SlotText(nn.Module):
         self.num_slots = num_slots
         self.num_iter = num_iter
         self.slot_dim = slot_dim 
-        self.layernorm = nn.LayerNorm(64) 
+        self.layernorm = nn.LayerNorm(self.slot_dim)  
         self.mlp = nn.Sequential(
-                nn.Linear(self.mbert_out_size, 512), 
+                nn.Linear(self.mbert_out_size, self.slot_dim), 
                 nn.ReLU(), 
-                nn.Linear(512, 64)
+                nn.Linear(self.slot_dim, self.slot_dim)
                 )
         self.slot_attention_module = SlotAttention(num_slots=self.num_slots, 
                                                 iters=self.num_iter,

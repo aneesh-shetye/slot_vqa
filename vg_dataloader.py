@@ -7,9 +7,6 @@ import torchvision.transforms as transforms
 from datasets import load_dataset
 from transformers import AutoTokenizer
 
-
-
-
 class VG_dataset(Dataset): 
 
     def __init__(self, 
@@ -23,12 +20,13 @@ class VG_dataset(Dataset):
         self.ques_list = []
         self.ans_list = []
 
+        self.mean, self.std = self.calc_stats(self.dataset)
         if self.transformations is not None: 
             self.transformations.append(transforms.Normalize(self.mean, self.std)) 
 
         else: 
             self.transformations = [transforms.Normalize(self.mean, self.std)]
-        T = torch.nn.Sequential(*self.transformations)
+        T = transforms.Compose(self.transformations)
 
         for n, i in enumerate(self.dataset['train']): 
             
@@ -39,10 +37,6 @@ class VG_dataset(Dataset):
                 self.ques_list.append(self.tokenizer(t['question'].lower(), padding=True, max_length=512, return_tensors='pt', truncation=True)['input_ids'])
                 self.ans_list.append(t['answer'])
 
-            if n== 10: 
-                break 
-
-        self.mean, self.std = self.calc_stats(self.dataset)
         self.ans_dict = self.build_ans_dict(self.ans_list)
     
 
@@ -52,7 +46,7 @@ class VG_dataset(Dataset):
     def __getitem__(self, index: int): 
         img = self.img_list[index]
         ques = self.ques_list[index]
-        ans = self.ans_dict[self.ans_list[index]]
+        ans = torch.tensor(self.ans_dict[self.ans_list[index]])
         
         return {'img': img, 
                 'ques': ques, 
@@ -62,7 +56,7 @@ class VG_dataset(Dataset):
                        ans: list): 
         
         ans_set = set(ans)
-        self.ans_dict = { a:i for i,a in enumerate(ans_set)}
+        self.ans_dict = { a.lower():i for i,a in enumerate(ans_set)}
         return self.ans_dict 
 
     def calc_stats(self, 

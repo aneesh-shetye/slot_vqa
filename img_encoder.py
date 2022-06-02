@@ -68,13 +68,13 @@ class SlotImage(nn.Module):
         self.pos_emb = SoftPositionEmbed(64, self.resolution) 
 
         self.mlp = nn.Sequential(
-            nn.Linear(64, 64), 
+            nn.Linear(64, self.slot_dim), 
             nn.ReLU(), 
-            nn.Linear(64, 64)
+            nn.Linear(self.slot_dim, self.slot_dim)
             )
 
         #####################################################
-        self.layer_norm = nn.LayerNorm(64)#layernorm along the embedding dim 
+        self.layer_norm = nn.LayerNorm(self.slot_dim)#layernorm along the embedding dim 
         #####################################################
 
         self.slot_attention_module = SlotAttention(num_slots=self.num_slots, 
