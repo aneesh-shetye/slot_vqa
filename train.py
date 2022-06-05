@@ -15,6 +15,9 @@ from torch import nn, optim
 from torchvision import transforms
 from transformers import BertModel
 
+from vg_dataloader import VG_dataset
+from model import SlotVQA
+
 import wandb
 
 # setting environment variables: 
@@ -33,11 +36,13 @@ torch.backends.cudnn.deterministic = True
 
 parser = argparse.ArgumentParser(description='slot_vqa')
 
-#system hyperparameters: 
-parser.add_argument('--workers', default=4, type=int, metavar='N', 
+#system config: 
+parser.add_argument('--workers', default=0, type=int, metavar='N', 
                     help='number of data loader workers') 
 parser.add_argument('--print_freq', default=5, type=int, metavar='PF', 
                     help='write in the stats file and print after PF steps') 
+parser.add_argument('--checkpoint_dir', default='./checkpoint/', type=Path, metavar='CD', 
+                    help='path to directory in which checkpoint and stats are saved') 
 
 #training hyperparameters: 
 parser.add_argument('--epochs', default=10, type=int, metavar='N',
@@ -78,7 +83,7 @@ parser.add_argument('--slotdimtext', default=512, type=int, metavar='IT',
                     help='number of iterations for slot attention on text')
 
 #transformer encoder hyperparameters: 
-parser.add_argument('--nhead', default=6, type=int, metavar='NH',
+parser.add_argument('--nhead', default=8, type=int, metavar='NH',
                     help='number of heads in transformer')
 parser.add_argument('--tdim', default=512, type=int, metavar='D',
                     help='dimension of transformer')
@@ -90,31 +95,21 @@ args = parser.parse_args()
 
 def main(): 
 
-    # print("entered main")
-    args.ngpus_per_node = torch.cuda.device_count()
-    if 'SLURM_JOB_ID' in os.environ:
-        # single-node and multi-node distributed training on SLURM cluster
-        # requeue job on SLURM preemption
-        signal.signal(signal.SIGUSR1, handle_sigusr1)
-        signal.signal(signal.SIGTERM, handle_sigterm)
-        # find a common host name on all nodes
-        # assume scontrol returns hosts in the same order on all nodes
-        cmd = 'scontrol show hostnames ' + os.getenv('SLURM_JOB_NODELIST')
-        stdout = subprocess.check_output(cmd.split())
-        host_name = stdout.decode().splitlines()[0]
-        args.rank = int(os.getenv('SLURM_NODEID')) * args.ngpus_per_node
-        args.world_size = int(os.getenv('SLURM_NNODES')) * args.ngpus_per_node
-        args.dist_url = f'tcp://{host_name}:58472'
-    else:
-        # single-node distributed training
-        args.rank = 0
-        args.dist_url = 'tcp://localhost:58472'
-        args.world_size = args.ngpus_per_node
-    torch.multiprocessing.spawn(main_worker, (args,), args.ngpus_per_node)
+    # single-node distributed training
+    args.rank = 0
+    args.dist_url = 'tcp://localhost:58472'
+    args.world_size = 1 
+    ############################################
+    args.ngpus_per_node = args.world_size #single machine 
+    ############################################
+    print(args.ngpus_per_node)
+    # torch.multiprocessing.spawn(main_worker, (args,), args.ngpus_per_node)
+    torch.multiprocessing.spawn(main_worker, args=(args,), nprocs=args.ngpus_per_node)
 
 def main_worker(gpu, args):
     
     args.rank += gpu
+    print(args.rank, args.world_size)
     torch.distributed.init_process_group(
         backend='nccl', init_method=args.dist_url,
         world_size=args.world_size, rank=args.rank)
@@ -144,8 +139,8 @@ def main_worker(gpu, args):
 #initializing the model: 
     mbert = BertModel.from_pretrained('bert-base-multilingual-uncased')
     model = SlotVQA(mbert, resolution=(600, 600), 
-                slot_img=args.simg, iters_img=args.itersimg, slot_dim_img=args.slotdimimg, 
-                slot_text=args.stext, iters_text=args.iterstext, slot_dim_text=args.slotdimtext, 
+                slots_img=args.simg, iters_img=args.itersimg, slot_dim_img=args.slotdimimg, 
+                slots_text=args.stext, iters_text=args.iterstext, slot_dim_text=args.slotdimtext, 
                 num_head=args.nhead, transf_dim=args.tdim, transf_num_layers=args.nlayers, 
                 ans_dim=ans_dict_len)
     
@@ -158,6 +153,7 @@ def main_worker(gpu, args):
         else:
             param_weights.append(param)
     parameters = [{'params': param_weights}, {'params': param_biases}]
+    print(args.world_size, args.rank, gpu)
     model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[gpu], find_unused_parameters=True)
 
     #defining the optimizer
@@ -169,6 +165,7 @@ def main_worker(gpu, args):
     #defining the loss_function: 
     loss_fn = nn.CrossEntropyLoss()
 
+    print('instantiated sampler')
     sampler = torch.utils.datadistributed.DistributedSampler(dataset)
 
     assert args.batch_size % args.world_size == 0
@@ -207,6 +204,7 @@ def main_worker(gpu, args):
 
             print(ans.shape, pred.shape)
             loss = loss_fn(ans, pred)
+            print(loss)
             torch.nn.utils.clip_grad_norm(model.parameters(), args.clip)
             loss.backward
 
@@ -220,11 +218,13 @@ def main_worker(gpu, args):
                                 loss=loss.item(), 
                                 time=int(time.time() - start_time))            
 
-                            print(json.dumps(stats))
-                            print(json.dumps(stats), file=stats_file)
+                    print(json.dumps(stats))
+                    print(json.dumps(stats), file=stats_file)
                 
                 state = dict(epoch=epoch + 1, model=model.module.state_dict(),
                             optimizer=optimizer.state_dict())
                 torch.save(state, args.checkpoint_dir / 'checkpoint.pth')
                 print('Model saved in', args.checkpoint_dir)
             
+if __name__ == '__main__': 
+    main()

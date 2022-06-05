@@ -36,12 +36,15 @@ class VG_dataset(Dataset):
                 self.img_list.append(T(img))
                 self.ques_list.append(self.tokenizer(t['question'].lower(), padding=True, max_length=512, return_tensors='pt', truncation=True)['input_ids'])
                 self.ans_list.append(t['answer'])
-
+            
+            if n==100: 
+                break
+        print("======out of for loop========")
         self.ans_dict = self.build_ans_dict(self.ans_list)
     
 
     def __len__(self): 
-        return len(self.ans_list)
+        return 101 #len(self.ans_list)
 
     def __getitem__(self, index: int): 
         img = self.img_list[index]

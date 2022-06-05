@@ -22,6 +22,7 @@ class SlotVQA(nn.Module):
             transf_num_layers: int =3, 
             ans_dim: int =200): 
 
+        super().__init__()
         self.mbert = mbert, 
         self.mbert_out_size = mbert_out_size
 
@@ -32,6 +33,7 @@ class SlotVQA(nn.Module):
         self.slots_text = slots_text
         self.iters_text = iters_text
         self.slot_dim_text = slot_dim_text
+        self.transf_dim = transf_dim
 
         self.img_enc = SlotImage(resolution=self.res, 
                 num_slots=self.slots_img, num_iter=self.iters_img, 
@@ -41,7 +43,7 @@ class SlotVQA(nn.Module):
                     num_slots=self.slots_text, num_iter=self.iters_text, 
                     mbert_out_size=self.mbert_out_size, slot_dim=self.slot_dim_text) 
 
-        transf_layer = nn.TransformerEncoderLayer(d_model=transf_dim, nhead=nhead)
+        transf_layer = nn.TransformerEncoderLayer(d_model=transf_dim, nhead=num_head)
         self.transf_enc = nn.TransformerEncoder(transf_layer, num_layers=transf_num_layers)
 
         #project text_slots to common embedding space
@@ -50,7 +52,7 @@ class SlotVQA(nn.Module):
         self.linear_img = nn.Linear(self.slot_dim_img, transf_dim)
 
         #linear for cls type token (just like a look-up table) 
-        self.learnable_cls = nn.Linear(self.trasnf_dim, transf_dim)
+        self.learnable_cls = nn.Linear(self.transf_dim, transf_dim)
 
         #output of cls to ans
         self.ans_enc = nn.Sequential(nn.Linear(transf_dim, ans_dim), 

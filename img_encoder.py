@@ -3,7 +3,7 @@ import torch
 import torch.nn as nn 
 import numpy as np
 
-from slot_attention imoprt SlotAttention
+from slot_attention import SlotAttention
 
 # soft positional embeddings with learnable projection
 #taken from official implementation
@@ -78,7 +78,7 @@ class SlotImage(nn.Module):
         #####################################################
 
         self.slot_attention_module = SlotAttention(num_slots=self.num_slots, 
-                                                iters=self.num_iters,
+                                                iters=self.num_iter,
                                                 dim=self.slot_dim, 
                                                 hidden_dim=self.resolution[0]*self.resolution[1])
 
