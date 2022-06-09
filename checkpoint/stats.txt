@@ -1,0 +1,165 @@
+train.py
+{"epoch": 0, "step": 0, "loss": 7.53791618347168, "time": 0}
+{"epoch": 0, "step": 5, "loss": 7.519730091094971, "time": 11}
+train.py
+{"epoch": 0, "step": 0, "loss": 7.53791618347168, "time": 0}
+{"epoch": 0, "step": 5, "loss": 7.519730091094971, "time": 12}
+{"epoch": 0, "step": 10, "loss": 7.713112831115723, "time": 24}
+{"epoch": 0, "step": 15, "loss": 7.865635871887207, "time": 36}
+{"epoch": 0, "step": 20, "loss": 7.506631851196289, "time": 48}
+{"epoch": 0, "step": 25, "loss": 7.975133895874023, "time": 60}
+train.py
+train.py
+train.py
+train.py
+train.py
+train.py
+train.py
+train.py
+train.py
+train.py
+train.py
+train.py
+train.py
+train.py
+train.py
+train.py
+train.py
+train.py
+train.py
+train.py
+train.py
+train.py
+train.py
+train.py
+{"epoch": 0, "step": 0, "loss": 7.52609920501709, "time": 0}
+{"epoch": 0, "step": 5, "loss": 7.390076637268066, "time": 6}
+{"epoch": 0, "step": 10, "loss": 7.753705024719238, "time": 12}
+{"epoch": 0, "step": 15, "loss": 7.510819435119629, "time": 18}
+{"epoch": 0, "step": 20, "loss": 7.599503517150879, "time": 25}
+{"epoch": 0, "step": 25, "loss": 7.63972806930542, "time": 31}
+{"epoch": 0, "step": 30, "loss": 7.5087971687316895, "time": 37}
+{"epoch": 0, "step": 35, "loss": 7.617819309234619, "time": 43}
+{"epoch": 0, "step": 40, "loss": 7.53371524810791, "time": 49}
+{"epoch": 0, "step": 45, "loss": 7.500147819519043, "time": 55}
+{"epoch": 0, "step": 50, "loss": 7.39073371887207, "time": 61}
+{"epoch": 0, "step": 55, "loss": 7.596905708312988, "time": 67}
+train.py
+{"epoch": 0, "step": 0, "loss": 7.880224227905273, "time": 0}
+{"epoch": 0, "step": 5, "loss": 7.486581325531006, "time": 5}
+{"epoch": 0, "step": 10, "loss": 7.620453834533691, "time": 11}
+{"epoch": 0, "step": 15, "loss": 7.432290077209473, "time": 17}
+{"epoch": 0, "step": 20, "loss": 7.27981424331665, "time": 23}
+{"epoch": 0, "step": 25, "loss": 7.547468662261963, "time": 29}
+{"epoch": 0, "step": 30, "loss": 7.645051956176758, "time": 35}
+{"epoch": 0, "step": 35, "loss": 7.616385459899902, "time": 41}
+{"epoch": 0, "step": 40, "loss": 7.504704475402832, "time": 47}
+{"epoch": 0, "step": 45, "loss": 7.475785255432129, "time": 53}
+{"epoch": 0, "step": 50, "loss": 7.750861644744873, "time": 58}
+{"epoch": 0, "step": 55, "loss": 7.3213605880737305, "time": 64}
+{"epoch": 0, "step": 60, "loss": 7.5030012130737305, "time": 70}
+{"epoch": 0, "step": 65, "loss": 7.5431437492370605, "time": 76}
+{"epoch": 0, "step": 70, "loss": 7.283163070678711, "time": 81}
+{"epoch": 0, "step": 75, "loss": 7.6855902671813965, "time": 87}
+{"epoch": 0, "step": 80, "loss": 7.777302265167236, "time": 93}
+{"epoch": 0, "step": 85, "loss": 7.5147385597229, "time": 99}
+{"epoch": 0, "step": 90, "loss": 7.43070125579834, "time": 105}
+{"epoch": 0, "step": 95, "loss": 7.557629585266113, "time": 111}
+{"epoch": 0, "step": 100, "loss": 7.384493827819824, "time": 116}
+{"epoch": 0, "step": 105, "loss": 7.511327743530273, "time": 122}
+{"epoch": 0, "step": 110, "loss": 7.663837432861328, "time": 128}
+{"epoch": 0, "step": 115, "loss": 7.50858211517334, "time": 134}
+{"epoch": 0, "step": 120, "loss": 7.638899326324463, "time": 139}
+{"epoch": 0, "step": 125, "loss": 7.692944526672363, "time": 145}
+{"epoch": 0, "step": 130, "loss": 7.672996520996094, "time": 151}
+train.py
+train.py
+{"epoch": 0, "step": 0, "loss": 7.553865909576416, "time": 0}
+{"epoch": 0, "step": 5, "loss": 7.5958476066589355, "time": 7}
+{"epoch": 0, "step": 10, "loss": 7.531919956207275, "time": 13}
+{"epoch": 0, "step": 15, "loss": 7.591022968292236, "time": 20}
+{"epoch": 0, "step": 20, "loss": 7.462124347686768, "time": 26}
+{"epoch": 0, "step": 25, "loss": 7.489391326904297, "time": 33}
+{"epoch": 0, "step": 30, "loss": 7.4988694190979, "time": 40}
+{"epoch": 0, "step": 35, "loss": 7.56967830657959, "time": 46}
+{"epoch": 0, "step": 40, "loss": 7.599825859069824, "time": 53}
+{"epoch": 0, "step": 45, "loss": 7.472693920135498, "time": 60}
+{"epoch": 0, "step": 50, "loss": 7.516973972320557, "time": 67}
+{"epoch": 0, "step": 55, "loss": 7.453164100646973, "time": 73}
+{"epoch": 0, "step": 60, "loss": 7.584528923034668, "time": 80}
+{"epoch": 0, "step": 65, "loss": 7.567092418670654, "time": 86}
+{"epoch": 0, "step": 70, "loss": 7.627830505371094, "time": 93}
+{"epoch": 0, "step": 75, "loss": 7.57837438583374, "time": 100}
+{"epoch": 0, "step": 80, "loss": 7.5802507400512695, "time": 106}
+{"epoch": 0, "step": 85, "loss": 7.51731014251709, "time": 113}
+{"epoch": 0, "step": 90, "loss": 7.476049423217773, "time": 120}
+{"epoch": 0, "step": 95, "loss": 7.497921943664551, "time": 126}
+{"epoch": 0, "step": 100, "loss": 7.631317138671875, "time": 133}
+{"epoch": 0, "step": 105, "loss": 7.568572998046875, "time": 140}
+{"epoch": 0, "step": 110, "loss": 7.682725429534912, "time": 146}
+{"epoch": 0, "step": 115, "loss": 7.503177642822266, "time": 153}
+{"epoch": 0, "step": 120, "loss": 7.51187801361084, "time": 160}
+{"epoch": 0, "step": 125, "loss": 7.575509548187256, "time": 167}
+{"epoch": 0, "step": 130, "loss": 7.435646057128906, "time": 173}
+{"epoch": 0, "step": 135, "loss": 7.548572540283203, "time": 180}
+{"epoch": 0, "step": 140, "loss": 7.567778587341309, "time": 187}
+{"epoch": 0, "step": 145, "loss": 7.51542854309082, "time": 193}
+{"epoch": 0, "step": 150, "loss": 7.54081916809082, "time": 200}
+{"epoch": 0, "step": 155, "loss": 7.511966228485107, "time": 207}
+{"epoch": 0, "step": 160, "loss": 7.537336826324463, "time": 213}
+{"epoch": 0, "step": 165, "loss": 7.547874450683594, "time": 220}
+{"epoch": 0, "step": 170, "loss": 7.543036460876465, "time": 227}
+{"epoch": 0, "step": 175, "loss": 7.464951992034912, "time": 233}
+{"epoch": 0, "step": 180, "loss": 7.484886169433594, "time": 240}
+{"epoch": 0, "step": 185, "loss": 7.556710720062256, "time": 246}
+{"epoch": 0, "step": 190, "loss": 7.478262424468994, "time": 253}
+{"epoch": 0, "step": 195, "loss": 7.555220603942871, "time": 260}
+{"epoch": 0, "step": 200, "loss": 7.550258636474609, "time": 266}
+{"epoch": 0, "step": 205, "loss": 7.622440814971924, "time": 273}
+{"epoch": 0, "step": 210, "loss": 7.701798439025879, "time": 280}
+train.py
+{"epoch": 0, "step": 0, "loss": 7.553865909576416, "time": 0}
+{"epoch": 0, "step": 5, "loss": 7.5958476066589355, "time": 6}
+{"epoch": 0, "step": 10, "loss": 7.531919956207275, "time": 13}
+{"epoch": 0, "step": 15, "loss": 7.591022968292236, "time": 19}
+{"epoch": 0, "step": 20, "loss": 7.462124347686768, "time": 25}
+{"epoch": 0, "step": 25, "loss": 7.489391326904297, "time": 32}
+{"epoch": 0, "step": 30, "loss": 7.4988694190979, "time": 39}
+{"epoch": 0, "step": 35, "loss": 7.56967830657959, "time": 45}
+{"epoch": 0, "step": 40, "loss": 7.599825859069824, "time": 52}
+{"epoch": 0, "step": 45, "loss": 7.472693920135498, "time": 58}
+{"epoch": 0, "step": 50, "loss": 7.516973972320557, "time": 64}
+{"epoch": 0, "step": 55, "loss": 7.453164100646973, "time": 71}
+{"epoch": 0, "step": 60, "loss": 7.584528923034668, "time": 77}
+{"epoch": 0, "step": 65, "loss": 7.567092418670654, "time": 84}
+{"epoch": 0, "step": 70, "loss": 7.627830505371094, "time": 91}
+{"epoch": 0, "step": 75, "loss": 7.57837438583374, "time": 97}
+{"epoch": 0, "step": 80, "loss": 7.5802507400512695, "time": 103}
+{"epoch": 0, "step": 85, "loss": 7.51731014251709, "time": 110}
+{"epoch": 0, "step": 90, "loss": 7.476049423217773, "time": 116}
+{"epoch": 0, "step": 95, "loss": 7.497921943664551, "time": 122}
+{"epoch": 0, "step": 100, "loss": 7.631317138671875, "time": 129}
+{"epoch": 0, "step": 105, "loss": 7.568572998046875, "time": 135}
+{"epoch": 0, "step": 110, "loss": 7.682725429534912, "time": 141}
+{"epoch": 0, "step": 115, "loss": 7.503177642822266, "time": 148}
+{"epoch": 0, "step": 120, "loss": 7.51187801361084, "time": 154}
+{"epoch": 0, "step": 125, "loss": 7.575509548187256, "time": 160}
+{"epoch": 0, "step": 130, "loss": 7.435646057128906, "time": 167}
+{"epoch": 0, "step": 135, "loss": 7.548572540283203, "time": 173}
+{"epoch": 0, "step": 140, "loss": 7.567778587341309, "time": 180}
+{"epoch": 0, "step": 145, "loss": 7.51542854309082, "time": 186}
+{"epoch": 0, "step": 150, "loss": 7.54081916809082, "time": 192}
+{"epoch": 0, "step": 155, "loss": 7.511966228485107, "time": 199}
+{"epoch": 0, "step": 160, "loss": 7.537336826324463, "time": 205}
+{"epoch": 0, "step": 165, "loss": 7.547874450683594, "time": 212}
+{"epoch": 0, "step": 170, "loss": 7.543036460876465, "time": 219}
+train.py
+train.py
+train.py
+train.py
+train.py
+train.py
+train.py
+train.py
+train.py
+train.py

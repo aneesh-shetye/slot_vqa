@@ -14,6 +14,9 @@ from pycocotools import mask as coco_mask
 
 import datasets.transforms as T
 
+from transformers import CLIPProcessor
+
+processor = CLIPProcessor.from_pretrained('openai/clip-vit-base-patch32')
 
 class ModulatedDetection(torchvision.datasets.CocoDetection):
     def __init__(self, img_folder, ann_file, transforms, return_masks, return_tokens, tokenizer, is_train=False):
@@ -82,6 +85,7 @@ def create_positive_map(tokenized, tokens_positive):
     """construct a map such that positive_map[i,j] = True iff box i is associated to token j"""
     positive_map = torch.zeros((len(tokens_positive), 256), dtype=torch.float)
     for j, tok_list in enumerate(tokens_positive):
+        # print(f'tokenized =======> {tokenized}')
         for (beg, end) in tok_list:
             beg_pos = tokenized.char_to_token(beg)
             end_pos = tokenized.char_to_token(end - 1)
@@ -197,19 +201,26 @@ class ConvertCocoPolysToMask(object):
         if self.return_tokens and self.tokenizer is not None:
             assert len(target["boxes"]) == len(target["tokens_positive"])
             tokenized = self.tokenizer(caption, return_tensors="pt")
-            target["positive_map"] = create_positive_map(tokenized, target["tokens_positive"])
+            ##################################################################################
+            # target["positive_map"] = create_positive_map(tokenized, target["tokens_positive"])
+            ##################################################################################
         return image, target
 
 
 def make_coco_transforms(image_set, cautious):
 
-    normalize = T.Compose([T.ToTensor(), T.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])])
+    ################################################################
+    #normalize = T.Compose([T.ToTensor(), T.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])])
+    #################################################################
 
+    ################################################################
+    ################################################################
+    normalize = T.Compose([ T.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])])
     scales = [480, 512, 544, 576, 608, 640, 672, 704, 736, 768, 800]
 
     max_size = 1333
-    if image_set == "train":
-        horizontal = [] if cautious else [T.RandomHorizontalFlip()]
+    if image_set == "train" or image_set == "val":
+        horizontal = [] #if cautious else [T.RandomHorizontalFlip()]
         return T.Compose(
             horizontal
               + [
@@ -224,18 +235,20 @@ def make_coco_transforms(image_set, cautious):
             #         ),
             #     ),
                 # T.RandomResize([800], max_size=800), 
-                T.Resize_orig([600, 600]), 
+                T.Resize_orig([224, 224]),
+                T.CLIP_transf(processor), 
                 normalize,
              ]
         )
-
-    if image_set == "val":
-        return T.Compose(
-            [
-                T.RandomResize([800], max_size=max_size),
-                normalize,
-            ]
-        )
+################################################################################
+    # if image_set == "val":
+    #     return T.Compose(
+    #         [
+    #             T.RandomResize([800], max_size=max_size),
+    #             normalize,
+    #         ]
+    #     )
+#################################################################################
 
     raise ValueError(f"unknown {image_set}")
 

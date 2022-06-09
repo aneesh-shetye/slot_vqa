@@ -8,9 +8,11 @@ from .text_encoder import SlotText
 class SlotVQA(nn.Module): 
 
     def __init__(self, 
+            clip_vision_model, 
             mbert, 
-            mbert_out_size: int =768, 
-            resolution: tuple =(600, 600), 
+            mbert_out_size: int =512, 
+            img_enc_out_size: int=768, 
+            resolution: tuple =(224, 224), 
             slots_img: int =5, 
             iters_img: int =5, 
             slot_dim_img: int =64, 
@@ -23,7 +25,10 @@ class SlotVQA(nn.Module):
             ans_dim: int =200): 
 
         super().__init__()
-        self.mbert = mbert, 
+        self.clip_vision_model = clip_vision_model
+        self.img_enc_out_size = img_enc_out_size
+
+        self.mbert = mbert 
         self.mbert_out_size = mbert_out_size
 
         self.res = resolution
@@ -35,8 +40,8 @@ class SlotVQA(nn.Module):
         self.slot_dim_text = slot_dim_text
         self.transf_dim = transf_dim
 
-        self.img_enc = SlotImage(resolution=self.res, 
-                num_slots=self.slots_img, num_iter=self.iters_img, 
+        self.img_enc = SlotImage(self.clip_vision_model, resolution=self.res, 
+                mbert_out_size=self.img_enc_out_size,num_slots=self.slots_img, num_iter=self.iters_img, 
                 slot_dim=self.slot_dim_img)
             
         self.text_enc = SlotText(mbert=self.mbert, 
@@ -79,7 +84,7 @@ class SlotVQA(nn.Module):
         cls_tok = torch.ones((img_slots.shape[0], self.transf_dim), dtype=torch.float).to(self.device) 
         #cls_tok.shape = batch_size, transf_dim
         cls_tok = self.learnable_cls(cls_tok)        
-        print(cls_tok.shape) 
+        # print(cls_tok.shape) 
         comb_slots = torch.cat((cls_tok.unsqueeze(1), comb_slots), dim=1) 
         #comb_slots.shape = batch, num_slots_text + num_slots_img + 1, slot_dim
 

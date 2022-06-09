@@ -8,7 +8,7 @@ from pathlib import Path
 import torch 
 import torchvision 
 from torch.nn.utils.rnn import  pad_sequence
-from transformers import AutoTokenizer
+from transformers import AutoTokenizer, CLIPTokenizer
 
 from .coco import ConvertCocoPolysToMask, ModulatedDetection, make_coco_transforms
 
@@ -99,7 +99,7 @@ def build(image_set, args):
     img_dir = Path(args.vg_img_path)
     assert img_dir.exists(), f"provided VG img path {img_dir} does not exist"
 
-    tokenizer = AutoTokenizer.from_pretrained(args.text_encoder_type)
+    tokenizer = CLIPTokenizer.from_pretrained(args.text_encoder_type)
     ann_file = Path(args.gqa_ann_path) / f"finetune_gqa_{image_set}_{args.gqa_split_type}.json"
     dataset = GQAQuestionAnswering(
             img_dir,
@@ -123,7 +123,8 @@ class MyCollate:
     
     def __call__(self, batch): 
 
-        imgs = [item[0].unsqueeze(0) for item in batch]
+        # imgs = [item[0].unsqueeze(0) for item in batch]
+        imgs = [item[0] for item in batch]
         imgs = torch.cat(imgs, dim=0 )
         
         ques = []

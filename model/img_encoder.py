@@ -43,32 +43,38 @@ def build_grid(resolution: tuple):
 class SlotImage(nn.Module): 
 
     def __init__(self, 
+            clip_vision_model, 
             resolution: tuple, # tuple H, W
+            mbert_out_size:int, 
             num_slots: int, #no. of slots (k) 
             num_iter: int, 
-            slot_dim: int): #no. of iterations (t)
+            slot_dim: int, 
+            add_cls: bool =True): #no. of iterations (t)
 
         super().__init__()
         self.resolution = resolution
+        self.mbert_out_size = mbert_out_size
         self.num_slots = num_slots
         self.num_iter = num_iter
         self.slot_dim = slot_dim
+        self.add_cls = add_cls
 
-        self.encoder = nn.Sequential(
-            nn.Conv2d(3, 64, 5,  padding='same'),
-            nn.ReLU(),
-            nn.Conv2d(64, 64, 5, padding='same'),  
-            nn.ReLU(),
-            nn.Conv2d(64, 64, 5, padding='same'), 
-            nn.ReLU(),
-            nn.Conv2d(64, 64, 5, padding='same'), 
-            nn.ReLU()
-            )        # size = N, 64, H, W, 
+        # self.encoder = nn.Sequential(
+        #     nn.Conv2d(3, 64, 5,  padding='same'),
+        #     nn.ReLU(),
+        #     nn.Conv2d(64, 64, 5, padding='same'),  
+        #     nn.ReLU(),
+        #     nn.Conv2d(64, 64, 5, padding='same'), 
+        #     nn.ReLU(),
+        #     nn.Conv2d(64, 64, 5, padding='same'), 
+        #     nn.ReLU()
+        #     )        # size = N, 64, H, W, 
 
-        self.pos_emb = SoftPositionEmbed(64, self.resolution) 
+        self.clip_encoder = clip_vision_model
+        self.pos_emb = SoftPositionEmbed(self.mbert_out_size, self.resolution) 
 
         self.mlp = nn.Sequential(
-            nn.Linear(64, self.slot_dim), 
+            nn.Linear(self.mbert_out_size, self.slot_dim), 
             nn.ReLU(), 
             nn.Linear(self.slot_dim, self.slot_dim)
             )
@@ -80,19 +86,40 @@ class SlotImage(nn.Module):
         self.slot_attention_module = SlotAttention(num_slots=self.num_slots, 
                                                 iters=self.num_iter,
                                                 dim=self.slot_dim, 
-                                                hidden_dim=self.resolution[0]*self.resolution[1])
+                                                hidden_dim=self.slot_dim)
 
     def forward(self, 
-            inp: torch.tensor): # inp image after transform
+            inp: torch.tensor, 
+            add_cls: bool =True): # inp image after transform
         '''
         inp.shape = N, C, H, W 
         '''
         x = inp
-        res = (x.shape[2], x.shape[3])
+        # res = (x.shape[2], x.shape[3])
         #print(inp.shape) 
-        x = self.encoder(inp) 
+        # x = self.encoder(inp) 
+        x = self.clip_encoder(x)#x.shape = batch_size, 50, 768
+
+        '''
+        try appending cls tok to each embedding
+        '''
+
+        self.add_cls = False
+        
+        if self.add_cls: 
+            cls_token = x['pooler_output'] #pooler_output.shape = 1, 768
+
+        x =  x['last_hidden_state'] #1, 768
+
+        if self.add_cls: 
+            x = torch.cat((cls_token.unsqueeze(1), x), dim=1) 
+
+        '''
+        x = self.pos_emb(x)
         x = x.reshape(x.shape[0], x.shape[1], -1) #x.shape = N,C, H*W 
         x = x.permute(0, 2, 1) #x.shape = N, H*W, C 
+        x = self.layer_norm(self.mlp(x)) 
+        '''
         x = self.layer_norm(self.mlp(x)) 
         x = self.slot_attention_module(x) 
         
