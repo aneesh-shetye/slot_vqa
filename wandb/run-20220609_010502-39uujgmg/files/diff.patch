@@ -1,0 +1,118 @@
+diff --git a/datasets/__pycache__/__init__.cpython-39.pyc b/datasets/__pycache__/__init__.cpython-39.pyc
+index 81647f8..fe942e1 100644
+Binary files a/datasets/__pycache__/__init__.cpython-39.pyc and b/datasets/__pycache__/__init__.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/clevr.cpython-39.pyc b/datasets/__pycache__/clevr.cpython-39.pyc
+index c63dd83..d7bd183 100644
+Binary files a/datasets/__pycache__/clevr.cpython-39.pyc and b/datasets/__pycache__/clevr.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/clevrref.cpython-39.pyc b/datasets/__pycache__/clevrref.cpython-39.pyc
+index bb304c3..636c6d5 100644
+Binary files a/datasets/__pycache__/clevrref.cpython-39.pyc and b/datasets/__pycache__/clevrref.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/coco.cpython-39.pyc b/datasets/__pycache__/coco.cpython-39.pyc
+index f3991f6..7e45fd4 100644
+Binary files a/datasets/__pycache__/coco.cpython-39.pyc and b/datasets/__pycache__/coco.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/flickr.cpython-39.pyc b/datasets/__pycache__/flickr.cpython-39.pyc
+index 7e92282..27b4dba 100644
+Binary files a/datasets/__pycache__/flickr.cpython-39.pyc and b/datasets/__pycache__/flickr.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/gqa.cpython-39.pyc b/datasets/__pycache__/gqa.cpython-39.pyc
+index 31f29bc..0e40b4d 100644
+Binary files a/datasets/__pycache__/gqa.cpython-39.pyc and b/datasets/__pycache__/gqa.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/gqa_tweaked.cpython-39.pyc b/datasets/__pycache__/gqa_tweaked.cpython-39.pyc
+index b447a84..466bc5b 100644
+Binary files a/datasets/__pycache__/gqa_tweaked.cpython-39.pyc and b/datasets/__pycache__/gqa_tweaked.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/lvis.cpython-39.pyc b/datasets/__pycache__/lvis.cpython-39.pyc
+index 4f78b79..84cdc22 100644
+Binary files a/datasets/__pycache__/lvis.cpython-39.pyc and b/datasets/__pycache__/lvis.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/lvis_modulation.cpython-39.pyc b/datasets/__pycache__/lvis_modulation.cpython-39.pyc
+index 3c89d8e..11e73f1 100644
+Binary files a/datasets/__pycache__/lvis_modulation.cpython-39.pyc and b/datasets/__pycache__/lvis_modulation.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/mixed.cpython-39.pyc b/datasets/__pycache__/mixed.cpython-39.pyc
+index 2ac6044..8827222 100644
+Binary files a/datasets/__pycache__/mixed.cpython-39.pyc and b/datasets/__pycache__/mixed.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/phrasecut.cpython-39.pyc b/datasets/__pycache__/phrasecut.cpython-39.pyc
+index a1c6ec3..a6b61f8 100644
+Binary files a/datasets/__pycache__/phrasecut.cpython-39.pyc and b/datasets/__pycache__/phrasecut.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/refexp.cpython-39.pyc b/datasets/__pycache__/refexp.cpython-39.pyc
+index ae304fc..c933c2f 100644
+Binary files a/datasets/__pycache__/refexp.cpython-39.pyc and b/datasets/__pycache__/refexp.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/transforms.cpython-39.pyc b/datasets/__pycache__/transforms.cpython-39.pyc
+index 21e0556..cb7752c 100644
+Binary files a/datasets/__pycache__/transforms.cpython-39.pyc and b/datasets/__pycache__/transforms.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/vg.cpython-39.pyc b/datasets/__pycache__/vg.cpython-39.pyc
+index ff5922a..c2f235b 100644
+Binary files a/datasets/__pycache__/vg.cpython-39.pyc and b/datasets/__pycache__/vg.cpython-39.pyc differ
+diff --git a/datasets/util/__pycache__/__init__.cpython-39.pyc b/datasets/util/__pycache__/__init__.cpython-39.pyc
+index cebd5ba..1a298de 100644
+Binary files a/datasets/util/__pycache__/__init__.cpython-39.pyc and b/datasets/util/__pycache__/__init__.cpython-39.pyc differ
+diff --git a/datasets/util/__pycache__/box_ops.cpython-39.pyc b/datasets/util/__pycache__/box_ops.cpython-39.pyc
+index 94fceb9..c5bc7df 100644
+Binary files a/datasets/util/__pycache__/box_ops.cpython-39.pyc and b/datasets/util/__pycache__/box_ops.cpython-39.pyc differ
+diff --git a/datasets/util/__pycache__/dist.cpython-39.pyc b/datasets/util/__pycache__/dist.cpython-39.pyc
+index 3c20845..e1fed6f 100644
+Binary files a/datasets/util/__pycache__/dist.cpython-39.pyc and b/datasets/util/__pycache__/dist.cpython-39.pyc differ
+diff --git a/datasets/util/__pycache__/misc.cpython-39.pyc b/datasets/util/__pycache__/misc.cpython-39.pyc
+index 10dc39d..b3bfc0d 100644
+Binary files a/datasets/util/__pycache__/misc.cpython-39.pyc and b/datasets/util/__pycache__/misc.cpython-39.pyc differ
+diff --git a/model/__pycache__/img_encoder.cpython-39.pyc b/model/__pycache__/img_encoder.cpython-39.pyc
+index ee567e7..32de8ef 100644
+Binary files a/model/__pycache__/img_encoder.cpython-39.pyc and b/model/__pycache__/img_encoder.cpython-39.pyc differ
+diff --git a/model/__pycache__/model.cpython-39.pyc b/model/__pycache__/model.cpython-39.pyc
+index 756570f..1682665 100644
+Binary files a/model/__pycache__/model.cpython-39.pyc and b/model/__pycache__/model.cpython-39.pyc differ
+diff --git a/model/__pycache__/slot_attention.cpython-39.pyc b/model/__pycache__/slot_attention.cpython-39.pyc
+index e301bc2..8549d51 100644
+Binary files a/model/__pycache__/slot_attention.cpython-39.pyc and b/model/__pycache__/slot_attention.cpython-39.pyc differ
+diff --git a/model/__pycache__/text_encoder.cpython-39.pyc b/model/__pycache__/text_encoder.cpython-39.pyc
+index c070d36..d53ed50 100644
+Binary files a/model/__pycache__/text_encoder.cpython-39.pyc and b/model/__pycache__/text_encoder.cpython-39.pyc differ
+diff --git a/train.py b/train.py
+index 9110ea0..7915e11 100644
+--- a/train.py
++++ b/train.py
+@@ -142,11 +142,10 @@ def main_worker(gpu, args):
+         world_size=args.world_size, rank=args.rank)
+ 
+     if args.rank == 0:
+-        '''
+-        wandb.init(config=args, project='translation_test')#############################################
++
++        wandb.init(config=args, project='slot_vqa')#############################################
+         wandb.config.update(args)
+         config = wandb.config
+-        '''
+     
+         # exit()
+         args.checkpoint_dir.mkdir(parents=True, exist_ok=True)
+@@ -215,6 +214,7 @@ def main_worker(gpu, args):
+         sampler.set_epoch(epoch)
+         epoch_loss = 0 
+         
++        counter = 0 
+         for step, item in enumerate(loader, start=epoch*len(loader)): 
+             
+             img = item[0].cuda(gpu, non_blocking=True)
+@@ -229,15 +229,18 @@ def main_worker(gpu, args):
+ 
+             print(f'ans.shape={ans.shape}, pred.shape={pred.shape}')
+             loss = loss_fn(pred, ans)
+-            print(loss)
++            wandb.log({"iter_loss": loss})
+             torch.nn.utils.clip_grad_norm(model.parameters(), args.clip)
+             loss.backward
+ 
+             optimizer.step()
+ 
++            counter += 1
++
+             epoch_loss+=loss.item()
+ 
+             if args.rank==0: 
++                wandb.log({"epoch_loss": epoch_loss/counter})
+                 if step%args.print_freq==0: 
+                     stats = dict(epoch=epoch, step=step, 
+                                 loss=loss.item(), 
+@@ -253,3 +256,4 @@ def main_worker(gpu, args):
+             
+ if __name__ == '__main__': 
+     main()
++    wandb.finish()
+\ No newline at end of file

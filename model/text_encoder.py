@@ -9,13 +9,13 @@ class SlotText(nn.Module):
             mbert, 
             num_slots: int =5, 
             num_iter: int =5, 
-            mbert_out_size: int =768, 
+            mbert_out_size: int =512, 
             slot_dim: int =64): 
 
         super().__init__()
 
         self.mbert_out_size = mbert_out_size
-        self.mbert = mbert[0]
+        self.mbert = mbert
         self.num_slots = num_slots
         self.num_iter = num_iter
         self.slot_dim = slot_dim 
@@ -38,12 +38,14 @@ class SlotText(nn.Module):
         device = next(self.slot_attention_module.parameters()).device 
         mask = torch.ones(inp.shape).to(device).masked_fill(inp==pad_id, 0)
         mask = mask.squeeze(-1).unsqueeze(1)
-        print(f'mask.shape={mask.shape}')
+        # print(f'mask.shape={mask.shape}')
         if len(inp.shape)>2: 
             inp = inp.squeeze(-1)
-        print(f'inp.shape={inp.shape}')        
+        # print(f'inp.shape={inp.shape}')        
         x = self.mbert(inp)['last_hidden_state']#x.shape = B, seq_len, mbert_out_size
+        # print(f'x.shape after mbert={x.shape}')
         x = self.layernorm(self.mlp(x)) #x.shape = B, seq_len, mbert_out_size 
         slots = self.slot_attention_module(x, mask=mask)  
+        # slots=x
         
-        return x 
+        return slots 

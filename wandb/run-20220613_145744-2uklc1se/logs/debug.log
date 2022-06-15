@@ -1,0 +1,91 @@
+2022-06-13 14:57:44,105 INFO    MainThread:177569 [wandb_setup.py:_flush():76] Loading settings from /home/aneesh/.config/wandb/settings
+2022-06-13 14:57:44,105 INFO    MainThread:177569 [wandb_setup.py:_flush():76] Loading settings from /home/aneesh/github/slot_vqa/wandb/settings
+2022-06-13 14:57:44,105 INFO    MainThread:177569 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'start_method': 'thread'}
+2022-06-13 14:57:44,105 INFO    MainThread:177569 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train.py', 'program': '/home/aneesh/github/slot_vqa/train.py'}
+2022-06-13 14:57:44,105 INFO    MainThread:177569 [wandb_init.py:_log_setup():428] Logging user logs to /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/logs/debug.log
+2022-06-13 14:57:44,105 INFO    MainThread:177569 [wandb_init.py:_log_setup():429] Logging internal logs to /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/logs/debug-internal.log
+2022-06-13 14:57:44,105 INFO    MainThread:177569 [wandb_init.py:init():462] calling init triggers
+2022-06-13 14:57:44,106 INFO    MainThread:177569 [wandb_init.py:init():465] wandb.init called with sweep_config: {}
+config: {'workers': 5, 'print_freq': 1, 'checkpoint_dir': PosixPath('checkpoint'), 'vg_img_path': '/home/aneesh/datasets/gqa_imgs/images/', 'gqa_ann_path': '/home/aneesh/datasets/gqa_ann/OpenSource/', 'gqa_split_type': 'balanced', 'mask_model': 'none', 'masks': False, 'epochs': 25, 'imset': 'train', 'batch_size': 256, 'learning_rate': 0.2, 'dropout': 0.01, 'weight_decay': 1e-06, 'momentum': 0.9, 'clip': 1, 'betas': (0.9, 0.98), 'eps': 1e-09, 'loss_fn': 'cross_entropy', 'optimizer': 'adam', 'simg': 10, 'itersimg': 5, 'slotdimimg': 512, 'stext': 7, 'iterstext': 5, 'slotdimtext': 512, 'nhead': 8, 'tdim': 512, 'nlayers': 3, 'text_encoder_type': 'openai/clip-vit-base-patch32', 'rank': 0, 'dist_url': 'tcp://localhost:58472', 'world_size': 1, 'ngpus_per_node': 1}
+2022-06-13 14:57:44,106 INFO    MainThread:177569 [wandb_init.py:init():515] starting backend
+2022-06-13 14:57:44,107 INFO    MainThread:177569 [backend.py:ensure_launched():217] starting backend process...
+2022-06-13 14:57:44,107 INFO    MainThread:177569 [backend.py:ensure_launched():222] started backend process with pid: 0
+2022-06-13 14:57:44,107 INFO    BackendThr:177569 [internal.py:wandb_internal():90] W&B internal server running at pid: 177569, started at: 2022-06-13 14:57:44.107525
+2022-06-13 14:57:44,108 INFO    MainThread:177569 [wandb_init.py:init():525] backend started and connected
+2022-06-13 14:57:44,114 INFO    MainThread:177569 [wandb_init.py:init():596] updated telemetry
+2022-06-13 14:57:44,115 INFO    WriterThread:177569 [datastore.py:open_for_write():75] open: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/run-2uklc1se.wandb
+2022-06-13 14:57:44,124 INFO    MainThread:177569 [wandb_init.py:init():627] communicating run to backend with 30 second timeout
+2022-06-13 14:57:44,343 INFO    SenderThread:177569 [dir_watcher.py:__init__():197] watching files in: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files
+2022-06-13 14:57:44,343 INFO    SenderThread:177569 [sender.py:_start_run_threads():811] run started: 2uklc1se with start time 1655125064
+2022-06-13 14:57:44,345 INFO    MainThread:177569 [wandb_run.py:_on_init():1924] communicating current version
+2022-06-13 14:57:44,346 INFO    SenderThread:177569 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-13 14:57:44,400 INFO    MainThread:177569 [wandb_run.py:_on_init():1928] got version response upgrade_message: "wandb version 0.12.18 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2022-06-13 14:57:44,400 INFO    MainThread:177569 [wandb_init.py:init():662] starting run threads in backend
+2022-06-13 14:57:45,345 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/upstream_diff_023b4d5d6cfc75b121aba3ccf0f3683343cdc267.patch
+2022-06-13 14:57:45,345 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/wandb-summary.json
+2022-06-13 14:57:45,345 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/code/train.py
+2022-06-13 14:57:45,346 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/diff.patch
+2022-06-13 14:57:45,346 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/code
+2022-06-13 14:57:46,344 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/upstream_diff_023b4d5d6cfc75b121aba3ccf0f3683343cdc267.patch
+2022-06-13 14:57:46,344 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/conda-environment.yaml
+2022-06-13 14:57:46,345 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/requirements.txt
+2022-06-13 14:57:47,344 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/conda-environment.yaml
+2022-06-13 14:57:47,447 INFO    SenderThread:177569 [sender.py:_save_file():948] saving file wandb-metadata.json with policy now
+2022-06-13 14:57:47,448 INFO    SenderThread:177569 [sender.py:_save_file():948] saving file code/train.py with policy now
+2022-06-13 14:57:47,448 INFO    SenderThread:177569 [sender.py:_save_file():948] saving file diff.patch with policy now
+2022-06-13 14:57:47,449 INFO    SenderThread:177569 [sender.py:_save_file():948] saving file upstream_diff_023b4d5d6cfc75b121aba3ccf0f3683343cdc267.patch with policy now
+2022-06-13 14:57:47,459 INFO    MainThread:177569 [wandb_run.py:_console_start():1898] atexit reg
+2022-06-13 14:57:47,461 INFO    MainThread:177569 [wandb_run.py:_redirect():1771] redirect: SettingsConsole.WRAP
+2022-06-13 14:57:47,462 INFO    MainThread:177569 [wandb_run.py:_redirect():1808] Wrapping output streams.
+2022-06-13 14:57:47,464 INFO    MainThread:177569 [wandb_run.py:_redirect():1832] Redirects installed.
+2022-06-13 14:57:47,465 INFO    MainThread:177569 [wandb_init.py:init():688] run started, returning control to user process
+2022-06-13 14:57:47,469 INFO    MainThread:177569 [wandb_run.py:_config_callback():1136] config_cb None None {'workers': 5, 'print_freq': 1, 'checkpoint_dir': 'checkpoint', 'vg_img_path': '/home/aneesh/datasets/gqa_imgs/images/', 'gqa_ann_path': '/home/aneesh/datasets/gqa_ann/OpenSource/', 'gqa_split_type': 'balanced', 'mask_model': 'none', 'masks': False, 'epochs': 25, 'imset': 'train', 'batch_size': 256, 'learning_rate': 0.2, 'dropout': 0.01, 'weight_decay': 1e-06, 'momentum': 0.9, 'clip': 1, 'betas': [0.9, 0.98], 'eps': 1e-09, 'loss_fn': 'cross_entropy', 'optimizer': 'adam', 'simg': 10, 'itersimg': 5, 'slotdimimg': 512, 'stext': 7, 'iterstext': 5, 'slotdimtext': 512, 'nhead': 8, 'tdim': 512, 'nlayers': 3, 'text_encoder_type': 'openai/clip-vit-base-patch32', 'rank': 0, 'dist_url': 'tcp://localhost:58472', 'world_size': 1, 'ngpus_per_node': 1}
+2022-06-13 14:57:47,886 INFO    SenderThread:177569 [sender.py:send_run():707] updated run: 2uklc1se
+2022-06-13 14:57:48,048 INFO    Thread-14 :177569 [upload_job.py:push():132] Uploaded file /tmp/tmpi2fdrihswandb/6dd4ke5i-wandb-metadata.json
+2022-06-13 14:57:48,167 INFO    Thread-15 :177569 [upload_job.py:push():132] Uploaded file /tmp/tmpi2fdrihswandb/y4s74nls-code/train.py
+2022-06-13 14:57:48,345 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/config.yaml
+2022-06-13 14:57:48,345 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/wandb-metadata.json
+2022-06-13 14:57:48,345 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/output.log
+2022-06-13 14:57:48,396 INFO    Thread-19 :177569 [upload_job.py:push():132] Uploaded file /tmp/tmpi2fdrihswandb/p3xzysss-upstream_diff_023b4d5d6cfc75b121aba3ccf0f3683343cdc267.patch
+2022-06-13 14:57:48,459 INFO    Thread-16 :177569 [upload_job.py:push():132] Uploaded file /tmp/tmpi2fdrihswandb/29xj0mpp-diff.patch
+2022-06-13 14:57:50,345 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/output.log
+2022-06-13 14:57:52,347 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/output.log
+2022-06-13 14:58:01,647 INFO    SenderThread:177569 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-13 14:58:01,741 INFO    SenderThread:177569 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-13 14:58:02,468 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/wandb-summary.json
+2022-06-13 14:58:04,469 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/output.log
+2022-06-13 14:58:11,426 INFO    SenderThread:177569 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-13 14:58:11,502 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/wandb-summary.json
+2022-06-13 14:58:11,914 INFO    SenderThread:177569 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-13 14:58:12,403 INFO    SenderThread:177569 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-13 14:58:12,502 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/wandb-summary.json
+2022-06-13 14:58:12,888 INFO    SenderThread:177569 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-13 14:58:13,378 INFO    SenderThread:177569 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-13 14:58:13,503 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/wandb-summary.json
+2022-06-13 14:58:13,890 INFO    SenderThread:177569 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-13 14:58:14,503 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/wandb-summary.json
+2022-06-13 14:58:14,503 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/output.log
+2022-06-13 14:58:14,638 INFO    SenderThread:177569 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-13 14:58:14,874 INFO    SenderThread:177569 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-13 14:58:15,373 INFO    SenderThread:177569 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-13 14:58:15,504 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/wandb-summary.json
+2022-06-13 14:58:15,504 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/config.yaml
+2022-06-13 14:58:15,902 INFO    SenderThread:177569 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-13 14:58:16,389 INFO    SenderThread:177569 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-13 14:58:16,504 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/wandb-summary.json
+2022-06-13 14:58:16,504 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/output.log
+2022-06-13 14:58:16,878 INFO    SenderThread:177569 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-13 14:58:17,366 INFO    SenderThread:177569 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-13 14:58:17,504 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/wandb-summary.json
+2022-06-13 14:58:17,885 INFO    SenderThread:177569 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-13 14:58:18,376 INFO    SenderThread:177569 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-13 14:58:18,505 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/wandb-summary.json
+2022-06-13 14:58:18,505 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/output.log
+2022-06-13 14:58:18,872 INFO    SenderThread:177569 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-13 14:58:19,358 INFO    SenderThread:177569 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-13 14:58:19,505 INFO    Thread-10 :177569 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220613_145744-2uklc1se/files/wandb-summary.json
+2022-06-13 14:58:19,877 INFO    SenderThread:177569 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-13 14:58:20,317 WARNING MsgRouterThr:177569 [router.py:message_loop():73] EOFError seen in message_loop
+2022-06-13 14:58:20,318 INFO    MainThread:177569 [wandb_run.py:_atexit_cleanup():1867] got exitcode: 0
+2022-06-13 14:58:20,319 INFO    MainThread:177569 [wandb_run.py:_restore():1839] restore

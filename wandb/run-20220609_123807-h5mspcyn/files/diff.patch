@@ -1,0 +1,444 @@
+diff --git a/datasets/__pycache__/__init__.cpython-39.pyc b/datasets/__pycache__/__init__.cpython-39.pyc
+index 81647f8..fe942e1 100644
+Binary files a/datasets/__pycache__/__init__.cpython-39.pyc and b/datasets/__pycache__/__init__.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/clevr.cpython-39.pyc b/datasets/__pycache__/clevr.cpython-39.pyc
+index c63dd83..d7bd183 100644
+Binary files a/datasets/__pycache__/clevr.cpython-39.pyc and b/datasets/__pycache__/clevr.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/clevrref.cpython-39.pyc b/datasets/__pycache__/clevrref.cpython-39.pyc
+index bb304c3..636c6d5 100644
+Binary files a/datasets/__pycache__/clevrref.cpython-39.pyc and b/datasets/__pycache__/clevrref.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/coco.cpython-39.pyc b/datasets/__pycache__/coco.cpython-39.pyc
+index f3991f6..89bd2d9 100644
+Binary files a/datasets/__pycache__/coco.cpython-39.pyc and b/datasets/__pycache__/coco.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/flickr.cpython-39.pyc b/datasets/__pycache__/flickr.cpython-39.pyc
+index 7e92282..27b4dba 100644
+Binary files a/datasets/__pycache__/flickr.cpython-39.pyc and b/datasets/__pycache__/flickr.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/gqa.cpython-39.pyc b/datasets/__pycache__/gqa.cpython-39.pyc
+index 31f29bc..0e40b4d 100644
+Binary files a/datasets/__pycache__/gqa.cpython-39.pyc and b/datasets/__pycache__/gqa.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/gqa_tweaked.cpython-39.pyc b/datasets/__pycache__/gqa_tweaked.cpython-39.pyc
+index b447a84..08b5c8e 100644
+Binary files a/datasets/__pycache__/gqa_tweaked.cpython-39.pyc and b/datasets/__pycache__/gqa_tweaked.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/lvis.cpython-39.pyc b/datasets/__pycache__/lvis.cpython-39.pyc
+index 4f78b79..84cdc22 100644
+Binary files a/datasets/__pycache__/lvis.cpython-39.pyc and b/datasets/__pycache__/lvis.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/lvis_modulation.cpython-39.pyc b/datasets/__pycache__/lvis_modulation.cpython-39.pyc
+index 3c89d8e..11e73f1 100644
+Binary files a/datasets/__pycache__/lvis_modulation.cpython-39.pyc and b/datasets/__pycache__/lvis_modulation.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/mixed.cpython-39.pyc b/datasets/__pycache__/mixed.cpython-39.pyc
+index 2ac6044..8827222 100644
+Binary files a/datasets/__pycache__/mixed.cpython-39.pyc and b/datasets/__pycache__/mixed.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/phrasecut.cpython-39.pyc b/datasets/__pycache__/phrasecut.cpython-39.pyc
+index a1c6ec3..a6b61f8 100644
+Binary files a/datasets/__pycache__/phrasecut.cpython-39.pyc and b/datasets/__pycache__/phrasecut.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/refexp.cpython-39.pyc b/datasets/__pycache__/refexp.cpython-39.pyc
+index ae304fc..c933c2f 100644
+Binary files a/datasets/__pycache__/refexp.cpython-39.pyc and b/datasets/__pycache__/refexp.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/transforms.cpython-39.pyc b/datasets/__pycache__/transforms.cpython-39.pyc
+index 21e0556..b062c06 100644
+Binary files a/datasets/__pycache__/transforms.cpython-39.pyc and b/datasets/__pycache__/transforms.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/vg.cpython-39.pyc b/datasets/__pycache__/vg.cpython-39.pyc
+index ff5922a..c2f235b 100644
+Binary files a/datasets/__pycache__/vg.cpython-39.pyc and b/datasets/__pycache__/vg.cpython-39.pyc differ
+diff --git a/datasets/coco.py b/datasets/coco.py
+index 5fcd679..7f53ba4 100644
+--- a/datasets/coco.py
++++ b/datasets/coco.py
+@@ -14,6 +14,9 @@ from pycocotools import mask as coco_mask
+ 
+ import datasets.transforms as T
+ 
++from transformers import CLIPProcessor
++
++processor = CLIPProcessor.from_pretrained('openai/clip-vit-base-patch32')
+ 
+ class ModulatedDetection(torchvision.datasets.CocoDetection):
+     def __init__(self, img_folder, ann_file, transforms, return_masks, return_tokens, tokenizer, is_train=False):
+@@ -82,6 +85,7 @@ def create_positive_map(tokenized, tokens_positive):
+     """construct a map such that positive_map[i,j] = True iff box i is associated to token j"""
+     positive_map = torch.zeros((len(tokens_positive), 256), dtype=torch.float)
+     for j, tok_list in enumerate(tokens_positive):
++        # print(f'tokenized =======> {tokenized}')
+         for (beg, end) in tok_list:
+             beg_pos = tokenized.char_to_token(beg)
+             end_pos = tokenized.char_to_token(end - 1)
+@@ -197,19 +201,26 @@ class ConvertCocoPolysToMask(object):
+         if self.return_tokens and self.tokenizer is not None:
+             assert len(target["boxes"]) == len(target["tokens_positive"])
+             tokenized = self.tokenizer(caption, return_tensors="pt")
+-            target["positive_map"] = create_positive_map(tokenized, target["tokens_positive"])
++            ##################################################################################
++            # target["positive_map"] = create_positive_map(tokenized, target["tokens_positive"])
++            ##################################################################################
+         return image, target
+ 
+ 
+ def make_coco_transforms(image_set, cautious):
+ 
+-    normalize = T.Compose([T.ToTensor(), T.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])])
++    ################################################################
++    #normalize = T.Compose([T.ToTensor(), T.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])])
++    #################################################################
+ 
++    ################################################################
++    ################################################################
++    normalize = T.Compose([ T.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])])
+     scales = [480, 512, 544, 576, 608, 640, 672, 704, 736, 768, 800]
+ 
+     max_size = 1333
+     if image_set == "train":
+-        horizontal = [] if cautious else [T.RandomHorizontalFlip()]
++        horizontal = [] #if cautious else [T.RandomHorizontalFlip()]
+         return T.Compose(
+             horizontal
+               + [
+@@ -224,7 +235,8 @@ def make_coco_transforms(image_set, cautious):
+             #         ),
+             #     ),
+                 # T.RandomResize([800], max_size=800), 
+-                T.Resize_orig([600, 600]), 
++                #T.Resize_orig([600, 600]),
++                T.CLIP_transf(processor), 
+                 normalize,
+              ]
+         )
+diff --git a/datasets/gqa_tweaked.py b/datasets/gqa_tweaked.py
+index 3c3bf58..d10b719 100644
+--- a/datasets/gqa_tweaked.py
++++ b/datasets/gqa_tweaked.py
+@@ -8,7 +8,7 @@ from pathlib import Path
+ import torch 
+ import torchvision 
+ from torch.nn.utils.rnn import  pad_sequence
+-from transformers import AutoTokenizer
++from transformers import AutoTokenizer, CLIPTokenizer
+ 
+ from .coco import ConvertCocoPolysToMask, ModulatedDetection, make_coco_transforms
+ 
+@@ -36,6 +36,7 @@ class GQAQuestionAnswering(torchvision.datasets.CocoDetection):
+         target = {"image_id": image_id, "annotations": target, "caption": caption}
+         img, target = self.prepare(img, target)
+         if self._transforms is not None:
++            print(f'type(img)={type(img)}')
+             img, target = self._transforms(img, target)
+         target["dataset_name"] = dataset_name
+         target["questionId"] = questionId
+@@ -99,7 +100,7 @@ def build(image_set, args):
+     img_dir = Path(args.vg_img_path)
+     assert img_dir.exists(), f"provided VG img path {img_dir} does not exist"
+ 
+-    tokenizer = AutoTokenizer.from_pretrained(args.text_encoder_type)
++    tokenizer = CLIPTokenizer.from_pretrained(args.text_encoder_type)
+     ann_file = Path(args.gqa_ann_path) / f"finetune_gqa_{image_set}_{args.gqa_split_type}.json"
+     dataset = GQAQuestionAnswering(
+             img_dir,
+@@ -123,7 +124,8 @@ class MyCollate:
+     
+     def __call__(self, batch): 
+ 
+-        imgs = [item[0].unsqueeze(0) for item in batch]
++        # imgs = [item[0].unsqueeze(0) for item in batch]
++        imgs = [item[0] for item in batch]
+         imgs = torch.cat(imgs, dim=0 )
+         
+         ques = []
+diff --git a/datasets/transforms.py b/datasets/transforms.py
+index 9105e4a..626bb3e 100644
+--- a/datasets/transforms.py
++++ b/datasets/transforms.py
+@@ -220,6 +220,14 @@ class Resize_orig(object):
+         img = self.t(img)
+         return img, target
+ 
++class CLIP_transf(object):
++    def __init__(self, processor):
++        self.processor = processor
++
++    def __call__(self, img, target=None):
++        c = self.processor(images=img, return_tensors='pt')
++        return c['pixel_values'], target
++
+ 
+ class RandomPad(object):
+     def __init__(self, max_pad):
+diff --git a/datasets/util/__pycache__/__init__.cpython-39.pyc b/datasets/util/__pycache__/__init__.cpython-39.pyc
+index cebd5ba..1a298de 100644
+Binary files a/datasets/util/__pycache__/__init__.cpython-39.pyc and b/datasets/util/__pycache__/__init__.cpython-39.pyc differ
+diff --git a/datasets/util/__pycache__/box_ops.cpython-39.pyc b/datasets/util/__pycache__/box_ops.cpython-39.pyc
+index 94fceb9..c5bc7df 100644
+Binary files a/datasets/util/__pycache__/box_ops.cpython-39.pyc and b/datasets/util/__pycache__/box_ops.cpython-39.pyc differ
+diff --git a/datasets/util/__pycache__/dist.cpython-39.pyc b/datasets/util/__pycache__/dist.cpython-39.pyc
+index 3c20845..e1fed6f 100644
+Binary files a/datasets/util/__pycache__/dist.cpython-39.pyc and b/datasets/util/__pycache__/dist.cpython-39.pyc differ
+diff --git a/datasets/util/__pycache__/misc.cpython-39.pyc b/datasets/util/__pycache__/misc.cpython-39.pyc
+index 10dc39d..b3bfc0d 100644
+Binary files a/datasets/util/__pycache__/misc.cpython-39.pyc and b/datasets/util/__pycache__/misc.cpython-39.pyc differ
+diff --git a/model/__pycache__/img_encoder.cpython-39.pyc b/model/__pycache__/img_encoder.cpython-39.pyc
+index ee567e7..d51d5ef 100644
+Binary files a/model/__pycache__/img_encoder.cpython-39.pyc and b/model/__pycache__/img_encoder.cpython-39.pyc differ
+diff --git a/model/__pycache__/model.cpython-39.pyc b/model/__pycache__/model.cpython-39.pyc
+index 756570f..44c3df1 100644
+Binary files a/model/__pycache__/model.cpython-39.pyc and b/model/__pycache__/model.cpython-39.pyc differ
+diff --git a/model/__pycache__/slot_attention.cpython-39.pyc b/model/__pycache__/slot_attention.cpython-39.pyc
+index e301bc2..8549d51 100644
+Binary files a/model/__pycache__/slot_attention.cpython-39.pyc and b/model/__pycache__/slot_attention.cpython-39.pyc differ
+diff --git a/model/__pycache__/text_encoder.cpython-39.pyc b/model/__pycache__/text_encoder.cpython-39.pyc
+index c070d36..9496f9d 100644
+Binary files a/model/__pycache__/text_encoder.cpython-39.pyc and b/model/__pycache__/text_encoder.cpython-39.pyc differ
+diff --git a/model/img_encoder.py b/model/img_encoder.py
+index 1caa97b..9ac6abb 100644
+--- a/model/img_encoder.py
++++ b/model/img_encoder.py
+@@ -43,32 +43,38 @@ def build_grid(resolution: tuple):
+ class SlotImage(nn.Module): 
+ 
+     def __init__(self, 
++            clip_vision_model, 
+             resolution: tuple, # tuple H, W
++            mbert_out_size:int, 
+             num_slots: int, #no. of slots (k) 
+             num_iter: int, 
+-            slot_dim: int): #no. of iterations (t)
++            slot_dim: int, 
++            add_cls: bool =True): #no. of iterations (t)
+ 
+         super().__init__()
+         self.resolution = resolution
++        self.mbert_out_size = mbert_out_size
+         self.num_slots = num_slots
+         self.num_iter = num_iter
+         self.slot_dim = slot_dim
++        self.add_cls = add_cls
+ 
+-        self.encoder = nn.Sequential(
+-            nn.Conv2d(3, 64, 5,  padding='same'),
+-            nn.ReLU(),
+-            nn.Conv2d(64, 64, 5, padding='same'),  
+-            nn.ReLU(),
+-            nn.Conv2d(64, 64, 5, padding='same'), 
+-            nn.ReLU(),
+-            nn.Conv2d(64, 64, 5, padding='same'), 
+-            nn.ReLU()
+-            )        # size = N, 64, H, W, 
++        # self.encoder = nn.Sequential(
++        #     nn.Conv2d(3, 64, 5,  padding='same'),
++        #     nn.ReLU(),
++        #     nn.Conv2d(64, 64, 5, padding='same'),  
++        #     nn.ReLU(),
++        #     nn.Conv2d(64, 64, 5, padding='same'), 
++        #     nn.ReLU(),
++        #     nn.Conv2d(64, 64, 5, padding='same'), 
++        #     nn.ReLU()
++        #     )        # size = N, 64, H, W, 
+ 
+-        self.pos_emb = SoftPositionEmbed(64, self.resolution) 
++        self.clip_encoder = clip_vision_model
++        self.pos_emb = SoftPositionEmbed(self.mbert_out_size, self.resolution) 
+ 
+         self.mlp = nn.Sequential(
+-            nn.Linear(64, self.slot_dim), 
++            nn.Linear(self.mbert_out_size, self.slot_dim), 
+             nn.ReLU(), 
+             nn.Linear(self.slot_dim, self.slot_dim)
+             )
+@@ -80,20 +86,39 @@ class SlotImage(nn.Module):
+         self.slot_attention_module = SlotAttention(num_slots=self.num_slots, 
+                                                 iters=self.num_iter,
+                                                 dim=self.slot_dim, 
+-                                                hidden_dim=self.resolution[0]*self.resolution[1])
++                                                hidden_dim=self.slot_dim)
+ 
+     def forward(self, 
+-            inp: torch.tensor): # inp image after transform
++            inp: torch.tensor, 
++            add_cls: bool =True): # inp image after transform
+         '''
+         inp.shape = N, C, H, W 
+         '''
+         x = inp
+-        res = (x.shape[2], x.shape[3])
++        # res = (x.shape[2], x.shape[3])
+         #print(inp.shape) 
+-        x = self.encoder(inp) 
++        # x = self.encoder(inp) 
++        x = self.clip_encoder(x)#x.shape = batch_size, 50, 768
++
++        '''
++        try appending cls tok to each embedding
++        '''
++        
++        if self.add_cls: 
++            cls_token = x['pooler_output'] #pooler_output.shape = 1, 768
++
++        x =  x['last_hidden_state'] #1, 768
++
++        if self.add_cls: 
++            x = torch.cat((cls_token.unsqueeze(1), x), dim=1) 
++
++        '''
++        x = self.pos_emb(x)
+         x = x.reshape(x.shape[0], x.shape[1], -1) #x.shape = N,C, H*W 
+         x = x.permute(0, 2, 1) #x.shape = N, H*W, C 
+         x = self.layer_norm(self.mlp(x)) 
++        '''
++        x = self.layer_norm(self.mlp(x)) 
+         x = self.slot_attention_module(x) 
+         
+         return x         
+diff --git a/model/model.py b/model/model.py
+index d538fe7..6a44606 100644
+--- a/model/model.py
++++ b/model/model.py
+@@ -8,9 +8,11 @@ from .text_encoder import SlotText
+ class SlotVQA(nn.Module): 
+ 
+     def __init__(self, 
++            clip_vision_model, 
+             mbert, 
+-            mbert_out_size: int =768, 
+-            resolution: tuple =(600, 600), 
++            mbert_out_size: int =512, 
++            img_enc_out_size: int=768, 
++            resolution: tuple =(224, 224), 
+             slots_img: int =5, 
+             iters_img: int =5, 
+             slot_dim_img: int =64, 
+@@ -23,7 +25,10 @@ class SlotVQA(nn.Module):
+             ans_dim: int =200): 
+ 
+         super().__init__()
+-        self.mbert = mbert, 
++        self.clip_vision_model = clip_vision_model
++        self.img_enc_out_size = img_enc_out_size
++
++        self.mbert = mbert 
+         self.mbert_out_size = mbert_out_size
+ 
+         self.res = resolution
+@@ -35,8 +40,8 @@ class SlotVQA(nn.Module):
+         self.slot_dim_text = slot_dim_text
+         self.transf_dim = transf_dim
+ 
+-        self.img_enc = SlotImage(resolution=self.res, 
+-                num_slots=self.slots_img, num_iter=self.iters_img, 
++        self.img_enc = SlotImage(self.clip_vision_model, resolution=self.res, 
++                mbert_out_size=self.img_enc_out_size,num_slots=self.slots_img, num_iter=self.iters_img, 
+                 slot_dim=self.slot_dim_img)
+             
+         self.text_enc = SlotText(mbert=self.mbert, 
+diff --git a/model/text_encoder.py b/model/text_encoder.py
+index 84e1035..7f175eb 100644
+--- a/model/text_encoder.py
++++ b/model/text_encoder.py
+@@ -9,13 +9,13 @@ class SlotText(nn.Module):
+             mbert, 
+             num_slots: int =5, 
+             num_iter: int =5, 
+-            mbert_out_size: int =768, 
++            mbert_out_size: int =512, 
+             slot_dim: int =64): 
+ 
+         super().__init__()
+ 
+         self.mbert_out_size = mbert_out_size
+-        self.mbert = mbert[0]
++        self.mbert = mbert
+         self.num_slots = num_slots
+         self.num_iter = num_iter
+         self.slot_dim = slot_dim 
+@@ -43,6 +43,7 @@ class SlotText(nn.Module):
+             inp = inp.squeeze(-1)
+         print(f'inp.shape={inp.shape}')        
+         x = self.mbert(inp)['last_hidden_state']#x.shape = B, seq_len, mbert_out_size
++        print(f'x.shape after mbert={x.shape}')
+         x = self.layernorm(self.mlp(x)) #x.shape = B, seq_len, mbert_out_size 
+         slots = self.slot_attention_module(x, mask=mask)  
+         
+diff --git a/train.py b/train.py
+index 9110ea0..7459a80 100644
+--- a/train.py
++++ b/train.py
+@@ -13,7 +13,7 @@ import time
+ import torch
+ from torch import nn, optim 
+ from torchvision import transforms
+-from transformers import BertModel
++from transformers import BertModel, CLIPVisionModel, CLIPTextModel
+ 
+ #from vg_dataloader import VG_dataset
+ from datasets.gqa_tweaked import build, MyCollate
+@@ -111,7 +111,7 @@ parser.add_argument('--nlayers', default=3, type=int, metavar='NL',
+                     help='number of layers in transformer')
+ 
+ #tokenizer
+-parser.add_argument('--text_encoder_type', default='bert-base-multilingual-uncased', type=str, metavar='T',
++parser.add_argument('--text_encoder_type', default='openai/clip-vit-base-patch32', type=str, metavar='T',
+                     help='text encoder')
+ 
+ 
+@@ -142,11 +142,10 @@ def main_worker(gpu, args):
+         world_size=args.world_size, rank=args.rank)
+ 
+     if args.rank == 0:
+-        '''
+-        wandb.init(config=args, project='translation_test')#############################################
++
++        wandb.init(config=args, project='slot_vqa')#############################################
+         wandb.config.update(args)
+         config = wandb.config
+-        '''
+     
+         # exit()
+         args.checkpoint_dir.mkdir(parents=True, exist_ok=True)
+@@ -163,11 +162,15 @@ def main_worker(gpu, args):
+     ans_dict_len = len(dataset.answer2id)#1853 including unk
+ 
+ #initializing the model: 
+-    mbert = BertModel.from_pretrained('bert-base-multilingual-uncased').to(args.rank)
++    mbert = CLIPTextModel.from_pretrained('openai/clip-vit-base-patch32').to(args.rank)
+     for param in mbert.parameters(): 
+         param.requires_grad=False
+ 
+-    model = SlotVQA(mbert, resolution=(600, 600), 
++    clip_vision_model = CLIPVisionModel.from_pretrained('openai/clip-vit-base-patch32')
++    for param in clip_vision_model.parameters(): 
++        param.requires_grad=False
++
++    model = SlotVQA(clip_vision_model, mbert, resolution=(600, 600), 
+                 slots_img=args.simg, iters_img=args.itersimg, slot_dim_img=args.slotdimimg, 
+                 slots_text=args.stext, iters_text=args.iterstext, slot_dim_text=args.slotdimtext, 
+                 num_head=args.nhead, transf_dim=args.tdim, transf_num_layers=args.nlayers, 
+@@ -215,6 +218,7 @@ def main_worker(gpu, args):
+         sampler.set_epoch(epoch)
+         epoch_loss = 0 
+         
++        counter = 0 
+         for step, item in enumerate(loader, start=epoch*len(loader)): 
+             
+             img = item[0].cuda(gpu, non_blocking=True)
+@@ -229,15 +233,18 @@ def main_worker(gpu, args):
+ 
+             print(f'ans.shape={ans.shape}, pred.shape={pred.shape}')
+             loss = loss_fn(pred, ans)
+-            print(loss)
++            wandb.log({"iter_loss": loss})
+             torch.nn.utils.clip_grad_norm(model.parameters(), args.clip)
+             loss.backward
+ 
+             optimizer.step()
+ 
++            counter += 1
++
+             epoch_loss+=loss.item()
+ 
+             if args.rank==0: 
++                wandb.log({"epoch_loss": epoch_loss/counter})
+                 if step%args.print_freq==0: 
+                     stats = dict(epoch=epoch, step=step, 
+                                 loss=loss.item(), 
+@@ -253,3 +260,4 @@ def main_worker(gpu, args):
+             
+ if __name__ == '__main__': 
+     main()
++    wandb.finish()
+\ No newline at end of file

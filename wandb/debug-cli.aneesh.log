@@ -1,0 +1,150 @@
+2022-06-15 21:18:49 ERROR Traceback (most recent call last):
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 22, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 581, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+ValueError: Sweep tera_squid/slot_vqa/wl1jtcix not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/cli/cli.py", line 95, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/cli/cli.py", line 1205, in agent
+    wandb_agent.agent(sweep_id, entity=entity, project=project, count=count)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 606, in agent
+    return run_agent(
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 548, in run_agent
+    agent.run()
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 181, in run
+    sweep_obj = self._api.sweep(self._sweep_id, "{}")
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/internal.py", line 99, in sweep
+    return self.api.sweep(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 58, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 22, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 581, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+wandb.errors.CommError: Sweep tera_squid/slot_vqa/wl1jtcix not found
+
+2022-06-15 21:19:32 ERROR Traceback (most recent call last):
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 22, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 581, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+ValueError: Sweep tera_squid/slot_vqa/wl1jtcix not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/cli/cli.py", line 95, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/cli/cli.py", line 1205, in agent
+    wandb_agent.agent(sweep_id, entity=entity, project=project, count=count)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 606, in agent
+    return run_agent(
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 548, in run_agent
+    agent.run()
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 181, in run
+    sweep_obj = self._api.sweep(self._sweep_id, "{}")
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/internal.py", line 99, in sweep
+    return self.api.sweep(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 58, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 22, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 581, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+wandb.errors.CommError: Sweep tera_squid/slot_vqa/wl1jtcix not found
+
+2022-06-15 21:20:33 ERROR Traceback (most recent call last):
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 22, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 581, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+ValueError: Sweep tera_squid/slot_vqa/9kn8ohhv not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/cli/cli.py", line 95, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/cli/cli.py", line 1205, in agent
+    wandb_agent.agent(sweep_id, entity=entity, project=project, count=count)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 606, in agent
+    return run_agent(
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 548, in run_agent
+    agent.run()
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 181, in run
+    sweep_obj = self._api.sweep(self._sweep_id, "{}")
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/internal.py", line 99, in sweep
+    return self.api.sweep(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 58, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 22, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 581, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+wandb.errors.CommError: Sweep tera_squid/slot_vqa/9kn8ohhv not found
+
+2022-06-15 21:23:52 ERROR Traceback (most recent call last):
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 22, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 581, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+ValueError: Sweep tera_squid/slot_vqa/5daqq2zv not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/cli/cli.py", line 95, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/cli/cli.py", line 1205, in agent
+    wandb_agent.agent(sweep_id, entity=entity, project=project, count=count)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 606, in agent
+    return run_agent(
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 548, in run_agent
+    agent.run()
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 181, in run
+    sweep_obj = self._api.sweep(self._sweep_id, "{}")
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/internal.py", line 99, in sweep
+    return self.api.sweep(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 58, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 22, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 581, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+wandb.errors.CommError: Sweep tera_squid/slot_vqa/5daqq2zv not found
+
+2022-06-15 21:25:33 ERROR Traceback (most recent call last):
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 22, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 581, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+ValueError: Sweep tera_squid/slot_vqa/qvnnilf1 not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/cli/cli.py", line 95, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/cli/cli.py", line 1205, in agent
+    wandb_agent.agent(sweep_id, entity=entity, project=project, count=count)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 606, in agent
+    return run_agent(
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 548, in run_agent
+    agent.run()
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 181, in run
+    sweep_obj = self._api.sweep(self._sweep_id, "{}")
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/internal.py", line 99, in sweep
+    return self.api.sweep(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 58, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 22, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 581, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+wandb.errors.CommError: Sweep tera_squid/slot_vqa/qvnnilf1 not found
+

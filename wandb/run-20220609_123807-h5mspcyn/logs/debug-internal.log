@@ -1,0 +1,1374 @@
+2022-06-09 12:38:07,312 INFO    BackendThr:149064 [internal.py:wandb_internal():90] W&B internal server running at pid: 149064, started at: 2022-06-09 12:38:07.312521
+2022-06-09 12:38:07,313 INFO    MainThread:149064 [wandb_init.py:init():525] backend started and connected
+2022-06-09 12:38:07,313 DEBUG   MainThread:149064 [config_util.py:dict_from_config_file():100] no default config file found in config-defaults.yaml
+2022-06-09 12:38:07,319 INFO    MainThread:149064 [wandb_init.py:init():596] updated telemetry
+2022-06-09 12:38:07,320 INFO    WriterThread:149064 [datastore.py:open_for_write():75] open: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/run-h5mspcyn.wandb
+2022-06-09 12:38:07,320 DEBUG   SenderThread:149064 [sender.py:send():232] send: header
+2022-06-09 12:38:07,330 INFO    MainThread:149064 [wandb_init.py:init():627] communicating run to backend with 30 second timeout
+2022-06-09 12:38:07,331 DEBUG   SenderThread:149064 [sender.py:send():232] send: run
+2022-06-09 12:38:07,542 INFO    SenderThread:149064 [dir_watcher.py:__init__():197] watching files in: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files
+2022-06-09 12:38:07,542 INFO    SenderThread:149064 [sender.py:_start_run_threads():811] run started: h5mspcyn with start time 1654771087
+2022-06-09 12:38:07,544 INFO    MainThread:149064 [wandb_run.py:_on_init():1924] communicating current version
+2022-06-09 12:38:07,544 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:07,544 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: check_version
+2022-06-09 12:38:07,545 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:07,545 DEBUG   SenderThread:149064 [sender.py:send_request():246] send_request: check_version
+2022-06-09 12:38:07,593 INFO    MainThread:149064 [wandb_run.py:_on_init():1928] got version response 
+2022-06-09 12:38:07,593 INFO    MainThread:149064 [wandb_init.py:init():662] starting run threads in backend
+2022-06-09 12:38:07,594 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: run_start
+2022-06-09 12:38:07,596 DEBUG   HandlerThread:149064 [meta.py:__init__():35] meta init
+2022-06-09 12:38:07,596 DEBUG   HandlerThread:149064 [meta.py:__init__():49] meta init done
+2022-06-09 12:38:07,597 DEBUG   HandlerThread:149064 [meta.py:probe():209] probe
+2022-06-09 12:38:07,602 DEBUG   HandlerThread:149064 [meta.py:_setup_git():199] setup git
+2022-06-09 12:38:07,620 DEBUG   HandlerThread:149064 [meta.py:_setup_git():206] setup git done
+2022-06-09 12:38:07,621 DEBUG   HandlerThread:149064 [meta.py:_save_code():87] save code
+2022-06-09 12:38:07,629 DEBUG   HandlerThread:149064 [meta.py:_save_code():108] save code done
+2022-06-09 12:38:07,629 DEBUG   HandlerThread:149064 [meta.py:_save_patches():125] save patches
+2022-06-09 12:38:07,679 DEBUG   HandlerThread:149064 [meta.py:_save_patches():167] save patches done
+2022-06-09 12:38:07,679 DEBUG   HandlerThread:149064 [meta.py:_save_pip():53] save pip
+2022-06-09 12:38:07,680 DEBUG   HandlerThread:149064 [meta.py:_save_pip():67] save pip done
+2022-06-09 12:38:07,680 DEBUG   HandlerThread:149064 [meta.py:_save_conda():74] save conda
+2022-06-09 12:38:08,545 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/conda-environment.yaml
+2022-06-09 12:38:08,545 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/diff.patch
+2022-06-09 12:38:08,546 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:08,546 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/requirements.txt
+2022-06-09 12:38:08,546 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/code/train.py
+2022-06-09 12:38:08,546 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/code
+2022-06-09 12:38:09,081 DEBUG   HandlerThread:149064 [meta.py:_save_conda():84] save conda done
+2022-06-09 12:38:09,081 DEBUG   HandlerThread:149064 [meta.py:probe():247] probe done
+2022-06-09 12:38:09,084 DEBUG   SenderThread:149064 [sender.py:send():232] send: files
+2022-06-09 12:38:09,084 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-metadata.json with policy now
+2022-06-09 12:38:09,085 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file code/train.py with policy now
+2022-06-09 12:38:09,086 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file diff.patch with policy now
+2022-06-09 12:38:09,096 INFO    MainThread:149064 [wandb_run.py:_console_start():1898] atexit reg
+2022-06-09 12:38:09,097 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-09 12:38:09,097 DEBUG   SenderThread:149064 [sender.py:send_request():246] send_request: stop_status
+2022-06-09 12:38:09,098 INFO    MainThread:149064 [wandb_run.py:_redirect():1771] redirect: SettingsConsole.WRAP
+2022-06-09 12:38:09,099 INFO    MainThread:149064 [wandb_run.py:_redirect():1808] Wrapping output streams.
+2022-06-09 12:38:09,099 INFO    MainThread:149064 [wandb_run.py:_redirect():1832] Redirects installed.
+2022-06-09 12:38:09,099 INFO    MainThread:149064 [wandb_init.py:init():688] run started, returning control to user process
+2022-06-09 12:38:09,103 INFO    MainThread:149064 [wandb_run.py:_config_callback():1136] config_cb None None {'workers': 0, 'print_freq': 5, 'checkpoint_dir': 'checkpoint', 'vg_img_path': '/home/aneesh/datasets/gqa_imgs/images/', 'gqa_ann_path': '/home/aneesh/datasets/gqa_ann/OpenSource/', 'gqa_split_type': 'balanced', 'mask_model': 'none', 'masks': False, 'epochs': 10, 'imset': 'train', 'batch_size': 2, 'learning_rate': 0.2, 'dropout': 0.01, 'weight_decay': 1e-06, 'momentum': 0.9, 'clip': 1, 'betas': [0.9, 0.98], 'eps': 1e-09, 'loss_fn': 'cross_entropy', 'optimizer': 'adam', 'simg': 3, 'itersimg': 3, 'slotdimimg': 128, 'stext': 5, 'iterstext': 3, 'slotdimtext': 128, 'nhead': 4, 'tdim': 128, 'nlayers': 3, 'text_encoder_type': 'openai/clip-vit-base-patch32', 'rank': 0, 'dist_url': 'tcp://localhost:58472', 'world_size': 1, 'ngpus_per_node': 1}
+2022-06-09 12:38:09,357 DEBUG   SenderThread:149064 [sender.py:send():232] send: telemetry
+2022-06-09 12:38:09,357 DEBUG   SenderThread:149064 [sender.py:send():232] send: config
+2022-06-09 12:38:21,882 INFO    Thread-14 :149064 [upload_job.py:push():132] Uploaded file /tmp/tmp8d2x_9z9wandb/1vjs0vqb-wandb-metadata.json
+2022-06-09 12:38:21,883 INFO    Thread-16 :149064 [upload_job.py:push():132] Uploaded file /tmp/tmp8d2x_9z9wandb/366j8y2j-diff.patch
+2022-06-09 12:38:21,926 INFO    Thread-15 :149064 [upload_job.py:push():132] Uploaded file /tmp/tmp8d2x_9z9wandb/3huaqqz2-code/train.py
+2022-06-09 12:38:21,963 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/conda-environment.yaml
+2022-06-09 12:38:21,963 WARNING FileStreamThread:149064 [file_stream.py:request_with_retry():593] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/tera_squid/slot_vqa/h5mspcyn/file_stream (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1129)'))). func: <bound method Session.post of <requests.sessions.Session object at 0x7fdb48abb940>>, args: ('https://api.wandb.ai/files/tera_squid/slot_vqa/h5mspcyn/file_stream',), kwargs: {'json': {'files': {'wandb-summary.json': {'offset': 0, 'content': ['{}']}}, 'dropped': 0}}
+2022-06-09 12:38:21,964 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:38:21,974 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-metadata.json
+2022-06-09 12:38:24,358 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-09 12:38:24,359 DEBUG   SenderThread:149064 [sender.py:send_request():246] send_request: stop_status
+2022-06-09 12:38:24,492 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:38:26,515 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:38:28,058 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:28,059 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:28,060 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:28,060 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:28,060 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:28,060 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:28,060 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:28,067 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:28,518 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:28,519 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:38:29,098 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:29,098 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:29,098 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:29,099 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:29,099 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:29,100 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:29,100 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:29,100 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:29,519 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:30,233 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:30,233 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:30,233 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:30,234 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:30,234 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:30,235 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:30,235 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:30,235 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:30,519 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:30,519 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:38:31,372 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:31,373 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:31,373 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:31,374 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:31,374 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:31,374 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:31,374 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:31,375 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:31,521 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:32,514 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:32,515 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:32,515 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:32,516 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:32,516 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:32,516 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:32,517 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:32,517 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:32,521 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:32,522 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:38:33,658 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:33,658 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:33,658 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:33,659 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:33,659 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:33,659 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:33,660 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:33,660 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:34,523 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:34,524 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:38:34,860 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:34,860 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:34,860 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:34,861 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:34,861 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:34,862 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:34,862 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:34,862 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:35,526 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:36,030 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:36,031 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:36,031 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:36,031 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:36,032 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:36,032 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:36,032 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:36,032 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:36,527 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:36,527 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:38:37,188 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:37,188 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:37,189 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:37,189 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:37,190 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:37,190 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:37,190 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:37,191 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:37,532 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:38,423 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:38,424 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:38,424 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:38,424 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:38,425 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:38,425 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:38,425 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:38,426 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:38,542 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:38,543 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/config.yaml
+2022-06-09 12:38:38,543 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:38:39,515 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-09 12:38:39,515 DEBUG   SenderThread:149064 [sender.py:send_request():246] send_request: stop_status
+2022-06-09 12:38:39,588 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:39,589 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:39,688 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:39,688 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:39,707 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:39,709 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:39,709 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:39,709 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:40,541 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:40,541 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:38:40,736 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:40,736 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:40,737 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:40,737 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:40,738 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:40,738 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:40,738 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:40,738 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:41,546 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:41,961 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:41,962 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:41,962 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:41,962 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:41,963 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:41,963 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:41,963 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:41,963 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:42,548 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:42,548 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:38:43,148 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:43,148 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:43,148 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:43,149 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:43,149 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:43,149 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:43,149 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:43,150 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:43,562 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:44,294 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:44,295 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:44,295 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:44,295 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:44,296 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:44,296 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:44,296 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:44,297 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:44,562 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:44,562 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:38:45,503 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:45,503 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:45,503 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:45,504 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:45,504 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:45,504 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:45,505 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:45,505 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:45,563 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:46,563 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:38:46,718 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:46,718 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:46,718 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:46,719 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:46,719 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:46,720 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:46,720 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:46,720 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:47,563 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:47,938 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:47,938 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:47,938 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:47,939 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:47,939 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:47,939 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:47,940 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:47,940 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:48,566 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:48,566 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:38:49,147 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:49,148 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:49,148 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:49,148 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:49,149 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:49,149 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:49,149 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:49,150 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:49,619 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:50,358 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:50,358 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:50,358 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:50,359 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:50,360 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:50,360 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:50,360 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:50,361 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:50,622 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:50,622 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:38:50,852 DEBUG   SenderThread:149064 [sender.py:send():232] send: stats
+2022-06-09 12:38:51,578 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:51,579 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:51,579 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:51,580 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:51,580 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:51,580 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:51,580 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:51,581 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:51,623 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:52,623 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:38:52,761 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:52,762 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:52,762 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:52,762 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:52,763 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:52,763 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:52,763 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:52,764 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:53,624 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:53,934 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:53,935 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:53,935 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:53,936 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:53,936 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:53,937 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:53,937 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:53,937 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:54,624 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:54,624 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:38:54,699 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-09 12:38:54,699 DEBUG   SenderThread:149064 [sender.py:send_request():246] send_request: stop_status
+2022-06-09 12:38:55,089 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:55,090 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:55,090 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:55,091 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:55,091 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:55,092 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:55,092 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:55,092 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:55,625 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:56,254 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:56,255 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:56,255 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:56,255 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:56,256 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:56,256 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:56,256 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:56,256 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:56,625 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:56,626 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:38:57,463 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:57,464 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:57,464 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:57,465 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:57,465 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:57,466 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:57,466 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:57,466 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:57,626 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:58,619 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:58,620 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:58,620 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:58,620 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:58,621 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:58,621 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:58,621 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:58,622 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:58,626 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:38:58,626 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:38:59,672 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:59,672 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:38:59,672 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:59,673 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:59,673 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:38:59,673 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:38:59,673 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:38:59,674 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:00,627 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:00,627 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:00,830 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:00,831 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:00,831 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:00,831 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:00,832 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:00,832 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:00,832 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:00,833 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:01,627 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:01,976 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:01,977 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:01,977 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:01,977 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:01,978 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:01,979 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:01,979 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:01,979 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:02,628 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:02,628 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:03,121 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:03,122 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:03,122 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:03,123 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:03,123 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:03,123 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:03,124 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:03,124 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:03,629 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:04,273 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:04,273 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:04,273 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:04,274 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:04,274 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:04,275 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:04,275 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:04,275 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:04,692 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:04,692 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:05,425 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:05,426 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:05,426 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:05,427 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:05,427 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:05,427 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:05,428 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:05,428 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:05,692 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:06,593 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:06,594 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:06,594 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:06,595 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:06,595 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:06,595 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:06,595 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:06,596 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:06,692 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:06,693 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:07,788 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:07,789 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:07,789 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:07,790 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:07,790 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:07,791 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:07,791 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:07,791 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:08,693 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:08,693 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:08,984 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:08,985 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:08,985 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:08,985 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:08,986 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:08,986 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:08,986 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:08,987 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:09,694 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:09,876 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-09 12:39:09,876 DEBUG   SenderThread:149064 [sender.py:send_request():246] send_request: stop_status
+2022-06-09 12:39:10,131 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:10,134 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:10,134 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:10,134 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:10,135 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:10,135 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:10,135 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:10,136 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:10,694 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:10,694 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:11,280 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:11,281 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:11,281 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:11,281 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:11,282 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:11,282 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:11,282 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:11,283 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:11,697 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:12,422 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:12,423 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:12,423 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:12,423 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:12,424 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:12,424 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:12,424 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:12,424 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:12,698 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:12,698 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:13,595 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:13,596 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:13,596 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:13,596 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:13,597 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:13,597 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:13,597 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:13,597 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:13,698 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:14,699 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:14,808 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:14,809 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:14,809 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:14,810 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:14,810 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:14,810 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:14,811 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:14,811 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:15,704 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:16,004 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:16,005 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:16,005 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:16,005 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:16,006 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:16,006 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:16,006 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:16,006 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:16,707 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:16,707 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:17,234 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:17,234 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:17,235 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:17,235 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:17,236 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:17,236 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:17,236 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:17,236 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:17,707 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:18,433 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:18,434 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:18,434 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:18,435 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:18,435 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:18,435 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:18,436 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:18,436 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:18,710 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:18,711 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:19,604 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:19,604 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:19,604 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:19,605 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:19,605 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:19,605 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:19,605 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:19,606 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:19,711 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:20,711 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:20,811 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:20,812 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:20,812 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:20,812 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:20,813 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:20,813 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:20,813 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:20,813 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:21,711 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:21,847 DEBUG   SenderThread:149064 [sender.py:send():232] send: stats
+2022-06-09 12:39:21,950 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:21,951 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:21,951 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:21,952 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:21,953 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:21,953 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:21,953 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:21,953 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:22,713 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:22,713 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:23,086 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:23,087 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:23,087 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:23,087 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:23,088 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:23,088 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:23,088 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:23,089 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:23,714 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:24,244 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:24,245 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:24,245 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:24,245 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:24,246 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:24,246 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:24,246 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:24,247 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:24,716 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:24,716 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:25,073 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-09 12:39:25,073 DEBUG   SenderThread:149064 [sender.py:send_request():246] send_request: stop_status
+2022-06-09 12:39:25,444 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:25,445 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:25,445 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:25,445 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:25,446 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:25,446 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:25,446 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:25,446 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:25,717 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:26,596 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:26,596 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:26,597 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:26,598 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:26,599 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:26,599 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:26,599 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:26,599 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:26,718 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:26,718 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:27,742 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:27,742 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:27,742 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:27,743 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:27,743 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:27,743 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:27,744 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:27,744 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:28,718 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:28,719 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:28,890 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:28,891 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:28,891 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:28,891 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:28,892 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:28,892 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:28,892 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:28,892 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:29,719 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:30,040 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:30,040 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:30,041 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:30,041 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:30,041 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:30,042 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:30,042 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:30,042 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:30,720 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:30,720 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:31,183 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:31,184 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:31,184 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:31,185 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:31,185 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:31,185 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:31,186 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:31,186 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:31,721 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:32,310 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:32,311 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:32,311 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:32,311 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:32,312 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:32,312 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:32,312 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:32,312 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:32,731 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:32,731 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:33,458 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:33,459 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:33,459 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:33,459 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:33,460 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:33,460 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:33,460 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:33,461 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:33,733 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:34,600 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:34,601 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:34,601 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:34,601 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:34,602 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:34,602 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:34,602 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:34,602 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:34,739 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:34,739 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:35,745 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:35,746 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:35,746 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:35,746 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:35,747 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:35,748 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:35,748 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:35,748 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:36,740 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:36,740 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:36,964 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:36,965 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:36,965 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:36,967 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:36,968 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:36,968 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:36,968 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:36,968 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:37,740 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:38,115 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:38,116 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:38,116 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:38,116 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:38,117 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:38,117 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:38,117 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:38,118 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:38,740 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:38,741 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:39,263 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:39,264 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:39,264 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:39,264 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:39,265 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:39,265 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:39,265 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:39,265 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:39,743 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:40,239 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-09 12:39:40,239 DEBUG   SenderThread:149064 [sender.py:send_request():246] send_request: stop_status
+2022-06-09 12:39:40,421 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:40,422 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:40,422 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:40,423 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:40,423 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:40,424 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:40,424 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:40,424 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:40,743 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:40,744 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:41,578 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:41,578 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:41,578 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:41,579 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:41,579 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:41,579 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:41,579 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:41,580 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:41,744 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:42,716 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:42,717 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:42,717 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:42,717 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:42,718 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:42,718 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:42,718 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:42,719 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:42,744 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:42,745 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:43,862 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:43,862 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:43,862 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:43,863 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:43,863 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:43,864 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:43,864 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:43,864 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:44,745 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:44,745 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:45,033 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:45,033 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:45,034 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:45,034 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:45,035 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:45,035 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:45,035 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:45,035 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:45,746 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:46,182 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:46,183 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:46,183 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:46,184 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:46,184 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:46,184 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:46,184 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:46,185 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:46,746 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:46,747 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:47,337 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:47,338 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:47,338 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:47,340 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:47,341 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:47,341 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:47,341 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:47,341 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:47,762 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:48,495 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:48,495 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:48,495 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:48,496 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:48,496 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:48,497 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:48,497 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:48,497 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:48,762 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:48,762 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:49,656 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:49,656 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:49,657 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:49,657 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:49,657 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:49,657 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:49,658 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:49,658 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:49,762 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:50,763 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:50,858 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:50,859 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:50,859 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:50,859 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:50,860 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:50,860 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:50,860 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:50,861 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:51,763 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:52,020 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:52,021 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:52,021 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:52,021 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:52,022 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:52,022 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:52,022 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:52,022 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:52,763 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:52,763 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:52,932 DEBUG   SenderThread:149064 [sender.py:send():232] send: stats
+2022-06-09 12:39:53,222 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:53,223 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:53,223 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:53,223 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:53,224 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:53,224 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:53,224 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:53,225 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:53,764 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:54,390 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:54,390 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:54,391 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:54,391 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:54,391 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:54,391 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:54,392 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:54,392 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:54,765 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:54,765 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:55,398 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-09 12:39:55,399 DEBUG   SenderThread:149064 [sender.py:send_request():246] send_request: stop_status
+2022-06-09 12:39:55,607 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:55,607 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:55,607 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:55,608 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:55,608 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:55,608 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:55,608 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:55,609 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:55,765 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:56,766 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:56,784 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:56,785 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:56,785 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:56,785 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:56,786 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:56,786 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:56,786 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:56,786 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:57,766 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:57,975 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:57,975 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:57,976 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:57,977 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:57,978 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:57,978 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:57,978 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:57,979 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:58,770 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:39:58,770 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:39:59,194 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:59,195 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:39:59,195 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:59,196 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:59,196 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:59,196 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:39:59,197 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:39:59,197 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:39:59,771 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:00,341 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:00,342 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:00,342 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:00,343 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:00,343 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:00,343 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:00,343 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:00,344 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:00,772 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:00,772 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:01,385 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:01,385 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:01,385 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:01,386 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:01,386 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:01,386 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:01,386 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:01,387 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:01,834 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:02,564 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:02,565 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:02,565 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:02,566 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:02,566 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:02,567 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:02,567 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:02,567 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:02,834 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:02,834 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:03,770 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:03,770 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:03,771 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:03,771 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:03,772 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:03,772 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:03,772 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:03,772 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:03,834 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:04,835 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:04,936 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:04,937 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:04,937 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:04,937 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:04,938 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:04,938 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:04,938 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:04,938 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:05,835 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:06,089 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:06,089 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:06,090 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:06,090 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:06,091 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:06,091 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:06,091 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:06,091 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:06,837 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:06,837 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:07,235 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:07,236 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:07,236 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:07,236 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:07,237 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:07,237 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:07,237 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:07,237 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:07,840 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:08,378 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:08,379 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:08,379 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:08,380 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:08,380 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:08,380 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:08,380 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:08,381 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:08,840 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:08,841 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:09,564 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:09,564 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:09,565 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:09,565 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:09,565 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:09,566 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:09,566 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:09,566 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:09,841 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:10,554 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-09 12:40:10,555 DEBUG   SenderThread:149064 [sender.py:send_request():246] send_request: stop_status
+2022-06-09 12:40:10,752 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:10,755 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:10,755 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:10,756 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:10,756 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:10,757 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:10,757 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:10,757 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:10,875 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:10,876 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:11,885 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:11,885 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:11,886 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:11,886 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:11,887 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:11,887 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:11,887 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:11,887 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:12,876 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:12,876 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:13,034 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:13,035 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:13,035 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:13,036 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:13,036 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:13,037 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:13,037 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:13,037 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:13,876 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:14,188 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:14,188 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:14,188 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:14,189 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:14,189 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:14,189 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:14,189 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:14,190 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:14,877 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:14,877 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:15,396 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:15,396 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:15,397 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:15,397 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:15,397 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:15,398 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:15,398 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:15,398 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:15,877 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:16,597 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:16,598 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:16,598 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:16,598 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:16,599 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:16,599 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:16,599 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:16,599 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:16,881 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:16,881 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:17,753 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:17,754 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:17,754 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:17,755 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:17,755 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:17,755 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:17,755 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:17,756 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:17,916 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:18,914 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:18,935 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:18,935 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:18,936 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:18,936 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:18,937 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:18,937 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:18,937 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:18,937 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:19,915 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:20,125 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:20,126 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:20,126 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:20,126 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:20,127 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:20,127 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:20,127 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:20,128 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:20,915 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:20,915 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:21,273 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:21,274 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:21,274 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:21,274 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:21,275 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:21,275 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:21,275 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:21,275 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:21,915 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:22,406 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:22,406 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:22,406 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:22,407 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:22,407 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:22,407 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:22,407 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:22,408 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:22,916 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:22,916 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:23,541 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:23,542 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:23,542 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:23,543 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:23,543 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:23,544 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:23,544 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:23,544 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:23,773 DEBUG   SenderThread:149064 [sender.py:send():232] send: stats
+2022-06-09 12:40:23,958 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:24,693 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:24,694 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:24,694 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:24,694 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:24,695 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:24,695 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:24,695 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:24,696 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:24,959 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:24,959 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:25,757 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-09 12:40:25,757 DEBUG   SenderThread:149064 [sender.py:send_request():246] send_request: stop_status
+2022-06-09 12:40:25,847 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:25,848 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:25,917 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:25,917 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:25,938 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:25,943 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:25,948 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:25,967 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:25,969 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:26,969 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:26,983 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:26,983 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:26,984 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:26,984 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:26,985 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:26,985 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:26,985 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:26,985 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:27,970 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:28,126 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:28,127 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:28,127 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:28,128 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:28,128 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:28,129 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:28,129 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:28,129 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:28,970 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:28,970 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:29,266 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:29,267 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:29,267 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:29,267 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:29,267 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:29,268 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:29,268 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:29,268 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:29,971 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:30,405 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:30,405 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:30,406 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:30,406 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:30,407 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:30,407 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:30,407 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:30,407 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:30,971 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:30,972 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:31,534 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:31,535 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:31,535 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:31,535 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:31,536 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:31,536 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:31,536 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:31,536 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:31,972 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:32,624 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:32,625 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:32,625 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:32,625 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:32,626 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:32,626 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:32,626 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:32,626 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:32,974 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:32,974 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:33,768 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:33,768 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:33,769 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:33,769 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:33,769 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:33,770 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:33,770 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:33,770 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:33,975 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:34,898 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:34,899 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:34,899 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:34,899 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:34,900 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:34,900 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:34,900 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:34,901 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:35,020 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:35,020 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:36,031 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:36,032 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:36,032 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:36,033 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:36,033 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:36,034 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:36,034 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:36,034 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:37,019 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:37,019 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:37,168 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:37,169 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:37,169 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:37,169 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:37,170 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:37,170 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:37,170 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:37,171 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:38,025 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:38,317 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:38,318 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:38,318 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:38,318 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:38,319 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:38,319 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:38,319 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:38,319 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:39,025 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:39,025 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:39,478 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:39,479 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:39,479 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:39,480 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:39,480 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:39,480 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:39,480 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:39,481 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:40,026 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:40,620 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:40,621 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:40,621 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:40,622 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:40,622 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:40,623 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:40,623 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:40,623 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:40,948 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-09 12:40:40,948 DEBUG   SenderThread:149064 [sender.py:send_request():246] send_request: stop_status
+2022-06-09 12:40:41,038 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:41,038 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:41,752 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:41,752 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:41,753 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:41,753 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:41,754 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:41,754 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:41,754 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:41,754 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:42,039 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:42,903 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:42,904 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:42,904 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:42,904 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:42,905 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:42,905 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:42,905 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:42,906 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:43,042 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:43,042 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:44,044 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:44,045 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:44,045 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:44,045 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:44,046 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:44,046 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:44,046 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:44,046 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:45,046 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:45,046 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:45,224 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:45,225 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:45,225 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:45,225 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:45,226 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:45,226 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:45,226 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:45,226 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:46,046 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:46,431 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:46,431 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:46,432 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:46,432 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:46,432 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:46,433 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:46,433 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:46,433 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:47,047 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:47,047 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:47,616 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:47,616 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:47,617 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:47,617 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:47,617 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:47,618 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:47,618 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:47,618 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:48,047 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:48,751 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:48,752 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:48,752 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:48,752 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:48,753 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:48,753 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:48,753 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:48,754 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:49,048 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:49,048 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:49,887 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:49,887 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:49,887 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:49,888 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:49,888 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:49,888 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:49,889 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:49,889 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:50,048 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:51,022 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:51,023 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:51,023 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:51,023 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:51,024 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:51,024 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:51,024 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:51,025 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:51,049 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:51,049 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:52,152 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:52,153 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:52,153 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:52,153 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:52,154 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:52,155 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:52,155 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:52,155 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:53,049 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:53,049 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:53,290 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:53,291 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:53,291 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:53,292 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:53,292 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:53,293 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:53,293 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:53,293 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:54,049 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:54,424 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:54,425 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:54,425 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:54,425 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:54,426 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:54,426 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:54,426 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:54,426 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:54,667 DEBUG   SenderThread:149064 [sender.py:send():232] send: stats
+2022-06-09 12:40:55,052 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:55,052 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:55,564 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:55,565 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:55,565 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:55,565 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:55,566 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:55,566 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:55,566 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:55,566 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:56,053 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:56,169 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-09 12:40:56,169 DEBUG   SenderThread:149064 [sender.py:send_request():246] send_request: stop_status
+2022-06-09 12:40:56,718 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:56,718 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:56,719 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:56,719 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:56,719 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:56,720 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:56,720 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:56,720 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:57,054 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:57,054 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:40:57,900 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:57,901 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:57,901 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:57,902 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:57,902 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:57,902 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:57,903 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:57,903 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:58,054 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:59,041 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:59,042 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:59,042 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:59,043 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:40:59,043 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:59,043 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:40:59,044 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:40:59,044 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:40:59,055 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:40:59,055 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:41:00,175 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:41:00,176 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:41:00,176 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:41:00,176 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:41:00,177 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:41:00,177 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:41:00,177 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:41:00,177 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:41:01,055 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:41:01,056 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:41:01,310 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:41:01,311 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:41:01,311 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:41:01,312 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:41:01,312 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:41:01,313 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:41:01,313 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:41:01,313 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:41:02,056 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:41:02,492 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:41:02,493 DEBUG   HandlerThread:149064 [handler.py:handle_request():141] handle_request: partial_history
+2022-06-09 12:41:02,494 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:41:02,494 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:41:02,494 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:41:02,494 DEBUG   SenderThread:149064 [sender.py:send():232] send: history
+2022-06-09 12:41:02,495 DEBUG   SenderThread:149064 [sender.py:send():232] send: summary
+2022-06-09 12:41:02,495 INFO    SenderThread:149064 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:41:03,056 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/wandb-summary.json
+2022-06-09 12:41:03,057 INFO    Thread-10 :149064 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_123807-h5mspcyn/files/output.log
+2022-06-09 12:41:03,350 WARNING MsgRouterThr:149064 [router.py:message_loop():73] EOFError seen in message_loop
