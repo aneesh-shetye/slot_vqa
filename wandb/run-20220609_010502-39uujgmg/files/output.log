@@ -1,0 +1,184 @@
+train.py
+loading annotations into memory...
+Done (t=13.35s)
+creating index...
+index created!
+Some weights of the model checkpoint at bert-base-multilingual-uncased were not used when initializing BertModel: ['cls.predictions.transform.dense.weight', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.decoder.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+instantiated sampler
+instantiating dataloader
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 14, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 14])
+inp.shape=torch.Size([2, 14])
+/home/aneesh/github/slot_vqa/train.py:233: UserWarning: torch.nn.utils.clip_grad_norm is now deprecated in favor of torch.nn.utils.clip_grad_norm_.
+  torch.nn.utils.clip_grad_norm(model.parameters(), args.clip)
+torch.Size([2, 128])
+ans.shape=torch.Size([2]), pred.shape=torch.Size([2, 1853])
+{"epoch": 0, "step": 0, "loss": 7.53791618347168, "time": 0}
+Model saved in checkpoint
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 12, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 12])
+inp.shape=torch.Size([2, 12])
+torch.Size([2, 128])
+ans.shape=torch.Size([2]), pred.shape=torch.Size([2, 1853])
+Model saved in checkpoint
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 10, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 10])
+inp.shape=torch.Size([2, 10])
+torch.Size([2, 128])
+ans.shape=torch.Size([2]), pred.shape=torch.Size([2, 1853])
+Model saved in checkpoint
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 18, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 18])
+inp.shape=torch.Size([2, 18])
+torch.Size([2, 128])
+ans.shape=torch.Size([2]), pred.shape=torch.Size([2, 1853])
+Model saved in checkpoint
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 15, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 15])
+inp.shape=torch.Size([2, 15])
+torch.Size([2, 128])
+ans.shape=torch.Size([2]), pred.shape=torch.Size([2, 1853])
+Model saved in checkpoint
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 12, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 12])
+inp.shape=torch.Size([2, 12])
+torch.Size([2, 128])
+ans.shape=torch.Size([2]), pred.shape=torch.Size([2, 1853])
+{"epoch": 0, "step": 5, "loss": 7.519730091094971, "time": 12}
+Model saved in checkpoint
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 15, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 15])
+inp.shape=torch.Size([2, 15])
+torch.Size([2, 128])
+ans.shape=torch.Size([2]), pred.shape=torch.Size([2, 1853])
+Model saved in checkpoint
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 10, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 10])
+inp.shape=torch.Size([2, 10])
+torch.Size([2, 128])
+ans.shape=torch.Size([2]), pred.shape=torch.Size([2, 1853])
+Model saved in checkpoint
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 17, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 17])
+inp.shape=torch.Size([2, 17])
+torch.Size([2, 128])
+ans.shape=torch.Size([2]), pred.shape=torch.Size([2, 1853])
+Model saved in checkpoint
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 10, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 10])
+inp.shape=torch.Size([2, 10])
+torch.Size([2, 128])
+ans.shape=torch.Size([2]), pred.shape=torch.Size([2, 1853])
+Model saved in checkpoint
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 21, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 21])
+inp.shape=torch.Size([2, 21])
+torch.Size([2, 128])
+ans.shape=torch.Size([2]), pred.shape=torch.Size([2, 1853])
+{"epoch": 0, "step": 10, "loss": 7.713112831115723, "time": 24}
+Model saved in checkpoint
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 17, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 17])
+inp.shape=torch.Size([2, 17])
+torch.Size([2, 128])
+ans.shape=torch.Size([2]), pred.shape=torch.Size([2, 1853])
+Model saved in checkpoint
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 12, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 12])
+inp.shape=torch.Size([2, 12])
+torch.Size([2, 128])
+ans.shape=torch.Size([2]), pred.shape=torch.Size([2, 1853])
+Model saved in checkpoint
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 16, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 16])
+inp.shape=torch.Size([2, 16])
+torch.Size([2, 128])
+ans.shape=torch.Size([2]), pred.shape=torch.Size([2, 1853])
+Model saved in checkpoint
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 14, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 14])
+inp.shape=torch.Size([2, 14])
+torch.Size([2, 128])
+ans.shape=torch.Size([2]), pred.shape=torch.Size([2, 1853])
+Model saved in checkpoint
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 17, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 17])
+inp.shape=torch.Size([2, 17])
+torch.Size([2, 128])
+ans.shape=torch.Size([2]), pred.shape=torch.Size([2, 1853])
+{"epoch": 0, "step": 15, "loss": 7.865635871887207, "time": 36}
+Model saved in checkpoint
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 9, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 9])
+inp.shape=torch.Size([2, 9])
+torch.Size([2, 128])
+ans.shape=torch.Size([2]), pred.shape=torch.Size([2, 1853])
+Model saved in checkpoint
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 14, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 14])
+inp.shape=torch.Size([2, 14])
+torch.Size([2, 128])
+ans.shape=torch.Size([2]), pred.shape=torch.Size([2, 1853])
+Model saved in checkpoint
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 9, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 9])
+inp.shape=torch.Size([2, 9])
+torch.Size([2, 128])
+ans.shape=torch.Size([2]), pred.shape=torch.Size([2, 1853])
+Model saved in checkpoint
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 12, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 12])
+inp.shape=torch.Size([2, 12])
+torch.Size([2, 128])
+ans.shape=torch.Size([2]), pred.shape=torch.Size([2, 1853])
+Model saved in checkpoint
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 19, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 19])
+inp.shape=torch.Size([2, 19])
+torch.Size([2, 128])
+ans.shape=torch.Size([2]), pred.shape=torch.Size([2, 1853])
+{"epoch": 0, "step": 20, "loss": 7.506631851196289, "time": 48}
+Model saved in checkpoint
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 10, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 10])
+inp.shape=torch.Size([2, 10])
+torch.Size([2, 128])
+ans.shape=torch.Size([2]), pred.shape=torch.Size([2, 1853])
+Model saved in checkpoint
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 12, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 12])
+inp.shape=torch.Size([2, 12])
+torch.Size([2, 128])
+ans.shape=torch.Size([2]), pred.shape=torch.Size([2, 1853])
+Model saved in checkpoint
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 23, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 23])
+inp.shape=torch.Size([2, 23])
+torch.Size([2, 128])
+ans.shape=torch.Size([2]), pred.shape=torch.Size([2, 1853])
+Model saved in checkpoint
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 9, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 9])
+inp.shape=torch.Size([2, 9])
+torch.Size([2, 128])
+ans.shape=torch.Size([2]), pred.shape=torch.Size([2, 1853])
+Model saved in checkpoint
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 14, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 14])
+inp.shape=torch.Size([2, 14])
+torch.Size([2, 128])
+ans.shape=torch.Size([2]), pred.shape=torch.Size([2, 1853])
+{"epoch": 0, "step": 25, "loss": 7.975133895874023, "time": 60}
+Model saved in checkpoint
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 13, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 13])
+inp.shape=torch.Size([2, 13])
+torch.Size([2, 128])
+ans.shape=torch.Size([2]), pred.shape=torch.Size([2, 1853])
+Model saved in checkpoint
+img.shape=torch.Size([2, 3, 600, 600]), ques.shape=torch.Size([2, 12, 1]) ,ans.shape=torch.Size([2])
+mask.shape=torch.Size([2, 1, 12])
+inp.shape=torch.Size([2, 12])
+torch.Size([2, 128])

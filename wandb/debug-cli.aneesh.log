@@ -1,0 +1,593 @@
+2022-06-15 21:18:49 ERROR Traceback (most recent call last):
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 22, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 581, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+ValueError: Sweep tera_squid/slot_vqa/wl1jtcix not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/cli/cli.py", line 95, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/cli/cli.py", line 1205, in agent
+    wandb_agent.agent(sweep_id, entity=entity, project=project, count=count)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 606, in agent
+    return run_agent(
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 548, in run_agent
+    agent.run()
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 181, in run
+    sweep_obj = self._api.sweep(self._sweep_id, "{}")
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/internal.py", line 99, in sweep
+    return self.api.sweep(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 58, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 22, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 581, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+wandb.errors.CommError: Sweep tera_squid/slot_vqa/wl1jtcix not found
+
+2022-06-15 21:19:32 ERROR Traceback (most recent call last):
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 22, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 581, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+ValueError: Sweep tera_squid/slot_vqa/wl1jtcix not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/cli/cli.py", line 95, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/cli/cli.py", line 1205, in agent
+    wandb_agent.agent(sweep_id, entity=entity, project=project, count=count)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 606, in agent
+    return run_agent(
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 548, in run_agent
+    agent.run()
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 181, in run
+    sweep_obj = self._api.sweep(self._sweep_id, "{}")
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/internal.py", line 99, in sweep
+    return self.api.sweep(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 58, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 22, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 581, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+wandb.errors.CommError: Sweep tera_squid/slot_vqa/wl1jtcix not found
+
+2022-06-15 21:20:33 ERROR Traceback (most recent call last):
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 22, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 581, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+ValueError: Sweep tera_squid/slot_vqa/9kn8ohhv not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/cli/cli.py", line 95, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/cli/cli.py", line 1205, in agent
+    wandb_agent.agent(sweep_id, entity=entity, project=project, count=count)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 606, in agent
+    return run_agent(
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 548, in run_agent
+    agent.run()
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 181, in run
+    sweep_obj = self._api.sweep(self._sweep_id, "{}")
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/internal.py", line 99, in sweep
+    return self.api.sweep(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 58, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 22, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 581, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+wandb.errors.CommError: Sweep tera_squid/slot_vqa/9kn8ohhv not found
+
+2022-06-15 21:23:52 ERROR Traceback (most recent call last):
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 22, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 581, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+ValueError: Sweep tera_squid/slot_vqa/5daqq2zv not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/cli/cli.py", line 95, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/cli/cli.py", line 1205, in agent
+    wandb_agent.agent(sweep_id, entity=entity, project=project, count=count)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 606, in agent
+    return run_agent(
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 548, in run_agent
+    agent.run()
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 181, in run
+    sweep_obj = self._api.sweep(self._sweep_id, "{}")
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/internal.py", line 99, in sweep
+    return self.api.sweep(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 58, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 22, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 581, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+wandb.errors.CommError: Sweep tera_squid/slot_vqa/5daqq2zv not found
+
+2022-06-15 21:25:33 ERROR Traceback (most recent call last):
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 22, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 581, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+ValueError: Sweep tera_squid/slot_vqa/qvnnilf1 not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/cli/cli.py", line 95, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/cli/cli.py", line 1205, in agent
+    wandb_agent.agent(sweep_id, entity=entity, project=project, count=count)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 606, in agent
+    return run_agent(
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 548, in run_agent
+    agent.run()
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 181, in run
+    sweep_obj = self._api.sweep(self._sweep_id, "{}")
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/internal.py", line 99, in sweep
+    return self.api.sweep(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 58, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 22, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 581, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+wandb.errors.CommError: Sweep tera_squid/slot_vqa/qvnnilf1 not found
+
+2022-06-15 21:33:25 ERROR Traceback (most recent call last):
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 22, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 581, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+ValueError: Sweep tera_squid/slot_vqa/bgh89i0v not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/cli/cli.py", line 95, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/cli/cli.py", line 1205, in agent
+    wandb_agent.agent(sweep_id, entity=entity, project=project, count=count)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 606, in agent
+    return run_agent(
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 548, in run_agent
+    agent.run()
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/wandb_agent.py", line 181, in run
+    sweep_obj = self._api.sweep(self._sweep_id, "{}")
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/internal.py", line 99, in sweep
+    return self.api.sweep(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 58, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/apis/normalize.py", line 22, in wrapper
+    return func(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 581, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+wandb.errors.CommError: Sweep tera_squid/slot_vqa/bgh89i0v not found
+
+2022-06-15 21:56:04 INFO Running runs: []
+2022-06-15 21:56:04 INFO Agent received command: run
+2022-06-15 21:56:04 INFO Agent starting run with config:
+	nlayers: 4
+2022-06-15 21:56:05 INFO About to run command: /usr/bin/env python train.py --nlayers=4
+2022-06-15 21:56:10 INFO Running runs: ['56bkkzt5']
+2022-06-15 22:01:14 INFO Running runs: []
+2022-06-15 22:01:15 INFO Agent received command: run
+2022-06-15 22:01:15 INFO Agent starting run with config:
+	batch_size: 128
+	epochs: 25
+	itersimg: 2
+	learning_rate: 1.4
+	nhead: 8
+	nlayers: 3
+	simg: 6
+	slotdimimg: 768
+	slotdimtext: 128
+	stext: 14
+	tdim: 128
+2022-06-15 22:01:15 INFO About to run command: /usr/bin/env python train.py --batch_size=128 --epochs=25 --itersimg=2 --learning_rate=1.4 --nhead=8 --nlayers=3 --simg=6 --slotdimimg=768 --slotdimtext=128 --stext=14 --tdim=128
+2022-06-15 22:01:20 INFO Running runs: ['a9rjihqy']
+2022-06-15 22:01:25 INFO Cleaning up finished run: a9rjihqy
+2022-06-15 22:01:25 INFO Agent received command: run
+2022-06-15 22:01:25 INFO Agent starting run with config:
+	batch_size: 16
+	epochs: 30
+	itersimg: 4
+	learning_rate: 1.6
+	nhead: 4
+	nlayers: 2
+	simg: 8
+	slotdimimg: 512
+	slotdimtext: 768
+	stext: 12
+	tdim: 256
+2022-06-15 22:01:25 INFO About to run command: /usr/bin/env python train.py --batch_size=16 --epochs=30 --itersimg=4 --learning_rate=1.6 --nhead=4 --nlayers=2 --simg=8 --slotdimimg=512 --slotdimtext=768 --stext=12 --tdim=256
+2022-06-15 22:01:30 INFO Running runs: ['rsx0jgfl']
+2022-06-15 22:01:35 INFO Cleaning up finished run: rsx0jgfl
+2022-06-15 22:01:36 INFO Agent received command: run
+2022-06-15 22:01:36 INFO Agent starting run with config:
+	batch_size: 256
+	epochs: 25
+	itersimg: 2
+	learning_rate: 1.2000000000000002
+	nhead: 4
+	nlayers: 4
+	simg: 8
+	slotdimimg: 256
+	slotdimtext: 128
+	stext: 6
+	tdim: 128
+2022-06-15 22:01:36 INFO About to run command: /usr/bin/env python train.py --batch_size=256 --epochs=25 --itersimg=2 --learning_rate=1.2000000000000002 --nhead=4 --nlayers=4 --simg=8 --slotdimimg=256 --slotdimtext=128 --stext=6 --tdim=128
+2022-06-15 22:03:42 INFO Running runs: []
+2022-06-15 22:03:42 INFO Agent received command: run
+2022-06-15 22:03:42 INFO Agent starting run with config:
+	batch_size: 16
+	epochs: 25
+	itersimg: 2
+	learning_rate: 1
+	nhead: 8
+	nlayers: 4
+	simg: 10
+	slotdimimg: 512
+	slotdimtext: 128
+	stext: 6
+	tdim: 128
+2022-06-15 22:03:42 INFO About to run command: /usr/bin/env python train.py --batch_size=16 --epochs=25 --itersimg=2 --learning_rate=1 --nhead=8 --nlayers=4 --simg=10 --slotdimimg=512 --slotdimtext=128 --stext=6 --tdim=128
+2022-06-15 22:03:47 INFO Running runs: ['hxtezxya']
+2022-06-15 22:08:26 ERROR 500 response executing GraphQL.
+2022-06-15 22:08:26 ERROR {"errors":[{"message":"internal database error","path":["agentHeartbeat"]}],"data":{"agentHeartbeat":null}}
+2022-06-15 22:08:30 ERROR 500 response executing GraphQL.
+2022-06-15 22:08:30 ERROR {"errors":[{"message":"internal database error","path":["agentHeartbeat"]}],"data":{"agentHeartbeat":null}}
+2022-06-15 22:08:36 ERROR 500 response executing GraphQL.
+2022-06-15 22:08:36 ERROR {"error":"internal database error"}
+2022-06-15 22:08:36 ERROR Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/lib/retry.py", line 102, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 140, in execute
+    return self.client.execute(*args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/transport/requests.py", line 39, in execute
+    request.raise_for_status()
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: https://api.wandb.ai/graphql
+2022-06-15 22:08:49 ERROR 500 response executing GraphQL.
+2022-06-15 22:08:49 ERROR {"errors":[{"message":"internal database error","path":["agentHeartbeat"]}],"data":{"agentHeartbeat":null}}
+2022-06-15 22:09:21 ERROR 500 response executing GraphQL.
+2022-06-15 22:09:21 ERROR {"errors":[{"message":"internal database error","path":["agentHeartbeat"]}],"data":{"agentHeartbeat":null}}
+2022-06-15 22:09:52 ERROR 500 response executing GraphQL.
+2022-06-15 22:09:52 ERROR {"errors":[{"message":"internal database error","path":["agentHeartbeat"]}],"data":{"agentHeartbeat":null}}
+2022-06-15 22:10:33 ERROR 500 response executing GraphQL.
+2022-06-15 22:10:33 ERROR {"errors":[{"message":"internal database error","path":["agentHeartbeat"]}],"data":{"agentHeartbeat":null}}
+2022-06-15 22:35:41 INFO Running runs: []
+2022-06-15 22:35:41 INFO Agent received command: run
+2022-06-15 22:35:41 INFO Agent starting run with config:
+	batch_size: 32
+	epochs: 25
+	itersimg: 8
+	learning_rate: 1.4
+	nhead: 4
+	nlayers: 3
+	simg: 10
+	slotdimimg: 512
+	slotdimtext: 256
+	stext: 12
+	tdim: 256
+2022-06-15 22:35:41 INFO About to run command: /usr/bin/env python train.py --batch_size=32 --epochs=25 --itersimg=8 --learning_rate=1.4 --nhead=4 --nlayers=3 --simg=10 --slotdimimg=512 --slotdimtext=256 --stext=12 --tdim=256
+2022-06-15 22:35:46 INFO Running runs: ['wqvi92t6']
+2022-06-15 23:51:13 INFO Cleaning up finished run: wqvi92t6
+2022-06-15 23:51:13 INFO Agent received command: run
+2022-06-15 23:51:13 INFO Agent starting run with config:
+	batch_size: 32
+	epochs: 20
+	itersimg: 10
+	learning_rate: 0.8
+	nhead: 4
+	nlayers: 2
+	simg: 8
+	slotdimimg: 128
+	slotdimtext: 128
+	stext: 6
+	tdim: 256
+2022-06-15 23:51:13 INFO About to run command: /usr/bin/env python train.py --batch_size=32 --epochs=20 --itersimg=10 --learning_rate=0.8 --nhead=4 --nlayers=2 --simg=8 --slotdimimg=128 --slotdimtext=128 --stext=6 --tdim=256
+2022-06-15 23:51:18 INFO Running runs: ['k0e6ursv']
+2022-06-16 00:49:39 INFO Cleaning up finished run: k0e6ursv
+2022-06-16 00:49:40 INFO Agent received command: run
+2022-06-16 00:49:40 INFO Agent starting run with config:
+	batch_size: 256
+	epochs: 25
+	itersimg: 10
+	learning_rate: 0.8
+	nhead: 4
+	nlayers: 3
+	simg: 10
+	slotdimimg: 256
+	slotdimtext: 512
+	stext: 10
+	tdim: 128
+2022-06-16 00:49:40 INFO About to run command: /usr/bin/env python train.py --batch_size=256 --epochs=25 --itersimg=10 --learning_rate=0.8 --nhead=4 --nlayers=3 --simg=10 --slotdimimg=256 --slotdimtext=512 --stext=10 --tdim=128
+2022-06-16 00:49:45 INFO Running runs: ['g8ouo3di']
+2022-06-16 01:38:30 INFO Cleaning up finished run: g8ouo3di
+2022-06-16 01:38:31 INFO Agent received command: run
+2022-06-16 01:38:31 INFO Agent starting run with config:
+	batch_size: 16
+	epochs: 30
+	itersimg: 4
+	learning_rate: 1
+	nhead: 4
+	nlayers: 3
+	simg: 10
+	slotdimimg: 768
+	slotdimtext: 512
+	stext: 10
+	tdim: 512
+2022-06-16 01:38:31 INFO About to run command: /usr/bin/env python train.py --batch_size=16 --epochs=30 --itersimg=4 --learning_rate=1 --nhead=4 --nlayers=3 --simg=10 --slotdimimg=768 --slotdimtext=512 --stext=10 --tdim=512
+2022-06-16 01:38:36 INFO Running runs: ['8imkqat5']
+2022-06-16 03:37:47 INFO Cleaning up finished run: 8imkqat5
+2022-06-16 03:37:47 INFO Agent received command: run
+2022-06-16 03:37:47 INFO Agent starting run with config:
+	batch_size: 32
+	epochs: 35
+	itersimg: 2
+	learning_rate: 1.4
+	nhead: 4
+	nlayers: 3
+	simg: 8
+	slotdimimg: 512
+	slotdimtext: 256
+	stext: 14
+	tdim: 512
+2022-06-16 03:37:47 INFO About to run command: /usr/bin/env python train.py --batch_size=32 --epochs=35 --itersimg=2 --learning_rate=1.4 --nhead=4 --nlayers=3 --simg=8 --slotdimimg=512 --slotdimtext=256 --stext=14 --tdim=512
+2022-06-16 03:37:52 INFO Running runs: ['zwbevif4']
+2022-06-16 05:18:19 ERROR Detected 5 failed runs in a row, shutting down.
+2022-06-16 05:18:19 INFO To change this value set WANDB_AGENT_MAX_INITIAL_FAILURES=val
+2022-06-16 07:56:47 INFO Running runs: []
+2022-06-16 07:56:47 INFO Agent received command: run
+2022-06-16 07:56:47 INFO Agent starting run with config:
+	batch_size: 64
+	epochs: 30
+	itersimg: 4
+	learning_rate: 1.2000000000000002
+	nhead: 4
+	nlayers: 2
+	simg: 12
+	slotdimimg: 128
+	slotdimtext: 512
+	stext: 14
+	tdim: 512
+2022-06-16 07:56:47 INFO About to run command: /usr/bin/env python train.py --batch_size=64 --epochs=30 --itersimg=4 --learning_rate=1.2000000000000002 --nhead=4 --nlayers=2 --simg=12 --slotdimimg=128 --slotdimtext=512 --stext=14 --tdim=512
+2022-06-16 07:56:52 INFO Running runs: ['qk2xq7a9']
+2022-06-17 15:22:05 INFO Cleaning up finished run: qk2xq7a9
+2022-06-17 15:22:06 INFO Agent received command: run
+2022-06-17 15:22:06 INFO Agent starting run with config:
+	batch_size: 32
+	epochs: 25
+	itersimg: 4
+	learning_rate: 1.2000000000000002
+	nhead: 4
+	nlayers: 2
+	simg: 14
+	slotdimimg: 256
+	slotdimtext: 128
+	stext: 6
+	tdim: 256
+2022-06-17 15:22:06 INFO About to run command: /usr/bin/env python train.py --batch_size=32 --epochs=25 --itersimg=4 --learning_rate=1.2000000000000002 --nhead=4 --nlayers=2 --simg=14 --slotdimimg=256 --slotdimtext=128 --stext=6 --tdim=256
+2022-06-17 15:22:11 INFO Running runs: ['ewzutscu']
+2022-06-24 08:04:35 INFO Running runs: []
+2022-06-24 08:04:36 INFO Agent received command: run
+2022-06-24 08:04:36 INFO Agent starting run with config:
+	batch_size: 256
+	epochs: 40
+	itersimg: 6
+	learning_rate: 0.0048
+	nhead: 4
+	nlayers: 4
+	simg: 30
+	slotdimimg: 256
+	tdim: 512
+2022-06-24 08:04:36 INFO About to run command: /usr/bin/env python train.py --batch_size=256 --epochs=40 --itersimg=6 --learning_rate=0.0048 --nhead=4 --nlayers=4 --simg=30 --slotdimimg=256 --tdim=512
+2022-06-24 08:04:41 INFO Running runs: ['usft4cfs']
+2022-06-24 08:11:49 INFO Running runs: []
+2022-06-24 08:11:49 INFO Agent received command: run
+2022-06-24 08:11:49 INFO Agent starting run with config:
+	batch_size: 128
+	epochs: 40
+	itersimg: 4
+	learning_rate: 0.0012
+	nhead: 8
+	nlayers: 3
+	simg: 25
+	slotdimimg: 512
+	tdim: 512
+2022-06-24 08:11:49 INFO About to run command: /usr/bin/env python train.py --batch_size=128 --epochs=40 --itersimg=4 --learning_rate=0.0012 --nhead=8 --nlayers=3 --simg=25 --slotdimimg=512 --tdim=512
+2022-06-24 08:11:54 INFO Running runs: ['zjcvs4oe']
+2022-06-24 08:29:37 INFO Cleaning up finished run: zjcvs4oe
+2022-06-24 08:29:37 INFO Agent received command: run
+2022-06-24 08:29:37 INFO Agent starting run with config:
+	batch_size: 128
+	epochs: 20
+	itersimg: 4
+	learning_rate: 0.0058000000000000005
+	nhead: 4
+	nlayers: 2
+	simg: 15
+	slotdimimg: 512
+	tdim: 256
+2022-06-24 08:29:37 INFO About to run command: /usr/bin/env python train.py --batch_size=128 --epochs=20 --itersimg=4 --learning_rate=0.0058000000000000005 --nhead=4 --nlayers=2 --simg=15 --slotdimimg=512 --tdim=256
+2022-06-24 08:29:42 INFO Running runs: ['e6sltdma']
+2022-06-24 08:38:11 INFO Cleaning up finished run: e6sltdma
+2022-06-24 08:38:12 INFO Agent received command: run
+2022-06-24 08:38:12 INFO Agent starting run with config:
+	batch_size: 16
+	epochs: 25
+	itersimg: 6
+	learning_rate: 0.002
+	nhead: 8
+	nlayers: 4
+	simg: 5
+	slotdimimg: 256
+	tdim: 256
+2022-06-24 08:38:12 INFO About to run command: /usr/bin/env python train.py --batch_size=16 --epochs=25 --itersimg=6 --learning_rate=0.002 --nhead=8 --nlayers=4 --simg=5 --slotdimimg=256 --tdim=256
+2022-06-24 08:38:17 INFO Running runs: ['4q9ws2io']
+2022-06-24 08:55:35 INFO Cleaning up finished run: 4q9ws2io
+2022-06-24 08:55:36 INFO Agent received command: run
+2022-06-24 08:55:36 INFO Agent starting run with config:
+	batch_size: 128
+	epochs: 25
+	itersimg: 8
+	learning_rate: 0.0096
+	nhead: 4
+	nlayers: 2
+	simg: 25
+	slotdimimg: 256
+	tdim: 256
+2022-06-24 08:55:36 INFO About to run command: /usr/bin/env python train.py --batch_size=128 --epochs=25 --itersimg=8 --learning_rate=0.0096 --nhead=4 --nlayers=2 --simg=25 --slotdimimg=256 --tdim=256
+2022-06-24 08:55:41 INFO Running runs: ['lp9965oo']
+2022-06-24 09:06:14 INFO Cleaning up finished run: lp9965oo
+2022-06-24 09:06:15 INFO Agent received command: run
+2022-06-24 09:06:15 INFO Agent starting run with config:
+	batch_size: 128
+	epochs: 35
+	itersimg: 8
+	learning_rate: 0.0098
+	nhead: 8
+	nlayers: 3
+	simg: 10
+	slotdimimg: 512
+	tdim: 256
+2022-06-24 09:06:15 INFO About to run command: /usr/bin/env python train.py --batch_size=128 --epochs=35 --itersimg=8 --learning_rate=0.0098 --nhead=8 --nlayers=3 --simg=10 --slotdimimg=512 --tdim=256
+2022-06-24 09:06:20 INFO Running runs: ['z9m1fc5g']
+2022-06-24 09:09:28 INFO Running runs: []
+2022-06-24 09:09:28 INFO Agent received command: run
+2022-06-24 09:09:28 INFO Agent starting run with config:
+	batch_size: 32
+	epochs: 25
+	itersimg: 6
+	learning_rate: 0.0076
+	nhead: 8
+	nlayers: 2
+	simg: 10
+	slotdimimg: 512
+	slotdimtext: 256
+	stext: 15
+	tdim: 512
+2022-06-24 09:09:28 INFO About to run command: /usr/bin/env python train.py --batch_size=32 --epochs=25 --itersimg=6 --learning_rate=0.0076 --nhead=8 --nlayers=2 --simg=10 --slotdimimg=512 --slotdimtext=256 --stext=15 --tdim=512
+2022-06-24 09:09:33 INFO Running runs: ['b6p7icns']
+2022-06-24 09:09:59 INFO Cleaning up finished run: b6p7icns
+2022-06-24 09:13:45 INFO Running runs: []
+2022-06-24 09:13:46 INFO Agent received command: run
+2022-06-24 09:13:46 INFO Agent starting run with config:
+	batch_size: 256
+	epochs: 25
+	itersimg: 4
+	learning_rate: 0.0008
+	nhead: 4
+	nlayers: 4
+	simg: 15
+	slotdimimg: 512
+	slotdimtext: 768
+	stext: 20
+	tdim: 512
+2022-06-24 09:13:46 INFO About to run command: /usr/bin/env python train.py --batch_size=256 --epochs=25 --itersimg=4 --learning_rate=0.0008 --nhead=4 --nlayers=4 --simg=15 --slotdimimg=512 --slotdimtext=768 --stext=20 --tdim=512
+2022-06-24 09:13:51 INFO Running runs: ['e7fxgc6x']
+2022-06-24 09:25:40 INFO Cleaning up finished run: e7fxgc6x
+2022-06-24 09:25:47 INFO Agent received command: run
+2022-06-24 09:25:47 INFO Agent starting run with config:
+	batch_size: 256
+	epochs: 20
+	itersimg: 8
+	learning_rate: 0.0078
+	nhead: 8
+	nlayers: 4
+	simg: 15
+	slotdimimg: 512
+	slotdimtext: 768
+	stext: 20
+	tdim: 256
+2022-06-24 09:25:47 INFO About to run command: /usr/bin/env python train.py --batch_size=256 --epochs=20 --itersimg=8 --learning_rate=0.0078 --nhead=8 --nlayers=4 --simg=15 --slotdimimg=512 --slotdimtext=768 --stext=20 --tdim=256
+2022-06-24 09:25:52 INFO Running runs: ['z9onhi9m']
+2022-06-24 09:29:25 INFO Agent received command: stop
+2022-06-24 09:29:25 INFO Stop: z9onhi9m
+2022-06-24 09:29:30 INFO Cleaning up finished run: z9onhi9m
+2022-06-24 09:29:30 INFO Agent received command: run
+2022-06-24 09:29:30 INFO Agent starting run with config:
+	batch_size: 128
+	epochs: 25
+	itersimg: 2
+	learning_rate: 0.0068000000000000005
+	nhead: 8
+	nlayers: 2
+	simg: 15
+	slotdimimg: 256
+	slotdimtext: 768
+	stext: 20
+	tdim: 256
+2022-06-24 09:29:30 INFO About to run command: /usr/bin/env python train.py --batch_size=128 --epochs=25 --itersimg=2 --learning_rate=0.0068000000000000005 --nhead=8 --nlayers=2 --simg=15 --slotdimimg=256 --slotdimtext=768 --stext=20 --tdim=256
+2022-06-24 09:29:35 INFO Running runs: ['6pai9gvh']
+2022-06-24 09:40:44 INFO Cleaning up finished run: 6pai9gvh
+2022-06-24 09:40:50 INFO Agent received command: run
+2022-06-24 09:40:50 INFO Agent starting run with config:
+	batch_size: 128
+	epochs: 35
+	itersimg: 10
+	learning_rate: 0.0092
+	nhead: 8
+	nlayers: 3
+	simg: 15
+	slotdimimg: 512
+	slotdimtext: 256
+	stext: 10
+	tdim: 256
+2022-06-24 09:40:50 INFO About to run command: /usr/bin/env python train.py --batch_size=128 --epochs=35 --itersimg=10 --learning_rate=0.0092 --nhead=8 --nlayers=3 --simg=15 --slotdimimg=512 --slotdimtext=256 --stext=10 --tdim=256
+2022-06-24 09:40:55 INFO Running runs: ['0meocks5']
+2022-06-24 09:56:50 INFO Cleaning up finished run: 0meocks5
+2022-06-24 09:56:51 INFO Agent received command: run
+2022-06-24 09:56:51 INFO Agent starting run with config:
+	batch_size: 128
+	epochs: 30
+	itersimg: 10
+	learning_rate: 0.0028
+	nhead: 8
+	nlayers: 2
+	simg: 15
+	slotdimimg: 256
+	slotdimtext: 256
+	stext: 10
+	tdim: 512
+2022-06-24 09:56:51 INFO About to run command: /usr/bin/env python train.py --batch_size=128 --epochs=30 --itersimg=10 --learning_rate=0.0028 --nhead=8 --nlayers=2 --simg=15 --slotdimimg=256 --slotdimtext=256 --stext=10 --tdim=512
+2022-06-24 09:56:56 INFO Running runs: ['ch1p7p1y']
+2022-06-24 10:10:03 INFO Cleaning up finished run: ch1p7p1y
+2022-06-24 10:10:04 INFO Agent received command: run
+2022-06-24 10:10:04 INFO Agent starting run with config:
+	batch_size: 256
+	epochs: 30
+	itersimg: 6
+	learning_rate: 0.0066
+	nhead: 4
+	nlayers: 3
+	simg: 25
+	slotdimimg: 512
+	slotdimtext: 256
+	stext: 5
+	tdim: 512
+2022-06-24 10:10:04 INFO About to run command: /usr/bin/env python train.py --batch_size=256 --epochs=30 --itersimg=6 --learning_rate=0.0066 --nhead=4 --nlayers=3 --simg=25 --slotdimimg=512 --slotdimtext=256 --stext=5 --tdim=512
+2022-06-24 10:10:09 INFO Running runs: ['49l84brz']
+2022-06-24 10:23:57 ERROR Detected 5 failed runs in a row, shutting down.
+2022-06-24 10:23:57 INFO To change this value set WANDB_AGENT_MAX_INITIAL_FAILURES=val

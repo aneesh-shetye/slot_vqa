@@ -1,0 +1,267 @@
+diff --git a/datasets/__pycache__/__init__.cpython-39.pyc b/datasets/__pycache__/__init__.cpython-39.pyc
+index 81647f8..fe942e1 100644
+Binary files a/datasets/__pycache__/__init__.cpython-39.pyc and b/datasets/__pycache__/__init__.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/clevr.cpython-39.pyc b/datasets/__pycache__/clevr.cpython-39.pyc
+index c63dd83..d7bd183 100644
+Binary files a/datasets/__pycache__/clevr.cpython-39.pyc and b/datasets/__pycache__/clevr.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/clevrref.cpython-39.pyc b/datasets/__pycache__/clevrref.cpython-39.pyc
+index bb304c3..636c6d5 100644
+Binary files a/datasets/__pycache__/clevrref.cpython-39.pyc and b/datasets/__pycache__/clevrref.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/coco.cpython-39.pyc b/datasets/__pycache__/coco.cpython-39.pyc
+index f3991f6..9be9911 100644
+Binary files a/datasets/__pycache__/coco.cpython-39.pyc and b/datasets/__pycache__/coco.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/flickr.cpython-39.pyc b/datasets/__pycache__/flickr.cpython-39.pyc
+index 7e92282..27b4dba 100644
+Binary files a/datasets/__pycache__/flickr.cpython-39.pyc and b/datasets/__pycache__/flickr.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/gqa.cpython-39.pyc b/datasets/__pycache__/gqa.cpython-39.pyc
+index 31f29bc..0e40b4d 100644
+Binary files a/datasets/__pycache__/gqa.cpython-39.pyc and b/datasets/__pycache__/gqa.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/gqa_tweaked.cpython-39.pyc b/datasets/__pycache__/gqa_tweaked.cpython-39.pyc
+index b447a84..c206d54 100644
+Binary files a/datasets/__pycache__/gqa_tweaked.cpython-39.pyc and b/datasets/__pycache__/gqa_tweaked.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/lvis.cpython-39.pyc b/datasets/__pycache__/lvis.cpython-39.pyc
+index 4f78b79..84cdc22 100644
+Binary files a/datasets/__pycache__/lvis.cpython-39.pyc and b/datasets/__pycache__/lvis.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/lvis_modulation.cpython-39.pyc b/datasets/__pycache__/lvis_modulation.cpython-39.pyc
+index 3c89d8e..11e73f1 100644
+Binary files a/datasets/__pycache__/lvis_modulation.cpython-39.pyc and b/datasets/__pycache__/lvis_modulation.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/mixed.cpython-39.pyc b/datasets/__pycache__/mixed.cpython-39.pyc
+index 2ac6044..8827222 100644
+Binary files a/datasets/__pycache__/mixed.cpython-39.pyc and b/datasets/__pycache__/mixed.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/phrasecut.cpython-39.pyc b/datasets/__pycache__/phrasecut.cpython-39.pyc
+index a1c6ec3..a6b61f8 100644
+Binary files a/datasets/__pycache__/phrasecut.cpython-39.pyc and b/datasets/__pycache__/phrasecut.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/refexp.cpython-39.pyc b/datasets/__pycache__/refexp.cpython-39.pyc
+index ae304fc..c933c2f 100644
+Binary files a/datasets/__pycache__/refexp.cpython-39.pyc and b/datasets/__pycache__/refexp.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/transforms.cpython-39.pyc b/datasets/__pycache__/transforms.cpython-39.pyc
+index 21e0556..4935039 100644
+Binary files a/datasets/__pycache__/transforms.cpython-39.pyc and b/datasets/__pycache__/transforms.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/vg.cpython-39.pyc b/datasets/__pycache__/vg.cpython-39.pyc
+index ff5922a..c2f235b 100644
+Binary files a/datasets/__pycache__/vg.cpython-39.pyc and b/datasets/__pycache__/vg.cpython-39.pyc differ
+diff --git a/datasets/coco.py b/datasets/coco.py
+index 5fcd679..5f575d8 100644
+--- a/datasets/coco.py
++++ b/datasets/coco.py
+@@ -14,6 +14,7 @@ from pycocotools import mask as coco_mask
+ 
+ import datasets.transforms as T
+ 
++from transformers import CLIPProcessor
+ 
+ class ModulatedDetection(torchvision.datasets.CocoDetection):
+     def __init__(self, img_folder, ann_file, transforms, return_masks, return_tokens, tokenizer, is_train=False):
+@@ -203,8 +204,14 @@ class ConvertCocoPolysToMask(object):
+ 
+ def make_coco_transforms(image_set, cautious):
+ 
+-    normalize = T.Compose([T.ToTensor(), T.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])])
++    ################################################################
++    #normalize = T.Compose([T.ToTensor(), T.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])])
++    #################################################################
+ 
++    ################################################################
++    processor = CLIPProcessor.from_pretrained('openai/clip-vit-base-patch32')
++    ################################################################
++    normalize = T.Compose([ T.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])])
+     scales = [480, 512, 544, 576, 608, 640, 672, 704, 736, 768, 800]
+ 
+     max_size = 1333
+@@ -224,7 +231,7 @@ def make_coco_transforms(image_set, cautious):
+             #         ),
+             #     ),
+                 # T.RandomResize([800], max_size=800), 
+-                T.Resize_orig([600, 600]), 
++                T.CLIP_transf(processor), 
+                 normalize,
+              ]
+         )
+diff --git a/datasets/gqa_tweaked.py b/datasets/gqa_tweaked.py
+index 3c3bf58..9c1ad11 100644
+--- a/datasets/gqa_tweaked.py
++++ b/datasets/gqa_tweaked.py
+@@ -123,7 +123,9 @@ class MyCollate:
+     
+     def __call__(self, batch): 
+ 
+-        imgs = [item[0].unsqueeze(0) for item in batch]
++        # imgs = [item[0].unsqueeze(0) for item in batch]
++        print(f'images.shape after clip = {item[0].shape}')
++        imgs = [item[0] for item in batch]
+         imgs = torch.cat(imgs, dim=0 )
+         
+         ques = []
+diff --git a/datasets/transforms.py b/datasets/transforms.py
+index 9105e4a..3756781 100644
+--- a/datasets/transforms.py
++++ b/datasets/transforms.py
+@@ -220,6 +220,14 @@ class Resize_orig(object):
+         img = self.t(img)
+         return img, target
+ 
++class CLIP_transf(object):
++    def __init__(self, processor):
++        self.processor = processor
++
++    def __call__(self, img, target=None):
++        img = self.processor(img, return_tensors='pt')['pixel_values']
++        return img, target
++
+ 
+ class RandomPad(object):
+     def __init__(self, max_pad):
+diff --git a/datasets/util/__pycache__/__init__.cpython-39.pyc b/datasets/util/__pycache__/__init__.cpython-39.pyc
+index cebd5ba..1a298de 100644
+Binary files a/datasets/util/__pycache__/__init__.cpython-39.pyc and b/datasets/util/__pycache__/__init__.cpython-39.pyc differ
+diff --git a/datasets/util/__pycache__/box_ops.cpython-39.pyc b/datasets/util/__pycache__/box_ops.cpython-39.pyc
+index 94fceb9..c5bc7df 100644
+Binary files a/datasets/util/__pycache__/box_ops.cpython-39.pyc and b/datasets/util/__pycache__/box_ops.cpython-39.pyc differ
+diff --git a/datasets/util/__pycache__/dist.cpython-39.pyc b/datasets/util/__pycache__/dist.cpython-39.pyc
+index 3c20845..e1fed6f 100644
+Binary files a/datasets/util/__pycache__/dist.cpython-39.pyc and b/datasets/util/__pycache__/dist.cpython-39.pyc differ
+diff --git a/datasets/util/__pycache__/misc.cpython-39.pyc b/datasets/util/__pycache__/misc.cpython-39.pyc
+index 10dc39d..b3bfc0d 100644
+Binary files a/datasets/util/__pycache__/misc.cpython-39.pyc and b/datasets/util/__pycache__/misc.cpython-39.pyc differ
+diff --git a/model/__pycache__/img_encoder.cpython-39.pyc b/model/__pycache__/img_encoder.cpython-39.pyc
+index ee567e7..29ce79e 100644
+Binary files a/model/__pycache__/img_encoder.cpython-39.pyc and b/model/__pycache__/img_encoder.cpython-39.pyc differ
+diff --git a/model/__pycache__/model.cpython-39.pyc b/model/__pycache__/model.cpython-39.pyc
+index 756570f..7286473 100644
+Binary files a/model/__pycache__/model.cpython-39.pyc and b/model/__pycache__/model.cpython-39.pyc differ
+diff --git a/model/__pycache__/slot_attention.cpython-39.pyc b/model/__pycache__/slot_attention.cpython-39.pyc
+index e301bc2..8549d51 100644
+Binary files a/model/__pycache__/slot_attention.cpython-39.pyc and b/model/__pycache__/slot_attention.cpython-39.pyc differ
+diff --git a/model/__pycache__/text_encoder.cpython-39.pyc b/model/__pycache__/text_encoder.cpython-39.pyc
+index c070d36..d53ed50 100644
+Binary files a/model/__pycache__/text_encoder.cpython-39.pyc and b/model/__pycache__/text_encoder.cpython-39.pyc differ
+diff --git a/model/img_encoder.py b/model/img_encoder.py
+index 1caa97b..cf385a9 100644
+--- a/model/img_encoder.py
++++ b/model/img_encoder.py
+@@ -43,6 +43,7 @@ def build_grid(resolution: tuple):
+ class SlotImage(nn.Module): 
+ 
+     def __init__(self, 
++            clip_vision_model, 
+             resolution: tuple, # tuple H, W
+             num_slots: int, #no. of slots (k) 
+             num_iter: int, 
+@@ -65,6 +66,7 @@ class SlotImage(nn.Module):
+             nn.ReLU()
+             )        # size = N, 64, H, W, 
+ 
++        self.clip_encoder = clip_vision_model
+         self.pos_emb = SoftPositionEmbed(64, self.resolution) 
+ 
+         self.mlp = nn.Sequential(
+@@ -88,9 +90,10 @@ class SlotImage(nn.Module):
+         inp.shape = N, C, H, W 
+         '''
+         x = inp
+-        res = (x.shape[2], x.shape[3])
++        # res = (x.shape[2], x.shape[3])
+         #print(inp.shape) 
+-        x = self.encoder(inp) 
++        # x = self.encoder(inp) 
++        x = self.clip_encoder(x)['last_hidden_state']
+         x = x.reshape(x.shape[0], x.shape[1], -1) #x.shape = N,C, H*W 
+         x = x.permute(0, 2, 1) #x.shape = N, H*W, C 
+         x = self.layer_norm(self.mlp(x)) 
+diff --git a/model/model.py b/model/model.py
+index d538fe7..e8ed345 100644
+--- a/model/model.py
++++ b/model/model.py
+@@ -8,6 +8,7 @@ from .text_encoder import SlotText
+ class SlotVQA(nn.Module): 
+ 
+     def __init__(self, 
++            clip_vision_model, 
+             mbert, 
+             mbert_out_size: int =768, 
+             resolution: tuple =(600, 600), 
+@@ -23,7 +24,9 @@ class SlotVQA(nn.Module):
+             ans_dim: int =200): 
+ 
+         super().__init__()
+-        self.mbert = mbert, 
++        self.clip_vision_model = clip_vision_model
++
++        self.mbert = mbert 
+         self.mbert_out_size = mbert_out_size
+ 
+         self.res = resolution
+@@ -35,7 +38,7 @@ class SlotVQA(nn.Module):
+         self.slot_dim_text = slot_dim_text
+         self.transf_dim = transf_dim
+ 
+-        self.img_enc = SlotImage(resolution=self.res, 
++        self.img_enc = SlotImage(self.clip_vision_model, resolution=self.res, 
+                 num_slots=self.slots_img, num_iter=self.iters_img, 
+                 slot_dim=self.slot_dim_img)
+             
+diff --git a/train.py b/train.py
+index 9110ea0..da7db34 100644
+--- a/train.py
++++ b/train.py
+@@ -142,11 +142,10 @@ def main_worker(gpu, args):
+         world_size=args.world_size, rank=args.rank)
+ 
+     if args.rank == 0:
+-        '''
+-        wandb.init(config=args, project='translation_test')#############################################
++
++        wandb.init(config=args, project='slot_vqa')#############################################
+         wandb.config.update(args)
+         config = wandb.config
+-        '''
+     
+         # exit()
+         args.checkpoint_dir.mkdir(parents=True, exist_ok=True)
+@@ -167,7 +166,11 @@ def main_worker(gpu, args):
+     for param in mbert.parameters(): 
+         param.requires_grad=False
+ 
+-    model = SlotVQA(mbert, resolution=(600, 600), 
++    clip_vision_model = CLIPVisionModel.from_pretrained('openai/clip-vit-base-patch32')
++    for param in clip_vision_model.parameters(): 
++        param.requires_grad=False
++
++    model = SlotVQA(clip_vision_model, mbert, resolution=(600, 600), 
+                 slots_img=args.simg, iters_img=args.itersimg, slot_dim_img=args.slotdimimg, 
+                 slots_text=args.stext, iters_text=args.iterstext, slot_dim_text=args.slotdimtext, 
+                 num_head=args.nhead, transf_dim=args.tdim, transf_num_layers=args.nlayers, 
+@@ -215,6 +218,7 @@ def main_worker(gpu, args):
+         sampler.set_epoch(epoch)
+         epoch_loss = 0 
+         
++        counter = 0 
+         for step, item in enumerate(loader, start=epoch*len(loader)): 
+             
+             img = item[0].cuda(gpu, non_blocking=True)
+@@ -229,15 +233,18 @@ def main_worker(gpu, args):
+ 
+             print(f'ans.shape={ans.shape}, pred.shape={pred.shape}')
+             loss = loss_fn(pred, ans)
+-            print(loss)
++            wandb.log({"iter_loss": loss})
+             torch.nn.utils.clip_grad_norm(model.parameters(), args.clip)
+             loss.backward
+ 
+             optimizer.step()
+ 
++            counter += 1
++
+             epoch_loss+=loss.item()
+ 
+             if args.rank==0: 
++                wandb.log({"epoch_loss": epoch_loss/counter})
+                 if step%args.print_freq==0: 
+                     stats = dict(epoch=epoch, step=step, 
+                                 loss=loss.item(), 
+@@ -253,3 +260,4 @@ def main_worker(gpu, args):
+             
+ if __name__ == '__main__': 
+     main()
++    wandb.finish()
+\ No newline at end of file

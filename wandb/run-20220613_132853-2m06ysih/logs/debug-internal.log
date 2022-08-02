@@ -1,0 +1,101 @@
+2022-06-13 13:28:53,764 INFO    BackendThr:174445 [internal.py:wandb_internal():90] W&B internal server running at pid: 174445, started at: 2022-06-13 13:28:53.763839
+2022-06-13 13:28:53,764 INFO    MainThread:174445 [wandb_init.py:init():525] backend started and connected
+2022-06-13 13:28:53,765 DEBUG   MainThread:174445 [config_util.py:dict_from_config_file():100] no default config file found in config-defaults.yaml
+2022-06-13 13:28:53,770 INFO    MainThread:174445 [wandb_init.py:init():596] updated telemetry
+2022-06-13 13:28:53,771 INFO    WriterThread:174445 [datastore.py:open_for_write():75] open: /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/run-2m06ysih.wandb
+2022-06-13 13:28:53,772 DEBUG   SenderThread:174445 [sender.py:send():232] send: header
+2022-06-13 13:28:53,781 INFO    MainThread:174445 [wandb_init.py:init():627] communicating run to backend with 30 second timeout
+2022-06-13 13:28:53,782 DEBUG   SenderThread:174445 [sender.py:send():232] send: run
+2022-06-13 13:28:53,991 INFO    SenderThread:174445 [dir_watcher.py:__init__():197] watching files in: /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/files
+2022-06-13 13:28:53,991 INFO    SenderThread:174445 [sender.py:_start_run_threads():811] run started: 2m06ysih with start time 1655119733
+2022-06-13 13:28:53,993 INFO    MainThread:174445 [wandb_run.py:_on_init():1924] communicating current version
+2022-06-13 13:28:53,993 DEBUG   SenderThread:174445 [sender.py:send():232] send: summary
+2022-06-13 13:28:53,993 DEBUG   HandlerThread:174445 [handler.py:handle_request():141] handle_request: check_version
+2022-06-13 13:28:53,993 INFO    SenderThread:174445 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-13 13:28:53,994 DEBUG   SenderThread:174445 [sender.py:send_request():246] send_request: check_version
+2022-06-13 13:28:54,053 INFO    MainThread:174445 [wandb_run.py:_on_init():1928] got version response upgrade_message: "wandb version 0.12.18 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2022-06-13 13:28:54,053 INFO    MainThread:174445 [wandb_init.py:init():662] starting run threads in backend
+2022-06-13 13:28:54,054 DEBUG   HandlerThread:174445 [handler.py:handle_request():141] handle_request: run_start
+2022-06-13 13:28:54,056 DEBUG   HandlerThread:174445 [meta.py:__init__():35] meta init
+2022-06-13 13:28:54,056 DEBUG   HandlerThread:174445 [meta.py:__init__():49] meta init done
+2022-06-13 13:28:54,057 DEBUG   HandlerThread:174445 [meta.py:probe():209] probe
+2022-06-13 13:28:54,063 DEBUG   HandlerThread:174445 [meta.py:_setup_git():199] setup git
+2022-06-13 13:28:54,082 DEBUG   HandlerThread:174445 [meta.py:_setup_git():206] setup git done
+2022-06-13 13:28:54,082 DEBUG   HandlerThread:174445 [meta.py:_save_code():87] save code
+2022-06-13 13:28:54,089 DEBUG   HandlerThread:174445 [meta.py:_save_code():108] save code done
+2022-06-13 13:28:54,089 DEBUG   HandlerThread:174445 [meta.py:_save_patches():125] save patches
+2022-06-13 13:28:54,151 DEBUG   HandlerThread:174445 [meta.py:_save_patches():167] save patches done
+2022-06-13 13:28:54,152 DEBUG   HandlerThread:174445 [meta.py:_save_pip():53] save pip
+2022-06-13 13:28:54,152 DEBUG   HandlerThread:174445 [meta.py:_save_pip():67] save pip done
+2022-06-13 13:28:54,152 DEBUG   HandlerThread:174445 [meta.py:_save_conda():74] save conda
+2022-06-13 13:28:54,993 INFO    Thread-10 :174445 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/files/conda-environment.yaml
+2022-06-13 13:28:54,993 INFO    Thread-10 :174445 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/files/diff.patch
+2022-06-13 13:28:54,993 INFO    Thread-10 :174445 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/files/code/train.py
+2022-06-13 13:28:54,993 INFO    Thread-10 :174445 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/files/wandb-summary.json
+2022-06-13 13:28:54,994 INFO    Thread-10 :174445 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/files/requirements.txt
+2022-06-13 13:28:54,994 INFO    Thread-10 :174445 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/files/upstream_diff_023b4d5d6cfc75b121aba3ccf0f3683343cdc267.patch
+2022-06-13 13:28:54,994 INFO    Thread-10 :174445 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/files/code
+2022-06-13 13:28:55,797 DEBUG   HandlerThread:174445 [meta.py:_save_conda():84] save conda done
+2022-06-13 13:28:55,797 DEBUG   HandlerThread:174445 [meta.py:probe():247] probe done
+2022-06-13 13:28:55,801 DEBUG   SenderThread:174445 [sender.py:send():232] send: files
+2022-06-13 13:28:55,801 INFO    SenderThread:174445 [sender.py:_save_file():948] saving file wandb-metadata.json with policy now
+2022-06-13 13:28:55,802 INFO    SenderThread:174445 [sender.py:_save_file():948] saving file code/train.py with policy now
+2022-06-13 13:28:55,803 INFO    SenderThread:174445 [sender.py:_save_file():948] saving file diff.patch with policy now
+2022-06-13 13:28:55,807 INFO    SenderThread:174445 [sender.py:_save_file():948] saving file upstream_diff_023b4d5d6cfc75b121aba3ccf0f3683343cdc267.patch with policy now
+2022-06-13 13:28:55,811 INFO    MainThread:174445 [wandb_run.py:_console_start():1898] atexit reg
+2022-06-13 13:28:55,811 DEBUG   HandlerThread:174445 [handler.py:handle_request():141] handle_request: stop_status
+2022-06-13 13:28:55,812 DEBUG   SenderThread:174445 [sender.py:send_request():246] send_request: stop_status
+2022-06-13 13:28:55,815 INFO    MainThread:174445 [wandb_run.py:_redirect():1771] redirect: SettingsConsole.WRAP
+2022-06-13 13:28:55,815 INFO    MainThread:174445 [wandb_run.py:_redirect():1808] Wrapping output streams.
+2022-06-13 13:28:55,816 INFO    MainThread:174445 [wandb_run.py:_redirect():1832] Redirects installed.
+2022-06-13 13:28:55,816 INFO    MainThread:174445 [wandb_init.py:init():688] run started, returning control to user process
+2022-06-13 13:28:55,823 INFO    MainThread:174445 [wandb_run.py:_config_callback():1136] config_cb None None {'workers': 5, 'print_freq': 1, 'checkpoint_dir': 'checkpoint', 'vg_img_path': '/home/aneesh/datasets/gqa_imgs/images/', 'gqa_ann_path': '/home/aneesh/datasets/gqa_ann/OpenSource/', 'gqa_split_type': 'balanced', 'mask_model': 'none', 'masks': False, 'epochs': 25, 'imset': 'train', 'batch_size': 256, 'learning_rate': 0.2, 'dropout': 0.01, 'weight_decay': 1e-06, 'momentum': 0.9, 'clip': 1, 'betas': [0.9, 0.98], 'eps': 1e-09, 'loss_fn': 'cross_entropy', 'optimizer': 'adam', 'simg': 10, 'itersimg': 5, 'slotdimimg': 512, 'stext': 7, 'iterstext': 5, 'slotdimtext': 512, 'nhead': 8, 'tdim': 512, 'nlayers': 3, 'text_encoder_type': 'openai/clip-vit-base-patch32', 'rank': 0, 'dist_url': 'tcp://localhost:58472', 'world_size': 1, 'ngpus_per_node': 1}
+2022-06-13 13:28:55,974 WARNING MsgRouterThr:174445 [router.py:message_loop():73] EOFError seen in message_loop
+2022-06-13 13:28:55,981 INFO    MainThread:174445 [wandb_run.py:_atexit_cleanup():1867] got exitcode: 1
+2022-06-13 13:28:55,981 INFO    MainThread:174445 [wandb_run.py:_restore():1839] restore
+2022-06-13 13:28:55,992 INFO    Thread-10 :174445 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/files/conda-environment.yaml
+2022-06-13 13:28:55,992 INFO    Thread-10 :174445 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/files/output.log
+2022-06-13 13:28:55,992 INFO    Thread-10 :174445 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/files/wandb-metadata.json
+2022-06-13 13:28:56,106 INFO    SenderThread:174445 [sender.py:finish():1110] shutting down sender
+2022-06-13 13:28:56,106 INFO    SenderThread:174445 [dir_watcher.py:finish():312] shutting down directory watcher
+2022-06-13 13:28:56,439 INFO    Thread-14 :174445 [upload_job.py:push():132] Uploaded file /tmp/tmpqb7hhs7rwandb/2wu455kx-wandb-metadata.json
+2022-06-13 13:28:56,466 INFO    Thread-15 :174445 [upload_job.py:push():132] Uploaded file /tmp/tmpqb7hhs7rwandb/3vooj89s-code/train.py
+2022-06-13 13:28:56,544 INFO    Thread-18 :174445 [upload_job.py:push():132] Uploaded file /tmp/tmpqb7hhs7rwandb/1xv4o5r9-diff.patch
+2022-06-13 13:28:56,680 INFO    Thread-23 :174445 [upload_job.py:push():132] Uploaded file /tmp/tmpqb7hhs7rwandb/36mkyj5g-upstream_diff_023b4d5d6cfc75b121aba3ccf0f3683343cdc267.patch
+2022-06-13 13:28:56,824 INFO    WriterThread:174445 [datastore.py:close():279] close: /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/run-2m06ysih.wandb
+2022-06-13 13:28:56,992 INFO    Thread-10 :174445 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/files/output.log
+2022-06-13 13:28:56,992 INFO    SenderThread:174445 [dir_watcher.py:finish():342] scan: /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/files
+2022-06-13 13:28:56,993 INFO    SenderThread:174445 [dir_watcher.py:finish():356] scan save: /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/files/requirements.txt requirements.txt
+2022-06-13 13:28:56,993 INFO    SenderThread:174445 [dir_watcher.py:finish():356] scan save: /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/files/output.log output.log
+2022-06-13 13:28:56,995 INFO    SenderThread:174445 [dir_watcher.py:finish():356] scan save: /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/files/conda-environment.yaml conda-environment.yaml
+2022-06-13 13:28:56,997 INFO    SenderThread:174445 [dir_watcher.py:finish():356] scan save: /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/files/wandb-metadata.json wandb-metadata.json
+2022-06-13 13:28:56,997 INFO    SenderThread:174445 [dir_watcher.py:finish():356] scan save: /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/files/config.yaml config.yaml
+2022-06-13 13:28:56,999 INFO    SenderThread:174445 [dir_watcher.py:finish():356] scan save: /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/files/upstream_diff_023b4d5d6cfc75b121aba3ccf0f3683343cdc267.patch upstream_diff_023b4d5d6cfc75b121aba3ccf0f3683343cdc267.patch
+2022-06-13 13:28:57,000 INFO    SenderThread:174445 [dir_watcher.py:finish():356] scan save: /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/files/wandb-summary.json wandb-summary.json
+2022-06-13 13:28:57,002 INFO    SenderThread:174445 [dir_watcher.py:finish():356] scan save: /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/files/diff.patch diff.patch
+2022-06-13 13:28:57,002 INFO    SenderThread:174445 [dir_watcher.py:finish():356] scan save: /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/files/code/train.py code/train.py
+2022-06-13 13:28:57,004 INFO    SenderThread:174445 [file_pusher.py:finish():145] shutting down file pusher
+2022-06-13 13:28:57,004 INFO    SenderThread:174445 [file_pusher.py:join():150] waiting for file pusher
+2022-06-13 13:28:57,506 INFO    Thread-24 :174445 [upload_job.py:push():132] Uploaded file /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/files/requirements.txt
+2022-06-13 13:28:57,509 INFO    Thread-28 :174445 [upload_job.py:push():132] Uploaded file /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/files/wandb-summary.json
+2022-06-13 13:28:57,532 INFO    Thread-25 :174445 [upload_job.py:push():132] Uploaded file /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/files/output.log
+2022-06-13 13:28:57,540 INFO    Thread-27 :174445 [upload_job.py:push():132] Uploaded file /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/files/config.yaml
+2022-06-13 13:28:57,582 INFO    Thread-26 :174445 [upload_job.py:push():132] Uploaded file /home/aneesh/github/slot_vqa/wandb/run-20220613_132853-2m06ysih/files/conda-environment.yaml
+2022-06-13 13:28:58,167 ERROR   BackendThr:174445 [internal.py:wandb_internal():165] Thread HandlerThread:
+Traceback (most recent call last):
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/internal/internal_util.py", line 51, in run
+    self._run()
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/internal/internal_util.py", line 98, in _run
+    record = self._input_record_q.get(timeout=1)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/multiprocessing/queues.py", line 117, in get
+    res = self._recv_bytes()
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/multiprocessing/connection.py", line 221, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/multiprocessing/connection.py", line 419, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/multiprocessing/connection.py", line 388, in _recv
+    raise EOFError
+EOFError
+2022-06-13 13:29:01,819 INFO    MainThread:174445 [wandb_run.py:_on_finish():1996] got exit ret: None
+2022-06-13 13:29:01,919 INFO    MainThread:174445 [wandb_run.py:_restore():1839] restore

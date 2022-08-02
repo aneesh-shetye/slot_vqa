@@ -1,0 +1,134 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.12.17
+    code_path: code/train.py
+    framework: huggingface
+    huggingface_version: 4.19.2
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.9.12
+    start_time: 1655124735
+    t:
+      1:
+      - 1
+      - 11
+      - 41
+      - 49
+      - 51
+      - 55
+      3:
+      - 16
+      - 17
+      4: 3.9.12
+      5: 0.12.17
+      6: 4.19.2
+      8:
+      - 8
+      - 9
+batch_size:
+  desc: null
+  value: 256
+betas:
+  desc: null
+  value:
+  - 0.9
+  - 0.98
+checkpoint_dir:
+  desc: null
+  value: checkpoint
+clip:
+  desc: null
+  value: 1
+dist_url:
+  desc: null
+  value: tcp://localhost:58472
+dropout:
+  desc: null
+  value: 0.01
+epochs:
+  desc: null
+  value: 25
+eps:
+  desc: null
+  value: 1.0e-09
+gqa_ann_path:
+  desc: null
+  value: /home/aneesh/datasets/gqa_ann/OpenSource/
+gqa_split_type:
+  desc: null
+  value: balanced
+imset:
+  desc: null
+  value: train
+itersimg:
+  desc: null
+  value: 5
+iterstext:
+  desc: null
+  value: 5
+learning_rate:
+  desc: null
+  value: 0.2
+loss_fn:
+  desc: null
+  value: cross_entropy
+mask_model:
+  desc: null
+  value: none
+masks:
+  desc: null
+  value: false
+momentum:
+  desc: null
+  value: 0.9
+ngpus_per_node:
+  desc: null
+  value: 1
+nhead:
+  desc: null
+  value: 8
+nlayers:
+  desc: null
+  value: 3
+optimizer:
+  desc: null
+  value: adam
+print_freq:
+  desc: null
+  value: 1
+rank:
+  desc: null
+  value: 0
+simg:
+  desc: null
+  value: 10
+slotdimimg:
+  desc: null
+  value: 512
+slotdimtext:
+  desc: null
+  value: 512
+stext:
+  desc: null
+  value: 7
+tdim:
+  desc: null
+  value: 512
+text_encoder_type:
+  desc: null
+  value: openai/clip-vit-base-patch32
+vg_img_path:
+  desc: null
+  value: /home/aneesh/datasets/gqa_imgs/images/
+weight_decay:
+  desc: null
+  value: 1.0e-06
+workers:
+  desc: null
+  value: 5
+world_size:
+  desc: null
+  value: 1

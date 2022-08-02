@@ -220,6 +220,14 @@ class Resize_orig(object):
         img = self.t(img)
         return img, target
 
+class CLIP_transf(object):
+    def __init__(self, processor):
+        self.processor = processor
+
+    def __call__(self, img, target=None):
+        c = self.processor(images=img, return_tensors='pt')
+        return c['pixel_values'], target
+
 
 class RandomPad(object):
     def __init__(self, max_pad):

@@ -9,6 +9,8 @@ from transformers import RobertaTokenizerFast
 
 from .coco import ModulatedDetection, make_coco_transforms
 
+from transformers import CLIPTokenizer
+
 
 class PhrasecutDetection(ModulatedDetection):
     pass
@@ -22,7 +24,7 @@ def build(image_set, args):
         image_set = "miniv"
 
     if image_set == "miniv":
-        ann_file = Path(args.phrasecut_ann_path) / f"finetune_phrasecut_miniv.json"
+        ann_file = Path(args.phrasecut_ann_path) / f"refer_miniv.json"
         image_set = "val"
     else:
         ann_file = Path(args.phrasecut_ann_path) / f"finetune_phrasecut_{image_set}.json"
@@ -30,7 +32,8 @@ def build(image_set, args):
     if args.test:
         ann_file = Path(args.phrasecut_ann_path) / f"finetune_phrasecut_test.json"
 
-    tokenizer = RobertaTokenizerFast.from_pretrained(args.text_encoder_type)
+    # tokenizer = RobertaTokenizerFast.from_pretrained(args.text_encoder_type)
+    tokenizer = CLIPTokenizer.from_pretrained('openai/clip-vit-base-patch32') 
     dataset = PhrasecutDetection(
         img_dir,
         ann_file,

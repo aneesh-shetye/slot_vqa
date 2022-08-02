@@ -1,0 +1,223 @@
+2022-06-15 15:41:26,762 INFO    MainThread:218700 [wandb_setup.py:_flush():76] Loading settings from /home/aneesh/.config/wandb/settings
+2022-06-15 15:41:26,762 INFO    MainThread:218700 [wandb_setup.py:_flush():76] Loading settings from /home/aneesh/github/slot_vqa/wandb/settings
+2022-06-15 15:41:26,762 INFO    MainThread:218700 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'start_method': 'thread'}
+2022-06-15 15:41:26,762 INFO    MainThread:218700 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train.py', 'program': '/home/aneesh/github/slot_vqa/train.py'}
+2022-06-15 15:41:26,762 INFO    MainThread:218700 [wandb_init.py:_log_setup():428] Logging user logs to /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/logs/debug.log
+2022-06-15 15:41:26,762 INFO    MainThread:218700 [wandb_init.py:_log_setup():429] Logging internal logs to /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/logs/debug-internal.log
+2022-06-15 15:41:26,763 INFO    MainThread:218700 [wandb_init.py:init():462] calling init triggers
+2022-06-15 15:41:26,763 INFO    MainThread:218700 [wandb_init.py:init():465] wandb.init called with sweep_config: {}
+config: {'workers': 5, 'print_freq': 1, 'checkpoint_dir': PosixPath('checkpoint'), 'vg_img_path': '/home/aneesh/datasets/gqa_imgs/images/', 'gqa_ann_path': '/home/aneesh/datasets/gqa_ann/OpenSource/', 'gqa_split_type': 'balanced', 'mask_model': 'none', 'masks': False, 'epochs': 25, 'imset': 'train', 'batch_size': 2, 'learning_rate': 0.2, 'dropout': 0.01, 'weight_decay': 1e-06, 'momentum': 0.9, 'clip': 1, 'betas': (0.9, 0.98), 'eps': 1e-09, 'loss_fn': 'cross_entropy', 'optimizer': 'adam', 'simg': 7, 'itersimg': 5, 'slotdimimg': 256, 'stext': 7, 'iterstext': 5, 'slotdimtext': 256, 'nhead': 4, 'tdim': 256, 'nlayers': 3, 'text_encoder_type': 'openai/clip-vit-base-patch32', 'rank': 0, 'dist_url': 'tcp://localhost:58472', 'world_size': 1, 'ngpus_per_node': 1}
+2022-06-15 15:41:26,763 INFO    MainThread:218700 [wandb_init.py:init():515] starting backend
+2022-06-15 15:41:26,764 INFO    MainThread:218700 [backend.py:ensure_launched():217] starting backend process...
+2022-06-15 15:41:26,764 INFO    MainThread:218700 [backend.py:ensure_launched():222] started backend process with pid: 0
+2022-06-15 15:41:26,765 INFO    BackendThr:218700 [internal.py:wandb_internal():90] W&B internal server running at pid: 218700, started at: 2022-06-15 15:41:26.764801
+2022-06-15 15:41:26,765 INFO    MainThread:218700 [wandb_init.py:init():525] backend started and connected
+2022-06-15 15:41:26,771 INFO    MainThread:218700 [wandb_init.py:init():596] updated telemetry
+2022-06-15 15:41:26,772 INFO    WriterThread:218700 [datastore.py:open_for_write():75] open: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/run-5f9zl82s.wandb
+2022-06-15 15:41:26,782 INFO    MainThread:218700 [wandb_init.py:init():627] communicating run to backend with 30 second timeout
+2022-06-15 15:41:27,058 INFO    SenderThread:218700 [dir_watcher.py:__init__():197] watching files in: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files
+2022-06-15 15:41:27,058 INFO    SenderThread:218700 [sender.py:_start_run_threads():811] run started: 5f9zl82s with start time 1655300486
+2022-06-15 15:41:27,060 INFO    MainThread:218700 [wandb_run.py:_on_init():1924] communicating current version
+2022-06-15 15:41:27,060 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:27,114 INFO    MainThread:218700 [wandb_run.py:_on_init():1928] got version response upgrade_message: "wandb version 0.12.18 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2022-06-15 15:41:27,114 INFO    MainThread:218700 [wandb_init.py:init():662] starting run threads in backend
+2022-06-15 15:41:28,060 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/wandb-summary.json
+2022-06-15 15:41:28,061 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/code/train.py
+2022-06-15 15:41:28,061 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/diff.patch
+2022-06-15 15:41:28,061 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/code
+2022-06-15 15:41:32,119 INFO    MainThread:218700 [wandb_run.py:_console_start():1898] atexit reg
+2022-06-15 15:41:32,119 INFO    MainThread:218700 [wandb_run.py:_redirect():1771] redirect: SettingsConsole.WRAP
+2022-06-15 15:41:32,119 INFO    MainThread:218700 [wandb_run.py:_redirect():1808] Wrapping output streams.
+2022-06-15 15:41:32,120 INFO    MainThread:218700 [wandb_run.py:_redirect():1832] Redirects installed.
+2022-06-15 15:41:32,120 INFO    MainThread:218700 [wandb_init.py:init():688] run started, returning control to user process
+2022-06-15 15:41:32,124 INFO    MainThread:218700 [wandb_run.py:_config_callback():1136] config_cb None None {'workers': 5, 'print_freq': 1, 'checkpoint_dir': 'checkpoint', 'vg_img_path': '/home/aneesh/datasets/gqa_imgs/images/', 'gqa_ann_path': '/home/aneesh/datasets/gqa_ann/OpenSource/', 'gqa_split_type': 'balanced', 'mask_model': 'none', 'masks': False, 'epochs': 25, 'imset': 'train', 'batch_size': 2, 'learning_rate': 0.2, 'dropout': 0.01, 'weight_decay': 1e-06, 'momentum': 0.9, 'clip': 1, 'betas': [0.9, 0.98], 'eps': 1e-09, 'loss_fn': 'cross_entropy', 'optimizer': 'adam', 'simg': 7, 'itersimg': 5, 'slotdimimg': 256, 'stext': 7, 'iterstext': 5, 'slotdimtext': 256, 'nhead': 4, 'tdim': 256, 'nlayers': 3, 'text_encoder_type': 'openai/clip-vit-base-patch32', 'rank': 0, 'dist_url': 'tcp://localhost:58472', 'world_size': 1, 'ngpus_per_node': 1}
+2022-06-15 15:41:32,198 ERROR   HandlerThread:218700 [meta.py:_save_patches():166] Error generating diff: Command '['git', 'diff', '--submodule=diff', 'HEAD']' timed out after 5 seconds
+2022-06-15 15:41:33,060 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/conda-environment.yaml
+2022-06-15 15:41:33,060 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/output.log
+2022-06-15 15:41:33,060 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/requirements.txt
+2022-06-15 15:41:34,060 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/conda-environment.yaml
+2022-06-15 15:41:34,060 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/wandb-metadata.json
+2022-06-15 15:41:34,317 INFO    SenderThread:218700 [sender.py:send_run():707] updated run: 5f9zl82s
+2022-06-15 15:41:34,317 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-metadata.json with policy now
+2022-06-15 15:41:34,318 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file code/train.py with policy now
+2022-06-15 15:41:34,841 INFO    Thread-20 :218700 [upload_job.py:push():132] Uploaded file /tmp/tmp35axmv14wandb/258a2qrm-wandb-metadata.json
+2022-06-15 15:41:34,867 INFO    Thread-21 :218700 [upload_job.py:push():132] Uploaded file /tmp/tmp35axmv14wandb/2epm7oui-code/train.py
+2022-06-15 15:41:35,061 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/output.log
+2022-06-15 15:41:35,061 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/config.yaml
+2022-06-15 15:41:37,062 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/output.log
+2022-06-15 15:41:39,062 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/output.log
+2022-06-15 15:41:44,116 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:44,296 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:44,467 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:44,634 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:44,802 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:44,972 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:45,065 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/wandb-summary.json
+2022-06-15 15:41:45,147 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:45,315 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:45,483 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:45,656 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:45,822 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:45,990 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:46,065 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/wandb-summary.json
+2022-06-15 15:41:46,159 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:46,329 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:46,501 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:46,677 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:46,850 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:47,023 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:47,066 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/output.log
+2022-06-15 15:41:47,066 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/wandb-summary.json
+2022-06-15 15:41:47,196 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:47,373 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:47,549 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:47,721 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:47,891 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:48,061 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:48,066 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/wandb-summary.json
+2022-06-15 15:41:48,233 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:48,404 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:48,574 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:48,743 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:48,911 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:49,066 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/wandb-summary.json
+2022-06-15 15:41:49,081 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:49,277 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:49,420 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:49,591 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:49,760 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:49,929 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:50,067 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/wandb-summary.json
+2022-06-15 15:41:50,098 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:50,267 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:50,440 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:50,621 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:50,794 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:50,969 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:51,067 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/wandb-summary.json
+2022-06-15 15:41:51,144 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:51,316 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:51,488 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:51,664 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:51,835 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:52,010 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:52,068 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/wandb-summary.json
+2022-06-15 15:41:52,188 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:52,366 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:52,541 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:52,715 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:52,885 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:53,055 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:53,068 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/wandb-summary.json
+2022-06-15 15:41:53,225 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:53,395 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:53,564 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:53,736 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:53,909 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:54,068 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/wandb-summary.json
+2022-06-15 15:41:54,085 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:54,261 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:54,438 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:54,612 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:54,781 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:54,954 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:55,069 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/wandb-summary.json
+2022-06-15 15:41:55,128 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:55,302 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:55,481 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:55,652 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:55,822 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:55,994 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:56,069 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/wandb-summary.json
+2022-06-15 15:41:56,166 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:56,336 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:56,506 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:56,676 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:57,048 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:57,050 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:57,069 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/config.yaml
+2022-06-15 15:41:57,069 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/wandb-summary.json
+2022-06-15 15:41:57,198 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:57,367 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:57,535 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:57,716 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:57,892 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:58,070 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:58,071 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/wandb-summary.json
+2022-06-15 15:41:58,244 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:58,417 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:58,593 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:58,777 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:58,962 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:59,071 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/wandb-summary.json
+2022-06-15 15:41:59,148 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:59,336 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:59,520 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:59,693 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:41:59,862 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:00,037 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:00,072 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/wandb-summary.json
+2022-06-15 15:42:00,212 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:00,386 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:00,573 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:00,743 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:00,913 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:01,072 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/wandb-summary.json
+2022-06-15 15:42:01,083 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:01,253 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:01,428 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:01,598 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:01,769 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:01,939 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:02,072 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/wandb-summary.json
+2022-06-15 15:42:02,112 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:02,285 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:02,459 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:02,633 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:02,807 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:02,980 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:03,073 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/wandb-summary.json
+2022-06-15 15:42:03,154 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:03,331 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:03,508 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:03,683 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:03,862 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:04,042 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:04,073 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/wandb-summary.json
+2022-06-15 15:42:04,219 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:04,454 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:04,565 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:04,741 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:04,919 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:05,073 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/wandb-summary.json
+2022-06-15 15:42:05,100 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:05,275 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:05,448 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:05,631 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:05,813 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:05,983 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:06,074 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/wandb-summary.json
+2022-06-15 15:42:06,154 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:06,325 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:06,496 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:06,666 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:06,836 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:07,007 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:07,074 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/wandb-summary.json
+2022-06-15 15:42:07,177 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:07,347 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:07,516 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:07,686 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:07,856 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:08,025 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:08,074 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/wandb-summary.json
+2022-06-15 15:42:08,195 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:08,364 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:08,536 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:08,708 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:08,877 INFO    SenderThread:218700 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-15 15:42:09,075 INFO    Thread-10 :218700 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220615_154126-5f9zl82s/files/wandb-summary.json
+2022-06-15 15:42:09,133 WARNING MsgRouterThr:218700 [router.py:message_loop():73] EOFError seen in message_loop
+2022-06-15 15:42:09,133 INFO    MainThread:218700 [wandb_run.py:_atexit_cleanup():1867] got exitcode: 0
+2022-06-15 15:42:09,135 INFO    MainThread:218700 [wandb_run.py:_restore():1839] restore

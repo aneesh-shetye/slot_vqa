@@ -1,0 +1,566 @@
+diff --git a/checkpoint/checkpoint.pth b/checkpoint/checkpoint.pth
+index 137c993..24fd279 100644
+Binary files a/checkpoint/checkpoint.pth and b/checkpoint/checkpoint.pth differ
+diff --git a/checkpoint/stats.txt b/checkpoint/stats.txt
+index 4df972f..306f78d 100644
+--- a/checkpoint/stats.txt
++++ b/checkpoint/stats.txt
+@@ -117,3 +117,119 @@ train.py
+ {"epoch": 0, "step": 200, "loss": 7.550258636474609, "time": 266}
+ {"epoch": 0, "step": 205, "loss": 7.622440814971924, "time": 273}
+ {"epoch": 0, "step": 210, "loss": 7.701798439025879, "time": 280}
++train.py
++{"epoch": 0, "step": 0, "loss": 7.553865909576416, "time": 0}
++{"epoch": 0, "step": 5, "loss": 7.5958476066589355, "time": 6}
++{"epoch": 0, "step": 10, "loss": 7.531919956207275, "time": 13}
++{"epoch": 0, "step": 15, "loss": 7.591022968292236, "time": 19}
++{"epoch": 0, "step": 20, "loss": 7.462124347686768, "time": 25}
++{"epoch": 0, "step": 25, "loss": 7.489391326904297, "time": 32}
++{"epoch": 0, "step": 30, "loss": 7.4988694190979, "time": 39}
++{"epoch": 0, "step": 35, "loss": 7.56967830657959, "time": 45}
++{"epoch": 0, "step": 40, "loss": 7.599825859069824, "time": 52}
++{"epoch": 0, "step": 45, "loss": 7.472693920135498, "time": 58}
++{"epoch": 0, "step": 50, "loss": 7.516973972320557, "time": 64}
++{"epoch": 0, "step": 55, "loss": 7.453164100646973, "time": 71}
++{"epoch": 0, "step": 60, "loss": 7.584528923034668, "time": 77}
++{"epoch": 0, "step": 65, "loss": 7.567092418670654, "time": 84}
++{"epoch": 0, "step": 70, "loss": 7.627830505371094, "time": 91}
++{"epoch": 0, "step": 75, "loss": 7.57837438583374, "time": 97}
++{"epoch": 0, "step": 80, "loss": 7.5802507400512695, "time": 103}
++{"epoch": 0, "step": 85, "loss": 7.51731014251709, "time": 110}
++{"epoch": 0, "step": 90, "loss": 7.476049423217773, "time": 116}
++{"epoch": 0, "step": 95, "loss": 7.497921943664551, "time": 122}
++{"epoch": 0, "step": 100, "loss": 7.631317138671875, "time": 129}
++{"epoch": 0, "step": 105, "loss": 7.568572998046875, "time": 135}
++{"epoch": 0, "step": 110, "loss": 7.682725429534912, "time": 141}
++{"epoch": 0, "step": 115, "loss": 7.503177642822266, "time": 148}
++{"epoch": 0, "step": 120, "loss": 7.51187801361084, "time": 154}
++{"epoch": 0, "step": 125, "loss": 7.575509548187256, "time": 160}
++{"epoch": 0, "step": 130, "loss": 7.435646057128906, "time": 167}
++{"epoch": 0, "step": 135, "loss": 7.548572540283203, "time": 173}
++{"epoch": 0, "step": 140, "loss": 7.567778587341309, "time": 180}
++{"epoch": 0, "step": 145, "loss": 7.51542854309082, "time": 186}
++{"epoch": 0, "step": 150, "loss": 7.54081916809082, "time": 192}
++{"epoch": 0, "step": 155, "loss": 7.511966228485107, "time": 199}
++{"epoch": 0, "step": 160, "loss": 7.537336826324463, "time": 205}
++{"epoch": 0, "step": 165, "loss": 7.547874450683594, "time": 212}
++{"epoch": 0, "step": 170, "loss": 7.543036460876465, "time": 219}
++train.py
++train.py
++train.py
++train.py
++train.py
++train.py
++train.py
++train.py
++train.py
++train.py
++train.py
++train.py
++train.py
++{"epoch": 0, "step": 10, "loss": 7.501245498657227, "acc": 0.0, "time": 241}
++train.py
++{"epoch": 0, "step": 0, "loss": 7.4950971603393555, "acc": 0.0, "time": 156}
++train.py
++{"epoch": 0, "step": 0, "loss": 7.4950971603393555, "acc": 0.0, "time": 154}
++train.py
++{"epoch": 0, "step": 0, "loss": 7.4950971603393555, "acc": 0.0, "time": 154}
++train.py
++{"epoch": 0, "step": 0, "loss": 7.495163440704346, "acc": 0.0, "time": 158}
++train.py
++{"epoch": 0, "step": 0, "loss": 7.4950971603393555, "acc": 0.0, "time": 158}
++train.py
++train.py
++train.py
++{"epoch": 0, "step": 0, "loss": 7.5555901527404785, "acc": 0.0, "time": 157}
++train.py
++{"epoch": 0, "step": 0, "loss": 7.5555901527404785, "acc": 0.0, "time": 136}
++{"epoch": 1, "step": 4000, "loss": 7.566069602966309, "acc": 0.0, "time": 970}
++train.py
++{"epoch": 0, "step": 0, "loss": 7.5555901527404785, "acc": 0.0, "time": 136}
++train.py
++{"epoch": 0, "step": 0, "loss": 7.5555901527404785, "acc": 0.0, "time": 137}
++{"epoch": 1, "step": 4000, "loss": 7.566069602966309, "acc": 0.0, "time": 886}
++{"epoch": 2, "step": 7500, "loss": 7.565180778503418, "acc": 0.0, "time": 1280}
++{"epoch": 3, "step": 11500, "loss": 7.577597618103027, "acc": 0.0, "time": 2295}
++{"epoch": 4, "step": 15000, "loss": 7.560959815979004, "acc": 0.0, "time": 2954}
++{"epoch": 5, "step": 18500, "loss": 7.577364921569824, "acc": 0.0, "time": 3254}
++{"epoch": 6, "step": 22500, "loss": 7.576725482940674, "acc": 0.0, "time": 4174}
++{"epoch": 7, "step": 26000, "loss": 7.54958963394165, "acc": 0.0, "time": 4742}
++{"epoch": 8, "step": 29500, "loss": 7.571584701538086, "acc": 0.0, "time": 4952}
++{"epoch": 9, "step": 33500, "loss": 7.580859661102295, "acc": 0.0, "time": 5790}
++{"epoch": 10, "step": 37000, "loss": 7.5545806884765625, "acc": 0.0, "time": 6259}
++{"epoch": 11, "step": 41000, "loss": 7.583085060119629, "acc": 0.0, "time": 7355}
++train.py
++train.py
++train.py
++train.py
++train.py
++train.py
++train.py
++train.py
++train.py
++train.py
++train.py
++train.py
++train.py
++train.py
++train.py
++train.py
++{"epoch": 0, "step": 0, "loss": 4.706112384796143, "acc": 0.0, "time": 37}
++{"epoch": 0, "step": 1, "loss": 4.697990417480469, "acc": 0.0, "time": 65}
++{"epoch": 0, "step": 2, "loss": 4.703197479248047, "acc": 0.0, "time": 94}
++{"epoch": 0, "step": 3, "loss": 4.701541900634766, "acc": 0.0, "time": 122}
++{"epoch": 0, "step": 4, "loss": 4.715994834899902, "acc": 0.0, "time": 151}
++{"epoch": 0, "step": 5, "loss": 4.705036640167236, "acc": 0.0, "time": 179}
++{"epoch": 0, "step": 6, "loss": 4.686688423156738, "acc": 0.0, "time": 207}
++{"epoch": 0, "step": 7, "loss": 4.69116735458374, "acc": 0.0, "time": 236}
++{"epoch": 0, "step": 8, "loss": 4.704876899719238, "acc": 0.0, "time": 264}
++{"epoch": 0, "step": 9, "loss": 4.693601608276367, "acc": 0.0, "time": 293}
++{"epoch": 0, "step": 10, "loss": 4.712883949279785, "acc": 0.0, "time": 322}
++{"epoch": 0, "step": 11, "loss": 4.706124305725098, "acc": 0.0, "time": 350}
++{"epoch": 0, "step": 12, "loss": 4.6945085525512695, "acc": 0.0, "time": 379}
++train.py
++train.py
++{"epoch": 0, "step": 0, "loss": 4.671562194824219, "acc": 0.0, "time": 38}
++train.py
++train.py
+diff --git a/datasets/__pycache__/coco.cpython-39.pyc b/datasets/__pycache__/coco.cpython-39.pyc
+index 89bd2d9..c02540f 100644
+Binary files a/datasets/__pycache__/coco.cpython-39.pyc and b/datasets/__pycache__/coco.cpython-39.pyc differ
+diff --git a/datasets/__pycache__/gqa_tweaked.cpython-39.pyc b/datasets/__pycache__/gqa_tweaked.cpython-39.pyc
+index 08b5c8e..6b4eb09 100644
+Binary files a/datasets/__pycache__/gqa_tweaked.cpython-39.pyc and b/datasets/__pycache__/gqa_tweaked.cpython-39.pyc differ
+diff --git a/datasets/coco.py b/datasets/coco.py
+index 7f53ba4..ecdf9b9 100644
+--- a/datasets/coco.py
++++ b/datasets/coco.py
+@@ -219,7 +219,7 @@ def make_coco_transforms(image_set, cautious):
+     scales = [480, 512, 544, 576, 608, 640, 672, 704, 736, 768, 800]
+ 
+     max_size = 1333
+-    if image_set == "train":
++    if image_set == "train" or image_set == "val":
+         horizontal = [] #if cautious else [T.RandomHorizontalFlip()]
+         return T.Compose(
+             horizontal
+@@ -235,19 +235,20 @@ def make_coco_transforms(image_set, cautious):
+             #         ),
+             #     ),
+                 # T.RandomResize([800], max_size=800), 
+-                #T.Resize_orig([600, 600]),
++                T.Resize_orig([224, 224]),
+                 T.CLIP_transf(processor), 
+                 normalize,
+              ]
+         )
+-
+-    if image_set == "val":
+-        return T.Compose(
+-            [
+-                T.RandomResize([800], max_size=max_size),
+-                normalize,
+-            ]
+-        )
++################################################################################
++    # if image_set == "val":
++    #     return T.Compose(
++    #         [
++    #             T.RandomResize([800], max_size=max_size),
++    #             normalize,
++    #         ]
++    #     )
++#################################################################################
+ 
+     raise ValueError(f"unknown {image_set}")
+ 
+diff --git a/model/__pycache__/img_encoder.cpython-39.pyc b/model/__pycache__/img_encoder.cpython-39.pyc
+index 731d7f1..2b4aa24 100644
+Binary files a/model/__pycache__/img_encoder.cpython-39.pyc and b/model/__pycache__/img_encoder.cpython-39.pyc differ
+diff --git a/model/__pycache__/model.cpython-39.pyc b/model/__pycache__/model.cpython-39.pyc
+index 44c3df1..a80c48c 100644
+Binary files a/model/__pycache__/model.cpython-39.pyc and b/model/__pycache__/model.cpython-39.pyc differ
+diff --git a/model/__pycache__/text_encoder.cpython-39.pyc b/model/__pycache__/text_encoder.cpython-39.pyc
+index 9496f9d..3c58270 100644
+Binary files a/model/__pycache__/text_encoder.cpython-39.pyc and b/model/__pycache__/text_encoder.cpython-39.pyc differ
+diff --git a/model/model.py b/model/model.py
+index 6a44606..3bb06ea 100644
+--- a/model/model.py
++++ b/model/model.py
+@@ -48,7 +48,7 @@ class SlotVQA(nn.Module):
+                     num_slots=self.slots_text, num_iter=self.iters_text, 
+                     mbert_out_size=self.mbert_out_size, slot_dim=self.slot_dim_text) 
+ 
+-        transf_layer = nn.TransformerEncoderLayer(d_model=transf_dim, nhead=num_head)
++        transf_layer = nn.TransformerEncoderLayer(d_model=transf_dim, nhead=num_head, batch_first=True)
+         self.transf_enc = nn.TransformerEncoder(transf_layer, num_layers=transf_num_layers)
+ 
+         #project text_slots to common embedding space
+@@ -70,6 +70,9 @@ class SlotVQA(nn.Module):
+             text: torch.tensor): 
+ 
+         self.device = next(self.learnable_cls.parameters()).device
++        # print('inside model:')
++        # print(f'img.shape: {img.shape}')
++        # print(f'text.shape: {text.shape}')
+         text_slots = self.text_enc(text) 
+         img_slots = self.img_enc(img) 
+         #slots.shape = batch, num_slots, slot_dim 
+@@ -78,18 +81,24 @@ class SlotVQA(nn.Module):
+         text_slots = self.linear_text(text_slots)
+         img_slots = self.linear_img(img_slots)
+ 
++        # print(f'text slots.shape = {text_slots.shape}, img_slots.shape = {img_slots.shape}')
+         comb_slots = torch.cat((text_slots, img_slots), dim=1)
++        # print(f'comb_slots.shape: {comb_slots.shape}')
+         #comb_slots.shape = batch,num_slots_text + num_slots_img, slot_dim 
+         #preprend this with a cls 
+         cls_tok = torch.ones((img_slots.shape[0], self.transf_dim), dtype=torch.float).to(self.device) 
+         #cls_tok.shape = batch_size, transf_dim
+         cls_tok = self.learnable_cls(cls_tok)        
+-        print(cls_tok.shape) 
++        # print(cls_tok.shape) 
+         comb_slots = torch.cat((cls_tok.unsqueeze(1), comb_slots), dim=1) 
++        # print(f'comb_slots+cls.shape: {comb_slots.shape}')
+         #comb_slots.shape = batch, num_slots_text + num_slots_img + 1, slot_dim
+ 
+         out = self.transf_enc(comb_slots)
++        # print(f'out.shape: {out.shape}')
++        # print(f'out=======================================> {out}')
+         ans = out[:,0, :]
++        # print(f'ans=====================================> {ans}')
+ 
+         return self.ans_enc(ans)
+ 
+diff --git a/model/text_encoder.py b/model/text_encoder.py
+index 7f175eb..a74bfe9 100644
+--- a/model/text_encoder.py
++++ b/model/text_encoder.py
+@@ -38,13 +38,13 @@ class SlotText(nn.Module):
+         device = next(self.slot_attention_module.parameters()).device 
+         mask = torch.ones(inp.shape).to(device).masked_fill(inp==pad_id, 0)
+         mask = mask.squeeze(-1).unsqueeze(1)
+-        print(f'mask.shape={mask.shape}')
++        # print(f'mask.shape={mask.shape}')
+         if len(inp.shape)>2: 
+             inp = inp.squeeze(-1)
+-        print(f'inp.shape={inp.shape}')        
++        # print(f'inp.shape={inp.shape}')        
+         x = self.mbert(inp)['last_hidden_state']#x.shape = B, seq_len, mbert_out_size
+-        print(f'x.shape after mbert={x.shape}')
++        # print(f'x.shape after mbert={x.shape}')
+         x = self.layernorm(self.mlp(x)) #x.shape = B, seq_len, mbert_out_size 
+         slots = self.slot_attention_module(x, mask=mask)  
+         
+-        return x 
++        return slots 
+diff --git a/train.py b/train.py
+index 5f9a702..b317099 100644
+--- a/train.py
++++ b/train.py
+@@ -1,3 +1,10 @@
++#################################################
++from easy_vqa import get_train_questions, get_test_questions
++from easy_vqa import get_train_image_paths, get_test_image_paths
++from datasets.test_easy_vqa import build, MyCollate
++from torchvision import transforms as T 
++#################################################
++
+ import numpy as np
+ from pathlib import Path
+ import argparse
+@@ -12,11 +19,16 @@ import time
+ 
+ import torch
+ from torch import nn, optim 
+-from torchvision import transforms
+-from transformers import BertModel, CLIPVisionModel, CLIPTextModel
++import torch.nn.functional as F 
++#from torchvision import transforms
++from transformers import BertModel, CLIPVisionModel, CLIPTextModel, CLIPTokenizer, CLIPProcessor
+ 
+ #from vg_dataloader import VG_dataset
++###########
++'''
+ from datasets.gqa_tweaked import build, MyCollate
++'''
++##########
+ from model.model import SlotVQA
+ 
+ import wandb
+@@ -38,9 +50,9 @@ torch.backends.cudnn.deterministic = True
+ parser = argparse.ArgumentParser(description='slot_vqa')
+ 
+ #system config: 
+-parser.add_argument('--workers', default=0, type=int, metavar='N', 
++parser.add_argument('--workers', default=5, type=int, metavar='N', 
+                     help='number of data loader workers') 
+-parser.add_argument('--print_freq', default=5, type=int, metavar='PF', 
++parser.add_argument('--print_freq', default=1, type=int, metavar='PF', 
+                     help='write in the stats file and print after PF steps') 
+ parser.add_argument('--checkpoint_dir', default='./checkpoint/', type=Path, metavar='CD', 
+                     help='path to directory in which checkpoint and stats are saved') 
+@@ -63,11 +75,11 @@ parser.add_argument(
+ parser.add_argument('--masks',action='store_true') 
+ 
+ #training hyperparameters: 
+-parser.add_argument('--epochs', default=10, type=int, metavar='N',
++parser.add_argument('--epochs', default=25, type=int, metavar='N',
+                     help='number of total epochs to run')
+ parser.add_argument('--imset', default='train', type=str, metavar='IS',
+                     help='train, val or test set')
+-parser.add_argument('--batch_size', default=16, type=int, metavar='n',
++parser.add_argument('--batch_size', default=256, type=int, metavar='n',
+                     help='mini-batch size')
+ parser.add_argument('--learning-rate', default=0.2, type=float, metavar='LR',
+                     help='base learning rate')
+@@ -89,23 +101,23 @@ parser.add_argument('--optimizer', default='adam', type=str, metavar='OP',
+                     help='selecting optimizer')
+ 
+ #slot-attention hyperparameters: 
+-parser.add_argument('--simg', default=5, type=int, metavar='SI',
++parser.add_argument('--simg', default=10, type=int, metavar='SI',
+                     help='number of slots for image modality')
+-parser.add_argument('--itersimg', default=3, type=int, metavar='II',
++parser.add_argument('--itersimg', default=5, type=int, metavar='II',
+                     help='numer of iterations for slot attention on images')
+-parser.add_argument('--slotdimimg', default=128, type=int, metavar='SDI',
++parser.add_argument('--slotdimimg', default=512, type=int, metavar='SDI',
+                     help='dimension of slots for images')
+-parser.add_argument('--stext', default=5, type=int, metavar='ST',
++parser.add_argument('--stext', default=7, type=int, metavar='ST',
+                     help='number of slots for text modality')
+-parser.add_argument('--iterstext', default=3, type=int, metavar='IT',
++parser.add_argument('--iterstext', default=5, type=int, metavar='IT',
+                     help='number of iterations for slot attention on text')
+-parser.add_argument('--slotdimtext', default=128, type=int, metavar='IT',
++parser.add_argument('--slotdimtext', default=512, type=int, metavar='IT',
+                     help='number of iterations for slot attention on text')
+ 
+ #transformer encoder hyperparameters: 
+ parser.add_argument('--nhead', default=8, type=int, metavar='NH',
+                     help='number of heads in transformer')
+-parser.add_argument('--tdim', default=128, type=int, metavar='D',
++parser.add_argument('--tdim', default=512, type=int, metavar='D',
+                     help='dimension of transformer')
+ parser.add_argument('--nlayers', default=3, type=int, metavar='NL',
+                     help='number of layers in transformer')
+@@ -120,6 +132,14 @@ args = parser.parse_args()
+ if args.mask_model != "none" :
+     args.masks = True
+ 
++class Transf_CLIProcess(nn.Module): 
++    def __init__(self, processor): 
++        super().__init__()
++        self.processor = processor
++    
++    def __call__(self, image): 
++        return self.processor(images=image, return_tensors='pt')['pixel_values'] 
++
+ def main(): 
+ 
+     # single-node distributed training
+@@ -129,14 +149,14 @@ def main():
+     ############################################
+     args.ngpus_per_node = args.world_size #single machine 
+     ############################################
+-    print(args.ngpus_per_node)
++    # print(args.ngpus_per_node)
+     # torch.multiprocessing.spawn(main_worker, (args,), args.ngpus_per_node)
+     torch.multiprocessing.spawn(main_worker, args=(args,), nprocs=args.ngpus_per_node)
+ 
+ def main_worker(gpu, args):
+     
+     args.rank += gpu
+-    print(args.rank, args.world_size)
++    # print(args.rank, args.world_size)
+     torch.distributed.init_process_group(
+         backend='nccl', init_method=args.dist_url,
+         world_size=args.world_size, rank=args.rank)
+@@ -144,9 +164,10 @@ def main_worker(gpu, args):
+     if args.rank == 0:
+ 
+         wandb.init(config=args, project='slot_vqa')#############################################
++        wandb.run.name = f"easy-vqa-{wandb.run.id}"
+         wandb.config.update(args)
+         config = wandb.config
+-    
++        wandb.run.save()
+         # exit()
+         args.checkpoint_dir.mkdir(parents=True, exist_ok=True)
+         stats_file = open(args.checkpoint_dir / 'stats.txt', 'a', buffering=1)
+@@ -157,10 +178,36 @@ def main_worker(gpu, args):
+     torch.backends.cudnn.benchmark = True
+ 
+ #loading dataset: 
++    ###################################################3
++    '''
+     dataset = build(image_set=args.imset, 
+                     args=args)
+     ans_dict_len = len(dataset.answer2id)#1853 including unk
+ 
++    args.imset = 'val'
++    val_dataset = build(image_set=args.imset, 
++                        args=args)
++    '''
++    ###############################################
++    #EASY DATASET  
++    ################################################
++    train_questions, train_answers, train_image_ids = get_train_questions()
++    train_image_paths = get_train_image_paths()
++    tokenizer = tokenizer = CLIPTokenizer.from_pretrained('openai/clip-vit-base-patch32')
++
++    processor = CLIPProcessor.from_pretrained('openai/clip-vit-base-patch32')
++    transform = [T.Resize([224, 224]), Transf_CLIProcess(processor)]
++
++    dataset = build(train_answers, train_questions, train_image_ids, 
++                train_image_paths, tokenizer, transform)
++    ans_dict_len = len(dataset.ans2id)
++    # print(dataset.ans2id)
++
++    test_questions, test_answers, test_image_ids = get_test_questions()
++    test_image_paths = get_test_image_paths()
++    val_dataset = build(test_questions, test_answers, test_image_ids, 
++                test_image_paths, tokenizer, transform)
++
+ #initializing the model: 
+     mbert = CLIPTextModel.from_pretrained('openai/clip-vit-base-patch32').to(args.rank)
+     for param in mbert.parameters(): 
+@@ -199,6 +246,8 @@ def main_worker(gpu, args):
+     print('instantiated sampler')
+     sampler = torch.utils.data.distributed.DistributedSampler(dataset)
+ 
++    val_sampler = torch.utils.data.distributed.DistributedSampler(val_dataset)
++
+     assert args.batch_size % args.world_size == 0
+     per_device_batch_size = args.batch_size // args.world_size
+     
+@@ -207,6 +256,10 @@ def main_worker(gpu, args):
+          dataset, batch_size=per_device_batch_size, num_workers=args.workers,
+          pin_memory=True, sampler=sampler, collate_fn = MyCollate(tokenizer=dataset.tokenizer))
+     
++    val_loader = torch.utils.data.DataLoader(
++         val_dataset, batch_size=per_device_batch_size, num_workers=args.workers,
++         pin_memory=True, sampler=val_sampler, collate_fn = MyCollate(tokenizer=dataset.tokenizer))
++
+     start_time = time.time()
+ 
+     #training loop: 
+@@ -215,23 +268,26 @@ def main_worker(gpu, args):
+     #can edit this to start from saved epoch
+     for epoch in range(start_epoch, args.epochs): 
+ 
++
+         sampler.set_epoch(epoch)
+         epoch_loss = 0 
+         
+         counter = 0 
+         for step, item in enumerate(loader, start=epoch*len(loader)): 
+             
++            model.train()
++            
+             img = item[0].cuda(gpu, non_blocking=True)
+             ques = item[1].cuda(gpu, non_blocking=True)
+             ans = item[2].cuda(gpu, non_blocking=True)
+ 
+-            print(f'img.shape={img.shape}, ques.shape={ques.shape} ,ans.shape={ans.shape}') 
++            # print(f'img.shape={img.shape}, ques.shape={ques.shape} ,ans.shape={ans.shape}') 
+ 
+             pred = model(img, ques)
+             
+             optimizer.zero_grad()
+ 
+-            print(f'ans.shape={ans.shape}, pred.shape={pred.shape}')
++            # print(f'ans.shape={ans.shape}, pred.shape={pred.shape}')
+             loss = loss_fn(pred, ans)
+             wandb.log({"iter_loss": loss})
+             torch.nn.utils.clip_grad_norm(model.parameters(), args.clip)
+@@ -243,21 +299,54 @@ def main_worker(gpu, args):
+ 
+             epoch_loss+=loss.item()
+ 
++
+             if args.rank==0: 
+                 wandb.log({"epoch_loss": epoch_loss/counter})
+                 if step%args.print_freq==0: 
++                    
++                    #test the model: 
++                    acc = 0
++                    val_sampler.set_epoch(epoch)
++                
++                    for step2, item in enumerate(val_loader): 
++                        
++                        model.eval()
++                        
++                        img = item[0].cuda(gpu, non_blocking=True)
++                        ques = item[1].cuda(gpu, non_blocking=True)
++                        ans = item[2].cuda(gpu, non_blocking=True)
++
++                        # print(img[1]==img[0])
++                        # print(ques[1]==ques[0]) 
++
++                        pred = model(img, ques)
++
++                        # print(f'pred before softmax ====================> {pred}')
++                        pred = torch.argmax(F.softmax(pred, dim=1), dim=1)
++                        assert pred.dtype == ans.dtype, f'Expected prediction and targets to be of same dype but got pred.dtype={pred.dtype} and ans.dtype={ans.dtype}'
++                        device = pred.device
++                        print(f'pred===========================> {pred}')
++                        print(f'target=============================> {ans}')
++                        correct = torch.zeros(pred.shape).to(device).masked_fill(pred==ans, 0)
++                        assert len(correct.shape) == 1, f'Expected predictions.shape == [n]  but got predictions.shape {correct.shape} instead'
++                        correct = torch.sum(correct)
++                        acc += correct/pred.shape[0]
++                        wandb.log({"accuracy": acc})
++
++
+                     stats = dict(epoch=epoch, step=step, 
+-                                loss=loss.item(), 
++                                loss=loss.item(),acc=acc.item(),  
+                                 time=int(time.time() - start_time))            
+ 
+                     print(json.dumps(stats))
+                     print(json.dumps(stats), file=stats_file)
+-                
+-                state = dict(epoch=epoch + 1, model=model.module.state_dict(),
+-                            optimizer=optimizer.state_dict())
+-                torch.save(state, args.checkpoint_dir / 'checkpoint.pth')
+-                print('Model saved in', args.checkpoint_dir)
+             
++            state = dict(epoch=epoch + 1, model=model.module.state_dict(),
++                        optimizer=optimizer.state_dict())
++            torch.save(state, args.checkpoint_dir / 'checkpoint.pth')
++            print('Model saved in', args.checkpoint_dir)
++            
++
+ if __name__ == '__main__': 
+     main()
+     wandb.finish()
+\ No newline at end of file
+diff --git a/wandb/debug-internal.log b/wandb/debug-internal.log
+index 55aae5d..5d84c3a 120000
+--- a/wandb/debug-internal.log
++++ b/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20220609_124410-4z9phrk2/logs/debug-internal.log
+\ No newline at end of file
++run-20220613_145744-2uklc1se/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/wandb/debug.log b/wandb/debug.log
+index 75e5232..ab59cc8 120000
+--- a/wandb/debug.log
++++ b/wandb/debug.log
+@@ -1 +1 @@
+-run-20220609_124410-4z9phrk2/logs/debug.log
+\ No newline at end of file
++run-20220613_145744-2uklc1se/logs/debug.log
+\ No newline at end of file
+diff --git a/wandb/latest-run b/wandb/latest-run
+index 17c9642..cee570d 120000
+--- a/wandb/latest-run
++++ b/wandb/latest-run
+@@ -1 +1 @@
+-run-20220609_124410-4z9phrk2
+\ No newline at end of file
++run-20220613_145744-2uklc1se
+\ No newline at end of file
