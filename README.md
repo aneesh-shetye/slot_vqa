@@ -23,6 +23,43 @@ pip install -r requirements.txt
 
 #### GQA: 
 
+Create a directory: `~/datasets/` using: 
+```
+mkdir ~/datasets/
+```
+*Downloading GQA Images:*
+
+Create a subdirectory: `~/datasets/gqa_imgs` using: 
+```
+mkdir ~/datasets/gqa_imgs
+```
+Download GQA imgs: 
+```
+wget -P ~/datasets/gqa_imgs https://downloads.cs.stanford.edu/nlp/data/gqa/images.zip
+```
+Extract the images folder: 
+```
+unzip images.zip
+```
+
+*Downloading GQA Annotations:*
+
+Create a subdirectory: `~/datasets/gqa_ann` using: 
+```
+mkdir ~/datasets/gqa_ann
+```
+Download GQA annotations: 
+```
+wget -P ~/datasets/gqa_imgs https://zenodo.org/record/4729015/files/mdetr_annotations.tar.gz?download=1
+```
+
+Rename and extract annotations folder: 
+
+```
+mv 'mdetr_annotations.tar.gz?download=1' ann.tar.gz
+tar -xvzf ann.tar.gz
+```
+
 ### 3. Running the code: 
 
 Log into wandb 
