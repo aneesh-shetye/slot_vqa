@@ -1,10 +1,13 @@
+#region: LIBRARY IMPORTS
 from termios import INPCK
 import torch 
 import torch.nn as nn 
 
 from .utils import SoftPositionEmbed 
 
+#endregion
 
+#region: HELPER FUNCTIONS:  
 def spatial_broadcast(slots, res): 
     """   
     Broadcast slot features to a 2D grid and collapse slot dimension
@@ -27,7 +30,7 @@ def unstack_and_split(x, batch_size: int, num_channels=3):
     # print(f'mask.shape = {mask.shape}')
     return channels, mask
 
-
+#endregion
     
 class SlotDecoder(nn.Module): 
     
@@ -41,14 +44,14 @@ class SlotDecoder(nn.Module):
 
         #transpose Conv Decoder: 
         self.decoder_cnn = nn.Sequential(
-            nn.ConvTranspose2d(slot_dim, 256, 5, padding=(2,2)),  # 256
+            nn.ConvTranspose2d(slot_dim, 256, 128, padding=(2,2)),  # 256
             nn.ReLU(), 
-            # nn.ConvTranspose2d(256, 64, 5, padding='same'), #64
-            # nn.ReLU(), 
-            # nn.ConvTranspose2d(64, 16, 5, padding='same'), #16
-            # nn.ReLU(), 
-            # nn.ConvTranspose2d(16, 4, 5, padding='same'), #4
-            # nn.ReLU(), 
+            nn.ConvTranspose2d(256, 64, 5, padding=(2,2)), #64
+            nn.ReLU(), 
+            nn.ConvTranspose2d(64, 16, 5, padding=(2,2)), #16
+            nn.ReLU(), 
+            nn.ConvTranspose2d(16, 4, 5, padding=(2,2)), #4
+            nn.ReLU(), 
             nn.ConvTranspose2d(256, 4, 5, padding=(2,2)), #4
             nn.ReLU() 
         )
@@ -80,6 +83,3 @@ class SlotDecoder(nn.Module):
 
         return recon_combined, recons, masks
         
-
-
-

@@ -5,6 +5,7 @@
 # from torchvision import transforms as T 
 #################################################
 
+#region: IMPORTS:
 import numpy as np
 from pathlib import Path
 import argparse
@@ -34,21 +35,25 @@ from model.model import SlotVQA
 
 import wandb
 import  pytorch_warmup as warmup
+#endregion
 
-# setting environment variables: 
+#region: SETTING ENV VARIABLES: 
 os.environ['TRANSFORMERS_OFFLINE'] = 'yes'
 os.environ['WANDB_START_METHOD'] = 'thread'
 os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
 os.environ["TOKENIZERS_PARALLELISM"] = "true"
+#endregion
 
-# setting seed: 
+#region: SETTING SEED: 
 MANUAL_SEED = 3407
 
 random.seed(MANUAL_SEED)
 np.random.seed(MANUAL_SEED)
 torch.manual_seed(MANUAL_SEED)
 torch.backends.cudnn.deterministic = True
+#endregion
 
+#region: ARGUMENTS:
 parser = argparse.ArgumentParser(description='slot_vqa')
 
 #system config: 
@@ -56,6 +61,8 @@ parser.add_argument('--workers', default=5, type=int, metavar='N',
                     help='number of data loader workers') 
 parser.add_argument('--print_freq', default=2, type=int, metavar='PF', 
                     help='write in the stats file and print after PF steps') 
+parser.add_argument('--load', default=False , metavar='L', 
+                    help='load pretrained model if True') 
 parser.add_argument('--checkpoint_dir', default='./checkpoint/', type=Path, metavar='CD', 
                     help='path to directory in which checkpoint and stats are saved') 
 parser.add_argument('--vg_img_path',default='/home/aneesh/datasets/gqa_imgs/images/', 
@@ -133,7 +140,9 @@ args = parser.parse_args()
 
 if args.mask_model != "none" :
     args.masks = True
+#endregion
 
+#region: HELPER FUNCTIONS: 
 class Transf_CLIProcess(nn.Module): 
     def __init__(self, processor): 
         super().__init__()
@@ -142,6 +151,9 @@ class Transf_CLIProcess(nn.Module):
     def __call__(self, image): 
         return self.processor(images=image, return_tensors='pt')['pixel_values'] 
 
+#endregion
+
+#region: MAIN FUNCTION:
 def main(): 
 
     # single-node distributed training
@@ -154,6 +166,7 @@ def main():
     # print(args.ngpus_per_node)
     # torch.multiprocessing.spawn(main_worker, (args,), args.ngpus_per_node)
     torch.multiprocessing.spawn(main_worker, args=(args,), nprocs=args.ngpus_per_node)
+#endregion
     
 
 def main_worker(gpu, args):
@@ -167,7 +180,7 @@ def main_worker(gpu, args):
     if args.rank == 0:
 
         wandb.init(config=args, project='slot_vqa')#############################################
-        wandb.run.name = f"gqa-no-slots-{wandb.run.id}"
+        wandb.run.name = f"gqa-no-slots-dry-run"
         wandb.config.update(args)
         config = wandb.config
         wandb.run.save()
@@ -252,6 +265,13 @@ def main_worker(gpu, args):
                 slots_text=args.stext, iters_text=args.iterstext, slot_dim_text=args.slotdimtext, 
                 num_head=args.nhead, transf_dim=args.tdim, transf_num_layers=args.nlayers, 
                 ans_dim=ans_dict_len).to(args.rank)
+
+    if args.load: 
+        ckpt = torch.load(args.checkpoint_dir/'checkpoint_best.pth', 
+            map_location='cpu') 
+    
+        model.load_state_dict(ckpt['model'])
+        print("Pretrained Model Loaded")
     
     #wrapping the model in DistributedDataParallel 
     param_weights = []
@@ -444,4 +464,6 @@ def main_worker(gpu, args):
 if __name__ == '__main__': 
     main()
     wandb.finish()
+
+
 

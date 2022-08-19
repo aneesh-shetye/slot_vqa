@@ -60,6 +60,11 @@ parser.add_argument('--gqa_ann_path',default='/home/aneesh/datasets/gqa_ann/Open
                 help='path to annotations')
 parser.add_argument('--gqa_split_type',default='balanced', 
         help='GQA split eg: balanced , all')
+
+#other args: 
+parser.add_argument('--load',default=True, 
+        help='Load pretrained model')
+
 # Segmentation #############################
 # No idea what this sands for 
 ############################################
@@ -139,7 +144,7 @@ parser.add_argument('--text_encoder_type', default='openai/clip-vit-base-patch32
 args = parser.parse_args()
 #endregion
 
-
+#region: HELPER FUNCTIONS: 
 class Clip_feat_extractor(nn.Module): 
     def __init__(self, processor): 
         super().__init__()
@@ -156,6 +161,17 @@ class Transf_CLIProcess(nn.Module):
     def __call__(self, image): 
         return self.processor(images=image, return_tensors='pt')['pixel_values'] 
 
+def tensor2img(img:torch.tensor): 
+    #inp.shape = 3, H, W
+
+    test_img = img.permute(1,2,0)
+    test_img = test_img.cpu().detach().numpy()
+    test_img = 255*test_img
+    test_img = test_img.astype(np.uint8)
+    return test_img
+#endregion
+
+#region: LOSS FUNCTION DEFINATIONS: 
 ########################################
 ## changed outer torch.sum to torch.mean
 ########################################
@@ -165,15 +181,7 @@ def min_l2_loss(inp, trg):
 def l2_loss(inp, trg): 
     return torch.mean((inp-trg)*(inp-trg))
 
-def tensor2img(img:torch.tensor): 
-    #inp.shape = 3, H, W
-
-    test_img = img.permute(1,2,0)
-    test_img = test_img.cpu().detach().numpy()
-    test_img = 255*test_img
-    test_img = test_img.astype(np.uint8)
-    return test_img
-
+#endregion
 
 #region: MAIN FUNCTION
 def main(): 
@@ -187,11 +195,15 @@ def main():
     ############################################
     # print(args.ngpus_per_node)
     # torch.multiprocessing.spawn(main_worker, (args,), args.ngpus_per_node)
-    torch.multiprocessing.spawn(main_worker, args=(args,), nprocs=args.ngpus_per_node)
+    torch.multiprocessing.spawn(train_obj, args=(args,), nprocs=args.ngpus_per_node)
 #endregion
 
 
-def main_worker(gpu, args):
+########################################
+args.ans_dict_len = 1853
+#########################################
+
+def train_obj(gpu, args):
     
     args.rank += gpu
     # print(args.rank, args.world_size)
@@ -201,7 +213,6 @@ def main_worker(gpu, args):
 
     if args.rank == 0:
 
-        
         wandb.init(config=args, project='slot_vqa')#############################################
         wandb.run.name = f"pc-dry-run-{wandb.run.id}"
         wandb.config.update(args)
@@ -222,6 +233,10 @@ def main_worker(gpu, args):
     # clip_feat_extractor = Clip_feat_extractor(clip_feat)
     processor = CLIPProcessor.from_pretrained('openai/clip-vit-base-patch32')
     dataset = build(root='/home/aneesh/datasets/PhraseCutDataset/data/VGPhraseCut_v0', 
+    sett='train',
+    resolution=[224, 224], 
+    transform= [Transf_CLIProcess(processor)])
+    val_dataset = build(root='/home/aneesh/datasets/PhraseCutDataset/data/VGPhraseCut_v0', 
     sett='val',
     resolution=[224, 224], 
     transform= [Transf_CLIProcess(processor)])
@@ -239,7 +254,15 @@ def main_worker(gpu, args):
                 resolution=(224, 224), 
                 slots_img=args.simg, iters_img=args.itersimg, slot_dim_img=args.slotdimimg, 
                 slots_text=args.stext, iters_text=args.iterstext, slot_dim_text=args.slotdimtext, 
-                num_head=args.nhead, transf_dim=args.tdim, transf_num_layers=args.nlayers).to(args.rank)
+                num_head=args.nhead, transf_dim=args.tdim, transf_num_layers=args.nlayers, ans_dim = args.ans_dict_len).to(args.rank)
+     
+    #loading pretrained model
+    if args.load: 
+        ckpt = torch.load(args.checkpoint_dir/'checkpoint_best.pth', 
+            map_location='cpu') 
+    
+        model.load_state_dict(ckpt['model'])
+        print("model loaded!")
     
     #wrapping the model in DistributedDataParallel 
     param_weights = []
@@ -262,7 +285,7 @@ def main_worker(gpu, args):
     #defining sampler
     sampler = torch.utils.data.distributed.DistributedSampler(dataset)
 
-    # val_sampler = torch.utils.data.distributed.DistributedSampler(val_dataset)
+    val_sampler = torch.utils.data.distributed.DistributedSampler(val_dataset)
 
     assert args.batch_size % args.world_size == 0
     per_device_batch_size = args.batch_size // args.world_size
@@ -272,9 +295,9 @@ def main_worker(gpu, args):
          dataset, batch_size=per_device_batch_size, num_workers=args.workers,
          pin_memory=True, sampler=sampler, collate_fn = MyCollate(tokenizer=dataset.tokenizer))
     
-    # val_loader = torch.utils.data.DataLoader(
-    #      val_dataset, batch_size=per_device_batch_size, num_workers=args.workers,
-    #      pin_memory=True, sampler=val_sampler, collate_fn = MyCollate(tokenizer=dataset.tokenizer))
+    val_loader = torch.utils.data.DataLoader(
+         val_dataset, batch_size=per_device_batch_size, num_workers=args.workers,
+         pin_memory=True, sampler=val_sampler, collate_fn = MyCollate(tokenizer=dataset.tokenizer))
 
 
     #training loop: 
@@ -340,6 +363,10 @@ def main_worker(gpu, args):
         if args.rank==0: 
             wandb.log({'epoch_loss':epoch_loss/counter})
             if epoch%5==0:
+                state = dict(epoch=epoch + 1, model=model.module.state_dict(),
+                            optimizer=optimizer.state_dict())
+                torch.save(state, args.checkpoint_dir / f'checkpoint_best.pth')
+                print('Model saved in', args.checkpoint_dir)
                 with torch.no_grad(): 
                     img_save = tensor2img(img[0])
                     caption = [dataset.tokenizer.convert_ids_to_tokens(i.item()) for i in phrase[0]] 
