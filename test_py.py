@@ -1,3 +1,4 @@
+
 #################################################
 # from easy_vqa import get_train_questions, get_test_questions
 # from easy_vqa import get_train_image_paths, get_test_image_paths
@@ -163,50 +164,26 @@ report  = wr.Report(
 ) 
 '''
 #endregion
-
-#region: MAIN FUNCTION:
-def main(): 
-
-    # single-node distributed training
-    args.rank = 0
-    args.dist_url = 'tcp://localhost:58472'
-    args.world_size = 1 
-    ############################################
-    args.ngpus_per_node = args.world_size #single machine 
-    ############################################
-    # print(args.ngpus_per_node)
-    # torch.multiprocessing.spawn(main_worker, (args,), args.ngpus_per_node)
-    torch.multiprocessing.spawn(main_worker, args=(args,), nprocs=args.ngpus_per_node)
-#endregion
     
 
-def main_worker(gpu, args):
+def main():
     
-    args.rank += gpu
-    # print(args.rank, args.world_size)
-    torch.distributed.init_process_group(
-        backend='nccl', init_method=args.dist_url,
-        world_size=args.world_size, rank=args.rank)
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    if args.rank == 0:
 
-        '''
-        wandb.init(config=args, project='slot_vqa')#############################################
-        wandb.run.name = f"gqa-no-slots-guide=text-emb"
-        wandb.config.update(args)
-        config = wandb.config
-        wandb.run.save()
-        '''
+    wandb.init(config=args, project='slot_vqa')#############################################
+    wandb.run.name = f"gqa-no-slots-guide=text-emb"
+    wandb.config.update(args)
+    config = wandb.config
+    wandb.run.save()
 
-        # exit()
-        args.checkpoint_dir.mkdir(parents=True, exist_ok=True)
-        stats_file = open(args.checkpoint_dir / 'stats.txt', 'a', buffering=1)
-        print(' '.join(sys.argv))
-        print(' '.join(sys.argv), file=stats_file)
+    # exit()
+    args.checkpoint_dir.mkdir(parents=True, exist_ok=True)
+    stats_file = open(args.checkpoint_dir / 'stats.txt', 'a', buffering=1)
+    print(' '.join(sys.argv))
+    print(' '.join(sys.argv), file=stats_file)
         
 
-    torch.cuda.set_device(gpu)
-    torch.backends.cudnn.benchmark = True
 
 #loading dataset: 
     ###################################################3
@@ -263,12 +240,12 @@ def main_worker(gpu, args):
     #                     args=args)
 
 #initializing the model: 
-    mbert = CLIPTextModel.from_pretrained('openai/clip-vit-base-patch32').to(args.rank)
+    mbert = CLIPTextModel.from_pretrained('openai/clip-vit-base-patch32').to(device)
     # mbert = BertModel.from_pretrained('bert-base-multilingual-uncased').to(args.rank)
     for param in mbert.parameters(): 
         param.requires_grad=False
 
-    clip_vision_model = CLIPVisionModel.from_pretrained('openai/clip-vit-base-patch32').to(args.rank)
+    clip_vision_model = CLIPVisionModel.from_pretrained('openai/clip-vit-base-patch32').to(device)
     for param in clip_vision_model.parameters(): 
         param.requires_grad=False
 
@@ -277,15 +254,17 @@ def main_worker(gpu, args):
                 slots_img=args.simg, iters_img=args.itersimg, slot_dim_img=args.slotdimimg, 
                 slots_text=args.stext, iters_text=args.iterstext, slot_dim_text=args.slotdimtext, 
                 num_head=args.nhead, transf_dim=args.tdim, transf_num_layers=args.nlayers, 
-                ans_dim=ans_dict_len).to(args.rank)
+                ans_dim=ans_dict_len).to(device)
 
-    if args.load: 
+    if args.load:  
         ckpt = torch.load(args.checkpoint_dir/'checkpoint_best.pth', 
             map_location='cpu') 
     
         print(type(args.load), args.load)
         model.load_state_dict(ckpt['model'])
         print("Pretrained Model Loaded")
+    
+    model = model.to(device)
     
     #wrapping the model in DistributedDataParallel 
     param_weights = []
@@ -296,7 +275,6 @@ def main_worker(gpu, args):
         else:
             param_weights.append(param)
     parameters = [{'params': param_weights}, {'params': param_biases}]
-    model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[gpu], find_unused_parameters=True)
 
     #defining the optimizer
     if args.optimizer == 'adam':
@@ -307,22 +285,20 @@ def main_worker(gpu, args):
     #defining the loss_function: 
     loss_fn = nn.CrossEntropyLoss()
 
-    print('instantiated sampler')
-    sampler = torch.utils.data.distributed.DistributedSampler(dataset)
 
-    val_sampler = torch.utils.data.distributed.DistributedSampler(val_dataset)
-
-    assert args.batch_size % args.world_size == 0
-    per_device_batch_size = args.batch_size // args.world_size
+    # assert args.batch_size % args.world_size == 0
+    # per_device_batch_size = args.batch_size // args.world_size
     
     print('instantiating dataloader')
     loader = torch.utils.data.DataLoader(
-         dataset, batch_size=per_device_batch_size, num_workers=args.workers,
-         pin_memory=True, sampler=sampler, collate_fn = MyCollate(tokenizer=dataset.tokenizer))
+         dataset, batch_size=args.batch_size, num_workers=args.workers,
+         pin_memory=True, #sampler=sampler, collate_fn = MyCollate(tokenizer=dataset.tokenizer))
+         collate_fn = MyCollate(tokenizer=dataset.tokenizer))           
     
     val_loader = torch.utils.data.DataLoader(
-         val_dataset, batch_size=per_device_batch_size, num_workers=args.workers,
-         pin_memory=True, sampler=val_sampler, collate_fn = MyCollate(tokenizer=dataset.tokenizer))
+         val_dataset, batch_size=args.batch_size, num_workers=args.workers,
+         pin_memory=True, #sampler=val_sampler, collate_fn = MyCollate(tokenizer=dataset.tokenizer))
+         collate_fn = MyCollate(tokenizer=dataset.tokenizer))
 
     lr_scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=len(loader)*args.epochs)
     warmup_scheduler = warmup.LinearWarmup(optimizer, warmup_period=10000)
@@ -337,7 +313,6 @@ def main_worker(gpu, args):
 
         start_time = time.time()
         model.train()
-        sampler.set_epoch(epoch)
         epoch_loss = 0 
         acc=0
         
@@ -345,9 +320,9 @@ def main_worker(gpu, args):
         for step, item in enumerate(loader, start=epoch*len(loader)): 
             
             model.train() 
-            img = item[0].cuda(gpu, non_blocking=True)
-            ques = item[1].cuda(gpu, non_blocking=True)
-            ans = item[2].cuda(gpu, non_blocking=True)
+            img = item[0].to(device)#.cuda(gpu, non_blocking=True)
+            ques = item[1].to(device)#.cuda(gpu, non_blocking=True)cuda(gpu, non_blocking=True)
+            ans = item[2].to(device)#cuda(gpu, non_blocking=True)
 
             ####################################################
             # img = img*img.shape[0]
@@ -364,7 +339,7 @@ def main_worker(gpu, args):
 
             # print(f'ans.shape={ans.shape}, pred.shape={pred.shape}')
             loss = loss_fn(pred, ans)
-            # wandb.log({"iter_loss": loss})
+            wandb.log({"iter_loss": loss})
             # torch.nn.utils.clip_grad_norm(model.parameters(), args.clip)
             loss.backward()
 
@@ -381,7 +356,7 @@ def main_worker(gpu, args):
 
             # pred = torch.argmax(F.softmax(pred, dim=1), dim=1)
             assert pred_ans.dtype == ans.dtype, f'Expected prediction and targets to be of same dype but got pred.dtype={pred.dtype} and ans.dtype={ans.dtype}'
-            device = pred_ans.device
+            # device = pred_ans.device
             # print(f'pred===========================> {pred}')
             # print(f'target=============================> {ans}')
 
@@ -397,32 +372,30 @@ def main_worker(gpu, args):
         train_acc = acc.div_(counter)
         # torch.distributed.all_reduce(train_acc)
         train_acc = train_acc*100
-        if args.rank==0: 
-            # wandb.log({"epoch_loss": epoch_loss/counter})
-            # wandb.log({"train accuracy": train_acc})
-            print({"train accuracy": train_acc})
+        wandb.log({"epoch_loss": epoch_loss/counter})
+        wandb.log({"train accuracy": train_acc})
+        print({"train accuracy": train_acc})
         if epoch%args.print_freq==0: 
             
             #test the model: 
             acc = 0
-            val_sampler.set_epoch(epoch)
         
             counter2=0
             for step2, item in enumerate(val_loader): 
                 
                 model.eval()
                 
-                img = item[0].cuda(gpu, non_blocking=True)
-                ques = item[1].cuda(gpu, non_blocking=True)
-                ans = item[2].cuda(gpu, non_blocking=True)
+                img = item[0].to(device)#cuda(gpu, non_blocking=True)
+                ques = item[1].to(device)#cuda(gpu, non_blocking=True)
+                ans = item[2].to(device)#cuda(gpu, non_blocking=True)
  
                 
                 if step2 ==0: 
                     return_text_att = True
                     att, pred = model(img, ques, return_text_att)
-                    att_map = plt.matshow(att[0].detach().cpu())
-                    caption = [dataset.tokenizer.convert_ids_to_tokens(i.item()) for i in ques[1]] 
-                    caption = f'epoch:{epoch} question: {caption}'
+                    # att_map = plt.matshow(att[0].detach().cpu())
+                    # caption = [dataset.tokenizer.convert_ids_to_tokens(i.item()) for i in ques[1]] 
+                    # caption = f'epoch:{epoch} question: {caption}'
                     # image = wandb.Image(att_map, caption=caption)
                     # wandb.log({'text_attention_map': image})
             
@@ -449,16 +422,17 @@ def main_worker(gpu, args):
             print(f'test_acc={accuracy}')
             # print(pred.shape[0])
             # accuracy = torch.distributed.all_reduce(accuracy)
-            if args.rank == 0: 
-                # wandb.log({"accuracy": accuracy})
-                print(accuracy)
-                if accuracy> best_accuracy: 
-                    state = dict(epoch=epoch + 1, model=model.module.state_dict(),
+            wandb.log({"accuracy": accuracy})
+            print(accuracy)
+            if accuracy> best_accuracy: 
+                try: 
+                    state = dict(epoch=epoch + 1, model=model.state_dict(),
                                 optimizer=optimizer.state_dict())
                     torch.save(state, args.checkpoint_dir / f'checkpoint_best.pth')
                     print('Model saved in', args.checkpoint_dir)
-
-                    best_accuracy= accuracy
+                except:
+                    print('failed to save model')
+                best_accuracy= accuracy
 
 
                 stats = dict(epoch=epoch, step=step, 
@@ -468,16 +442,18 @@ def main_worker(gpu, args):
                 print(json.dumps(stats))
                 print(json.dumps(stats), file=stats_file)
             
+                '''
                 if epoch%5 == 0: 
 
                     state = dict(epoch=epoch + 1, model=model.module.state_dict(),
                                 optimizer=optimizer.state_dict())
                     torch.save(state, args.checkpoint_dir / f'checkpoint_{accuracy}_{epoch+1}.pth')
                     print('Model saved in', args.checkpoint_dir)
+                '''
 
 if __name__ == '__main__': 
     main()
-    # wandb.finish()
+    wandb.finish()
 
 
 

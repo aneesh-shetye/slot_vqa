@@ -2,18 +2,18 @@ program: train.py
 method: bayes
 metric: 
     name: accuracy
-    goal: minimize
+    goal: maximize
 
-description: 'easy-vqa-sweep'
+description: 'gqa-sweep'
 
 parameters: 
 
     #training hyperparameters
-    epochs: 
-        distribution: 'q_uniform'
-        min: 20
-        max: 35
-        q: 5
+    # epochs: 
+    #     distribution: 'q_uniform'
+    #     min: 20
+    #     max: 35
+    #     q: 5
 
     batch_size: 
         values: [32, 64, 128, 256]
@@ -33,7 +33,7 @@ parameters:
 
     itersimg: 
         distribution: 'q_uniform'
-        min: 2
+        min: 3
         max: 10
         q: 2
       

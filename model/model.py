@@ -86,8 +86,8 @@ class SlotVQA(nn.Module):
         #                     nn.ReLU(), 
         #                     nn.Linear(self.transf_dim//8, ans_dim)) 
                             #nn.Softmax(dim=-1)) #crossentropyloss would take care of this 
-        self.decoder = SlotDecoder(decoder_init_size=self.res, 
-                                    slot_dim=transf_dim)
+        # self.decoder = SlotDecoder(decoder_init_size=self.res, 
+        #                             slot_dim=transf_dim)
         self.ans_enc = nn.Sequential(
                             nn.Linear(self.transf_dim, ans_dim)) 
         self.layernorm = nn.LayerNorm(ans_dim)
@@ -96,14 +96,25 @@ class SlotVQA(nn.Module):
             img: torch.tensor, 
             text: torch.tensor, 
             return_text_att: bool=False, 
+            return_img_att: bool=False,
             object_seg: bool=False): 
 
         
         self.device = next(self.learnable_cls.parameters()).device
         text_emb, cls, text_att, text_slots = self.text_enc(text) 
+        #text_emb.shape = batch_size, seq_len, emb_dim
         # text_slots = self.to_img_dim(text_slots)
         # guide = text_slots
-        guide = self.to_img_dim(cls.unsqueeze(1).repeat(1,self.slots_img,1))
+        #####################################
+        #guide = cls token
+        #####################################
+        # guide = self.to_img_dim(cls.unsqueeze(1).repeat(1,self.slots_img,1))
+
+        #####################################
+        #guide = sum of text emb
+        ####################################
+        guide = torch.sum(text_emb, dim=1)/text_emb.shape[1]
+        guide = self.to_img_dim(guide.unsqueeze(1).repeat(1, self.slots_img,1))
         # print(f'guide.shape: {guide.shape}')
         # print(f'cls.shape: {cls.shape}')
         # print(torch.sum(text_emb, dim=1).shape)
@@ -111,7 +122,7 @@ class SlotVQA(nn.Module):
         # print(f'guide.shape:{guide.shape}')
         # print(text_emb.shape)
         # guide = self.to_img_dim(torch.sum(text_emb, dim=1))
-        img_emb, img_slots = self.img_enc(inp=img, guide=guide) 
+        img_att, img_emb, img_slots = self.img_enc(inp=img, guide=guide) 
         #img_slots.shape = batch, num_slots, slot_dim 
 
         #projecting imgs and texts to a common embedding space
@@ -183,8 +194,18 @@ class SlotVQA(nn.Module):
         ans = out[:, 0, :]
         #################################################
         # return self.layernorm(self.ans_enc(ans))
+
+        att = []
+        
         if return_text_att: 
-            return text_att, self.ans_enc(ans)
+            att.append(text_att)
+        if return_img_att: 
+            att.append(img_att)
+
+        return_att = return_text_att or return_img_att
+
+        if return_att: 
+            return att, self.ans_enc(ans)
         else: 
             return self.ans_enc(ans)
         

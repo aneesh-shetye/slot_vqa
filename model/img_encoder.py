@@ -88,8 +88,8 @@ class SlotImage(nn.Module):
             cls_token = x['pooler_output'] #pooler_output.shape = batch_size, 768
 
         # print(x['last_hidden_state'].shape)
-        img_emb = x['last_hidden_state']          
-        # print(x.shape)
+        img_emb = x['last_hidden_state'] #img_emb.shape = batch_size, 50, img_dim          
+        # print(f'img_emb.shape = {img_emb.shape}')
 
         if add_cls:             
             cls_token = cls_token.unsqueeze(1).repeat(1,img_emb.shape[1], 1)
@@ -102,8 +102,8 @@ class SlotImage(nn.Module):
         # print(f'x shape in img encoder before mlp{x.shape}')
         img_slots = self.layer_norm(self.mlp(img_emb)) 
         if guide==None: 
-            _, img_slots = self.slot_attention_module(inputs=img_slots, slots=slots) 
+            img_att , img_slots = self.slot_attention_module(inputs=img_slots, slots=slots) 
         else: 
-            _, img_slots = self.slot_attention_module(inputs=img_slots, slots=slots, guide=guide)
+            img_att , img_slots = self.slot_attention_module(inputs=img_slots, slots=slots, guide=guide)
         
-        return img_emb, img_slots
+        return img_att, img_emb, img_slots

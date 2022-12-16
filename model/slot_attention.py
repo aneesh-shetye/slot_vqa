@@ -1,11 +1,55 @@
 #slot attention module from lucidrains
+import math
 import torch
 from torch import nn
 from torch.nn import init
 import torch.nn.functional as F
 
+#write a class for multihead attention
+class MultiheadAttention(nn.Module):
+    def __init__(self, 
+            query_dim:int,
+            key_dim:int, 
+            value_dim:int, 
+            hidden_dim:int , 
+            n_heads:int, 
+            dropout = None): 
+        super().__init__()
+        self.hidden_dim = hidden_dim = hidden_dim
+        self.n_heads = n_heads
+        self.dropout = dropout
+        self.head_dim = hidden_dim // n_heads
+        self.fc_Q = nn.Linear(query_dim, hidden_dim)
+        self.fc_K = nn.Linear(key_dim, hidden_dim)
+        self.fc_V = nn.Linear(value_dim, hidden_dim)
+        self.fc_O = nn.Linear(hidden_dim, hidden_dim)
+        self.scale = math.sqrt(self.head_dim)
+
+    def forward(self, query, key, value, mask=None): 
+
+        batch_size = query.shape[0]
+        Q = self.fc_Q(query)
+        K = self.fc_K(key)
+        V = self.fc_V(value)
+        Q = Q.view(batch_size, -1, self.n_heads, self.head_dim).permute(0, 2, 1, 3)     # [Q] = [batch_size, num_heads, query_len, head_dim]
+        K = K.view(batch_size, -1, self.n_heads, self.head_dim).permute(0, 2, 1, 3)     # [K] = [batch_size, num_heads, key_len, head_dim]
+        V = V.view(batch_size, -1, self.n_heads, self.head_dim).permute(0, 2, 1, 3)     # [V] = [batch_size, num_heads, value_len, head_dim]
+        energy = torch.matmul(Q, K.permute(0, 1, 3, 2)) / self.scale
+        if mask is not None:                                                            # [energy] = [batch_size, num_heads, query_len, key_len]  
+            energy = energy.masked_fill(mask == False, -1e10)                               
+        attention = torch.softmax(energy, dim = -1)                                     # [attention] = [batch_size, num_heads, query_len, key_len]
+        if self.dropout:
+            x = torch.matmul(self.dropout(attention), V)                                    # [x] = [batch_size, num_heads, query_len, head_dim]
+        else: 
+            x = torch.matmul(attention, V)
+        x = x.permute(0, 2, 1, 3).contiguous()                                          # [x] = [batch_size, query_len, num_heads, head_dim]
+        # Can avoid contiguous() if we use .reshape instead of .view in the next line
+        out = self.fc_O(x.view(batch_size, -1, self.hidden_dim))                        # [out] = [batch_size, query_len, hidden_dim]   
+        return out, attention
+ 
 #custom GRU module : 
 class customGRU(nn.Module): 
+
     def __init__(self, 
                 inp_dim: int, 
                 hidden_dim: int, 
@@ -44,6 +88,7 @@ class customGRU(nn.Module):
         h = (1-z)*n + z*n
 
         return h
+
 class SlotAttention(nn.Module):
     def __init__(self, num_slots, dim, iters = 3, eps = 1e-8, hidden_dim = 128):
         super().__init__()
@@ -75,6 +120,10 @@ class SlotAttention(nn.Module):
         self.norm_input  = nn.LayerNorm(dim)
         self.norm_slots  = nn.LayerNorm(dim)
         self.norm_pre_ff = nn.LayerNorm(dim)
+        ######################################
+        ## change hidden_dim
+        ######################################
+        self.multihead = MultiheadAttention(dim, dim, dim, hidden_dim=dim, n_heads=8)
 
     def forward(self, inputs, slots=None, num_slots=None, mask=None, guide=None):
         b, n, d, device = *inputs.shape, inputs.device
@@ -96,11 +145,13 @@ class SlotAttention(nn.Module):
             q = self.to_q(slots)
 
             dots = torch.einsum('bid,bjd->bij', q, k) * self.scale
+            #dots.shape =  batch_size, num_slots, seq_len 
             if mask != None: 
                 #mask.shape = batch_size, seq_len
                 dots.masked_fill(mask==0, 0.)
 
-            attn = dots.softmax(dim=1) + self.eps
+            # print(dots.shape) 
+            attn = dots.softmax(dim=2) + self.eps
             #attn = attn / attn.sum(dim=-1, keepdim=True)
 
             updates = torch.einsum('bjd,bij->bid', v, attn)
@@ -113,6 +164,7 @@ class SlotAttention(nn.Module):
                 )
             
             else: 
+                guide, _= self.multihead(slots, guide, guide)
                 slots = self.gru_modified(
                     updates.reshape(-1, d), 
                     slots_prev.reshape(-1, d), 

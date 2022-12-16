@@ -213,11 +213,13 @@ def train_obj(gpu, args):
 
     if args.rank == 0:
 
+        '''
         wandb.init(config=args, project='slot_vqa')#############################################
         wandb.run.name = f"pc-dry-run-{wandb.run.id}"
         wandb.config.update(args)
         config = wandb.config
         wandb.run.save()
+        '''
 
         # exit()
         args.checkpoint_dir.mkdir(parents=True, exist_ok=True)
@@ -233,7 +235,10 @@ def train_obj(gpu, args):
     # clip_feat_extractor = Clip_feat_extractor(clip_feat)
     processor = CLIPProcessor.from_pretrained('openai/clip-vit-base-patch32')
     dataset = build(root='/home/aneesh/datasets/PhraseCutDataset/data/VGPhraseCut_v0', 
-    sett='train',
+    #########################################333
+    ## testing code with sett ='test'
+    ########################################
+    sett='test',
     resolution=[224, 224], 
     transform= [Transf_CLIProcess(processor)])
     val_dataset = build(root='/home/aneesh/datasets/PhraseCutDataset/data/VGPhraseCut_v0', 
@@ -261,7 +266,7 @@ def train_obj(gpu, args):
         ckpt = torch.load(args.checkpoint_dir/'checkpoint_best.pth', 
             map_location='cpu') 
     
-        model.load_state_dict(ckpt['model'])
+        # model.load_state_dict(ckpt['model'])
         print("model loaded!")
     
     #wrapping the model in DistributedDataParallel 
@@ -273,7 +278,19 @@ def train_obj(gpu, args):
         else:
             param_weights.append(param)
     parameters = [{'params': param_weights}, {'params': param_biases}]
+
+    ####################################
+    ## To fit it on CUDA
+    ####################################
+    for param in model.decoder.parameters(): 
+        param.requires_grad = False
+
+    for param in model.transf_enc.parameters(): 
+        param.requires_grad = False
+
+
     model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[gpu], find_unused_parameters=True)
+    
 
     #defining the optimizer
     if args.optimizer == 'adam':
@@ -351,7 +368,7 @@ def train_obj(gpu, args):
             #find the shapes, save the image
             # print(f'type:{type(min_l2_loss(recons,trg_obj))}, {type(l2_loss(recon_combined,img))}')
             loss = min_l2_loss(recons,trg_obj) + args.lambd*l2_loss(recon_combined, img)
-            wandb.log({'iter_loss': loss})
+            # wandb.log({'iter_loss': loss})
             # print(loss)
             
             loss.backward()
@@ -361,7 +378,7 @@ def train_obj(gpu, args):
             epoch_loss+=loss.item()
         
         if args.rank==0: 
-            wandb.log({'epoch_loss':epoch_loss/counter})
+            # wandb.log({'epoch_loss':epoch_loss/counter})
             if epoch%5==0:
                 state = dict(epoch=epoch + 1, model=model.module.state_dict(),
                             optimizer=optimizer.state_dict())
@@ -370,6 +387,7 @@ def train_obj(gpu, args):
                 with torch.no_grad(): 
                     img_save = tensor2img(img[0])
                     caption = [dataset.tokenizer.convert_ids_to_tokens(i.item()) for i in phrase[0]] 
+                    '''
                     img_save = wandb.Image(img_save, caption=caption)
                     wandb.log({'image': img_save})
                     mask_save = tensor2img(trg_obj[0])
@@ -378,6 +396,7 @@ def train_obj(gpu, args):
                     recons_save = tensor2img(recon_combined[0])
                     recons_save = wandb.Image(recons_save)
                     wandb.log({'pred': recons_save})
+                    '''
 
 if __name__ == '__main__': 
     main()
