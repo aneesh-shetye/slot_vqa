@@ -10,10 +10,7 @@ import numpy as np
 from pathlib import Path
 import argparse
 import json
-import math
-import os
-import random
-import signal
+import math import os import random import signal
 import subprocess
 import sys
 import time
@@ -64,11 +61,11 @@ parser.add_argument('--print_freq', default=2, type=int, metavar='PF',
                     help='write in the stats file and print after PF steps') 
 parser.add_argument('--load', default=False , type=bool, metavar='L', 
                     help='load pretrained model if True') 
-parser.add_argument('--checkpoint_dir', default='/home/aneesh/vqa_checkpoint/checkpoint/', type=Path, metavar='CD', 
+parser.add_argument('--checkpoint_dir', default='media/compute/homes/ashetye/vqa_checkpoint/checkpoint/', type=Path, metavar='CD', 
                     help='path to directory in which checkpoint and stats are saved') 
-parser.add_argument('--vg_img_path',default='/home/aneesh/datasets/gqa_imgs/images/', 
+parser.add_argument('--vg_img_path',default='media/compute/homes/ashetye/Dataset/gqa_imgs/images/', 
                 help='path to image directory')
-parser.add_argument('--gqa_ann_path',default='/home/aneesh/datasets/gqa_ann/OpenSource/', 
+parser.add_argument('--gqa_ann_path',default='media/compute/homes/ashetye/Datasets/gqa_ann/OpenSource/', 
                 help='path to annotations')
 parser.add_argument('--gqa_split_type',default='balanced', 
         help='GQA split eg: balanced , all')
@@ -253,7 +250,7 @@ def main_worker(gpu, args):
     # processor = CLIPProcessor.from_pretrained('openai/clip-vit-base-patch32')
     # transform = [T.Resize([224, 224]), Transf_CLIProcess(processor)]
     # # transform = [T.ToTensor(), T.Resize([400, 400])]
-    # args.root = '/home/aneesh/datasets/'
+    # args.root = 'media/compute/homes/ashetye/datasets/'
     # dataset = build(transform, 
     #                 args=args)
     # ans_dict_len = len(dataset.answer2id)#1853 including unk

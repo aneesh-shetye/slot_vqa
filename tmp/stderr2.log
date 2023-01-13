@@ -1,0 +1,26 @@
+test.job.sbatch: line 19: ![[NoDevFiles: command not found
+Traceback (most recent call last):
+  File "train_obj.py", line 402, in <module>
+    main()
+  File "train_obj.py", line 198, in main
+    torch.multiprocessing.spawn(train_obj, args=(args,), nprocs=args.ngpus_per_node)
+  File "/media/compute/homes/ashetye/anaconda3/envs/slotvqa/lib/python3.7/site-packages/torch/multiprocessing/spawn.py", line 240, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/media/compute/homes/ashetye/anaconda3/envs/slotvqa/lib/python3.7/site-packages/torch/multiprocessing/spawn.py", line 198, in start_processes
+    while not context.join():
+  File "/media/compute/homes/ashetye/anaconda3/envs/slotvqa/lib/python3.7/site-packages/torch/multiprocessing/spawn.py", line 160, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/media/compute/homes/ashetye/anaconda3/envs/slotvqa/lib/python3.7/site-packages/torch/multiprocessing/spawn.py", line 69, in _wrap
+    fn(i, *args)
+  File "/media/compute/homes/ashetye/slotvqa/slot_vqa/train_obj.py", line 212, in train_obj
+    world_size=args.world_size, rank=args.rank)
+  File "/media/compute/homes/ashetye/anaconda3/envs/slotvqa/lib/python3.7/site-packages/torch/distributed/distributed_c10d.py", line 610, in init_process_group
+    timeout=timeout,
+  File "/media/compute/homes/ashetye/anaconda3/envs/slotvqa/lib/python3.7/site-packages/torch/distributed/distributed_c10d.py", line 738, in _new_process_group_helper
+    pg = ProcessGroupNCCL(prefix_store, rank, world_size, pg_options)
+RuntimeError: ProcessGroupNCCL is only supported with GPUs, no GPUs found!
+

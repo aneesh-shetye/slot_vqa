@@ -54,9 +54,9 @@ parser.add_argument('--print_freq', default=5, type=int, metavar='PF',
                     help='write in the stats file and print after PF steps') 
 parser.add_argument('--checkpoint_dir', default='./checkpoint/', type=Path, metavar='CD', 
                     help='path to directory in which checkpoint and stats are saved') 
-parser.add_argument('--vg_img_path',default='/home/aneesh/datasets/gqa_imgs/images/', 
+parser.add_argument('--vg_img_path',default='/home/aneesh/Datasets/gqa_imgs/images/', 
                 help='path to image directory')
-parser.add_argument('--gqa_ann_path',default='/home/aneesh/datasets/gqa_ann/OpenSource/', 
+parser.add_argument('--gqa_ann_path',default='/home/aneesh/Datasets/gqa_ann/OpenSource/', 
                 help='path to annotations')
 parser.add_argument('--gqa_split_type',default='balanced', 
         help='GQA split eg: balanced , all')
@@ -161,7 +161,7 @@ class Transf_CLIProcess(nn.Module):
     def __call__(self, image): 
         return self.processor(images=image, return_tensors='pt')['pixel_values'] 
 
-def tensor2img(img:torch.tensor): 
+def tensor2img(img): 
     #inp.shape = 3, H, W
 
     test_img = img.permute(1,2,0)
@@ -225,7 +225,7 @@ def train_obj(gpu, args):
         args.checkpoint_dir.mkdir(parents=True, exist_ok=True)
         stats_file = open(args.checkpoint_dir / 'stats.txt', 'a', buffering=1)
         print(' '.join(sys.argv))
-        print(' '.join(sys.argv), file=stats_file)
+        #print(' '.join(sys.argv), file=stats_file)
         
 
     torch.cuda.set_device(gpu)
@@ -234,14 +234,14 @@ def train_obj(gpu, args):
     # clip_feat = CLIPFeatureExtractor(do_resize=False, do_center_crop=False)
     # clip_feat_extractor = Clip_feat_extractor(clip_feat)
     processor = CLIPProcessor.from_pretrained('openai/clip-vit-base-patch32')
-    dataset = build(root='/home/aneesh/datasets/PhraseCutDataset/data/VGPhraseCut_v0', 
+    dataset = build(root='/home/aneesh/Datasets/PhraseCutDataset/data/VGPhraseCut_v0', 
     #########################################333
     ## testing code with sett ='test'
     ########################################
     sett='test',
     resolution=[224, 224], 
     transform= [Transf_CLIProcess(processor)])
-    val_dataset = build(root='/home/aneesh/datasets/PhraseCutDataset/data/VGPhraseCut_v0', 
+    val_dataset = build(root='/home/aneesh/Datasets/PhraseCutDataset/data/VGPhraseCut_v0', 
     sett='val',
     resolution=[224, 224], 
     transform= [Transf_CLIProcess(processor)])
@@ -382,7 +382,7 @@ def train_obj(gpu, args):
             if epoch%5==0:
                 state = dict(epoch=epoch + 1, model=model.module.state_dict(),
                             optimizer=optimizer.state_dict())
-                torch.save(state, args.checkpoint_dir / f'checkpoint_best.pth')
+                torch.save(state, f'{args.checkpoint_dir}/checkpoint_best.pth')
                 print('Model saved in', args.checkpoint_dir)
                 with torch.no_grad(): 
                     img_save = tensor2img(img[0])
