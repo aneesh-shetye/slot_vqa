@@ -62,7 +62,7 @@ parser.add_argument('--gqa_split_type',default='balanced',
         help='GQA split eg: balanced , all')
 
 #other args: 
-parser.add_argument('--load',default=True, 
+parser.add_argument('--load',default=False, type=bool, 
         help='Load pretrained model')
 
 # Segmentation #############################
@@ -178,6 +178,21 @@ def tensor2img(img:torch.tensor):
 def min_l2_loss(inp, trg): 
     return torch.mean(torch.min(torch.mean((inp-trg.unsqueeze(1))*(inp-trg.unsqueeze(1)), axis=(2,3,4)), axis=1).values)
 
+
+def custom_contrastive_loss(rep, inp, trg, text): 
+    c = torch.mean((inp-trg.unsqueeze(1))*(inp-trg.unsqueeze(1)), axis=(2,3,4))
+    true_obj_idx = torch.argmin(c, axis=1) # extract objects with highest intersection
+    true_obj_rep = torch.ones(inp.shape[0], rep.shape[-1]) #true_obj_rep.shape = [batch_size, rep_dim]
+    for i in range(true_obj_idx.shape[0]): 
+        true_obj_rep[i, :] = rep[i, true_obj_idx[i], :]
+    #text.shape = [batch_size, rep_space]
+    return torch.mean(torch.einsum('ij, ij-> i', true_obj_rep, text))
+ 
+# def contrastive_loss(visual, trg, text): 
+    
+    
+
+
 def l2_loss(inp, trg): 
     return torch.mean((inp-trg)*(inp-trg))
 
@@ -197,7 +212,6 @@ def main():
     # torch.multiprocessing.spawn(main_worker, (args,), args.ngpus_per_node)
     torch.multiprocessing.spawn(train_obj, args=(args,), nprocs=args.ngpus_per_node)
 #endregion
-
 
 ########################################
 args.ans_dict_len = 1853
@@ -263,6 +277,7 @@ def train_obj(gpu, args):
      
     #loading pretrained model
     if args.load: 
+        print(args.load)
         ckpt = torch.load(args.checkpoint_dir/'checkpoint_best.pth', 
             map_location='cpu') 
     
@@ -346,7 +361,8 @@ def train_obj(gpu, args):
             phrase = item[1].cuda(gpu, non_blocking=True)
             trg_mask = item[2].cuda(gpu, non_blocking=True)
 
-            recon_combined, recons, masks = model(img, phrase, object_seg=True)
+            text_slots,img_slots, recon_combined, recons, masks = model(img, phrase, object_seg=True)
+            #recons.shape = (batch_size, num_slots, channels, width, height )
 
             # print(f'img.shape: {img.shape}')
             # print(f'phrase.shape: {phrase.shape}')
@@ -360,10 +376,11 @@ def train_obj(gpu, args):
  
             optimizer.zero_grad()
 
-            trg_obj = img*trg_mask
+            trg_obj = img*trg_mask #trg_obj.shape = (batch_size, num_channels, height, width)
 
             # print(f'recon_combined.shape: {recon_combined.shape}')
             # print(f'recons.shape: {recons.shape}')
+            # print(f'trg_obj.shape:{trg_obj.shape}')
             # print(f'masks.shape: {masks.shape}')
             #find the shapes, save the image
             # print(f'type:{type(min_l2_loss(recons,trg_obj))}, {type(l2_loss(recon_combined,img))}')
@@ -387,16 +404,14 @@ def train_obj(gpu, args):
                 with torch.no_grad(): 
                     img_save = tensor2img(img[0])
                     caption = [dataset.tokenizer.convert_ids_to_tokens(i.item()) for i in phrase[0]] 
-                    '''
-                    img_save = wandb.Image(img_save, caption=caption)
-                    wandb.log({'image': img_save})
+                    # img_save = wandb.Image(img_save, caption=caption)
+                    # wandb.log({'image': img_save})
                     mask_save = tensor2img(trg_obj[0])
-                    mask_save = wandb.Image(mask_save)
-                    wandb.log({'trg_obj': mask_save})
+                    # mask_save = wandb.Image(mask_save)
+                    # wandb.log({'trg_obj': mask_save})
                     recons_save = tensor2img(recon_combined[0])
-                    recons_save = wandb.Image(recons_save)
-                    wandb.log({'pred': recons_save})
-                    '''
+                    # recons_save = wandb.Image(recons_save)
+                    # wandb.log({'pred': recons_save})
 
 if __name__ == '__main__': 
     main()

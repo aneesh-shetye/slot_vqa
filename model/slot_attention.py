@@ -151,7 +151,7 @@ class SlotAttention(nn.Module):
                 dots.masked_fill(mask==0, 0.)
 
             # print(dots.shape) 
-            attn = dots.softmax(dim=2) + self.eps
+            attn = dots.softmax(dim=1) + self.eps
             #attn = attn / attn.sum(dim=-1, keepdim=True)
 
             updates = torch.einsum('bjd,bij->bid', v, attn)

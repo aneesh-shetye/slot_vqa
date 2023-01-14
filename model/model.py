@@ -86,8 +86,8 @@ class SlotVQA(nn.Module):
         #                     nn.ReLU(), 
         #                     nn.Linear(self.transf_dim//8, ans_dim)) 
                             #nn.Softmax(dim=-1)) #crossentropyloss would take care of this 
-        # self.decoder = SlotDecoder(decoder_init_size=self.res, 
-        #                             slot_dim=transf_dim)
+        self.decoder = SlotDecoder(decoder_init_size=self.res, 
+                                    slot_dim=transf_dim)
         self.ans_enc = nn.Sequential(
                             nn.Linear(self.transf_dim, ans_dim)) 
         self.layernorm = nn.LayerNorm(ans_dim)
@@ -114,7 +114,7 @@ class SlotVQA(nn.Module):
         #guide = sum of text emb
         ####################################
         guide = torch.sum(text_emb, dim=1)/text_emb.shape[1]
-        guide = self.to_img_dim(guide.unsqueeze(1).repeat(1, self.slots_img,1))
+        guide = self.to_img_dim(guide.unsqueeze(1).repeat(1, self.slots_img,1)) #guide.shape = (batch_size, num_slots, dim)
         # print(f'guide.shape: {guide.shape}')
         # print(f'cls.shape: {cls.shape}')
         # print(torch.sum(text_emb, dim=1).shape)
@@ -126,7 +126,8 @@ class SlotVQA(nn.Module):
         #img_slots.shape = batch, num_slots, slot_dim 
 
         #projecting imgs and texts to a common embedding space
-        text_slots = text_emb
+        text_slots = text_emb #text_slots.shape = (batch_size, len, dim) 
+        # print(f'text_emb.shape:{text_emb.shape}')
         text_slots = self.linear_text(text_slots)
         img_slots = self.linear_img(img_slots)
 
@@ -136,7 +137,7 @@ class SlotVQA(nn.Module):
         
         if object_seg:  
             recon_combined, masks, recons = self.decoder(img_slots, self.device)
-            return recon_combined, masks, recons
+            return guide[:, 0, :], img_slots, recon_combined, masks, recons
         ################################################
         #AGREGATING IMAGE SLOTS
         ################################################

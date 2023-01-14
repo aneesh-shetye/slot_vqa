@@ -44,16 +44,18 @@ class SlotDecoder(nn.Module):
 
         #transpose Conv Decoder: 
         self.decoder_cnn = nn.Sequential(
-            nn.ConvTranspose2d(slot_dim, 256, 128, padding=(2,2)),  # 256
-            nn.ReLU(), 
-            nn.ConvTranspose2d(256, 64, 5, padding=(2,2)), #64
-            nn.ReLU(), 
-            nn.ConvTranspose2d(64, 16, 5, padding=(2,2)), #16
-            nn.ReLU(), 
-            nn.ConvTranspose2d(16, 4, 5, padding=(2,2)), #4
-            nn.ReLU(), 
-            nn.ConvTranspose2d(256, 4, 5, padding=(2,2)), #4
+            # nn.ConvTranspose2d(slot_dim, 256, 128, padding=(2,2)),  # 256
+            # nn.ReLU(), 
+            # nn.ConvTranspose2d(128, 64, 5, padding=(2,2)), #64
+            # nn.ReLU(), 
+            # nn.ConvTranspose2d(64, 16, 5, padding=(2,2)), #16
+            # nn.ReLU(), 
+            # nn.ConvTranspose2d(16, 4, 5, padding=(2,2)), #4
+            # nn.ReLU(), 
+            nn.ConvTranspose2d(512, 4, 5, padding=(2,2)), #4
             nn.ReLU() 
+            # nn.ConvTranspose2d(256, 4, 5, padding=(2,2)), #4
+            # nn.ReLU()
         )
 
     

@@ -190,13 +190,11 @@ def main_worker(gpu, args):
 
     if args.rank == 0:
 
-        '''
         wandb.init(config=args, project='slot_vqa')#############################################
         wandb.run.name = f"gqa-no-slots-guide=text-emb"
         wandb.config.update(args)
         config = wandb.config
         wandb.run.save()
-        '''
 
         # exit()
         args.checkpoint_dir.mkdir(parents=True, exist_ok=True)
@@ -364,7 +362,7 @@ def main_worker(gpu, args):
 
             # print(f'ans.shape={ans.shape}, pred.shape={pred.shape}')
             loss = loss_fn(pred, ans)
-            # wandb.log({"iter_loss": loss})
+            wandb.log({"iter_loss": loss})
             # torch.nn.utils.clip_grad_norm(model.parameters(), args.clip)
             loss.backward()
 
@@ -398,8 +396,8 @@ def main_worker(gpu, args):
         # torch.distributed.all_reduce(train_acc)
         train_acc = train_acc*100
         if args.rank==0: 
-            # wandb.log({"epoch_loss": epoch_loss/counter})
-            # wandb.log({"train accuracy": train_acc})
+            wandb.log({"epoch_loss": epoch_loss/counter})
+            wandb.log({"train accuracy": train_acc})
             print({"train accuracy": train_acc})
         if epoch%args.print_freq==0: 
             
@@ -420,9 +418,9 @@ def main_worker(gpu, args):
                 if step2 ==0: 
                     return_text_att = True
                     att, pred = model(img, ques, return_text_att)
-                    att_map = plt.matshow(att[0].detach().cpu())
-                    caption = [dataset.tokenizer.convert_ids_to_tokens(i.item()) for i in ques[1]] 
-                    caption = f'epoch:{epoch} question: {caption}'
+                    # att_map = plt.matshow(att[0].detach().cpu())
+                    # caption = [dataset.tokenizer.convert_ids_to_tokens(i.item()) for i in ques[1]] 
+                    # caption = f'epoch:{epoch} question: {caption}'
                     # image = wandb.Image(att_map, caption=caption)
                     # wandb.log({'text_attention_map': image})
             
@@ -450,7 +448,7 @@ def main_worker(gpu, args):
             # print(pred.shape[0])
             # accuracy = torch.distributed.all_reduce(accuracy)
             if args.rank == 0: 
-                # wandb.log({"accuracy": accuracy})
+                wandb.log({"accuracy": accuracy})
                 print(accuracy)
                 if accuracy> best_accuracy: 
                     state = dict(epoch=epoch + 1, model=model.module.state_dict(),
@@ -477,7 +475,7 @@ def main_worker(gpu, args):
 
 if __name__ == '__main__': 
     main()
-    # wandb.finish()
+    wandb.finish()
 
 
 
