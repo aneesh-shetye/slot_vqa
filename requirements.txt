@@ -9,7 +9,7 @@ pycocotools==2.0.4
 pytorch_warmup==0.1.0
 scikit_image==0.18.3
 seaborn==0.11.2
-requests=2.22.0
+requests==2.22.0
 torch==1.12.1
 torchvision==0.13.1
 transformers==4.21.1
