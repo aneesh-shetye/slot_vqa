@@ -60,7 +60,7 @@ mv 'mdetr_annotations.tar.gz?download=1' ann.tar.gz
 tar -xvzf ann.tar.gz
 ```
 
-### 3. Running the code: 
+### 3. Running the code on a single GPU system: 
 
 Log into wandb 
 ```
@@ -83,4 +83,14 @@ Fine-tuning on GQA dataset:
 
 ```
 python train.py --epochs=25 --load=1
+```
+### 3. Running the code on a multi-gpu system:
+
+Get back on the home folder
+``` 
+cd slotvqa
+```
+Schedule the job: 
+```
+srun test.job.sbatch
 ```
