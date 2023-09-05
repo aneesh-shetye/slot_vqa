@@ -1,0 +1,24 @@
+{
+    "os": "Linux-5.13.0-44-generic-x86_64-with-glibc2.31",
+    "python": "3.9.12",
+    "heartbeatAt": "2022-06-13T12:47:43.239269",
+    "startedAt": "2022-06-13T12:47:42.928641",
+    "docker": null,
+    "gpu": "NVIDIA GeForce GTX 1080 Ti",
+    "gpu_count": 1,
+    "cpu_count": 8,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/aneesh/github/slot_vqa/train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/aneesh-shetye/slot_vqa.git",
+        "commit": "89bede14551fc4818759fb2d35ea48fee4b75ffd"
+    },
+    "email": "aneeshashetye@gmail.com",
+    "root": "/home/aneesh/github/slot_vqa",
+    "host": "bender",
+    "username": "aneesh",
+    "executable": "/home/aneesh/.conda/envs/slotvqa/bin/python"
+}

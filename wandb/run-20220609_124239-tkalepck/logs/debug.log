@@ -1,0 +1,86 @@
+2022-06-09 12:42:39,759 INFO    MainThread:149175 [wandb_setup.py:_flush():76] Loading settings from /home/aneesh/.config/wandb/settings
+2022-06-09 12:42:39,759 INFO    MainThread:149175 [wandb_setup.py:_flush():76] Loading settings from /home/aneesh/github/slot_vqa/wandb/settings
+2022-06-09 12:42:39,759 INFO    MainThread:149175 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'start_method': 'thread'}
+2022-06-09 12:42:39,759 INFO    MainThread:149175 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train.py', 'program': '/home/aneesh/github/slot_vqa/train.py'}
+2022-06-09 12:42:39,759 INFO    MainThread:149175 [wandb_init.py:_log_setup():428] Logging user logs to /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/logs/debug.log
+2022-06-09 12:42:39,759 INFO    MainThread:149175 [wandb_init.py:_log_setup():429] Logging internal logs to /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/logs/debug-internal.log
+2022-06-09 12:42:39,759 INFO    MainThread:149175 [wandb_init.py:init():462] calling init triggers
+2022-06-09 12:42:39,759 INFO    MainThread:149175 [wandb_init.py:init():465] wandb.init called with sweep_config: {}
+config: {'workers': 0, 'print_freq': 5, 'checkpoint_dir': PosixPath('checkpoint'), 'vg_img_path': '/home/aneesh/datasets/gqa_imgs/images/', 'gqa_ann_path': '/home/aneesh/datasets/gqa_ann/OpenSource/', 'gqa_split_type': 'balanced', 'mask_model': 'none', 'masks': False, 'epochs': 10, 'imset': 'train', 'batch_size': 16, 'learning_rate': 0.2, 'dropout': 0.01, 'weight_decay': 1e-06, 'momentum': 0.9, 'clip': 1, 'betas': (0.9, 0.98), 'eps': 1e-09, 'loss_fn': 'cross_entropy', 'optimizer': 'adam', 'simg': 5, 'itersimg': 3, 'slotdimimg': 128, 'stext': 5, 'iterstext': 3, 'slotdimtext': 128, 'nhead': 6, 'tdim': 128, 'nlayers': 3, 'text_encoder_type': 'openai/clip-vit-base-patch32', 'rank': 0, 'dist_url': 'tcp://localhost:58472', 'world_size': 1, 'ngpus_per_node': 1}
+2022-06-09 12:42:39,759 INFO    MainThread:149175 [wandb_init.py:init():515] starting backend
+2022-06-09 12:42:39,761 INFO    MainThread:149175 [backend.py:ensure_launched():217] starting backend process...
+2022-06-09 12:42:39,761 INFO    MainThread:149175 [backend.py:ensure_launched():222] started backend process with pid: 0
+2022-06-09 12:42:39,761 INFO    BackendThr:149175 [internal.py:wandb_internal():90] W&B internal server running at pid: 149175, started at: 2022-06-09 12:42:39.761180
+2022-06-09 12:42:39,761 INFO    MainThread:149175 [wandb_init.py:init():525] backend started and connected
+2022-06-09 12:42:39,767 INFO    MainThread:149175 [wandb_init.py:init():596] updated telemetry
+2022-06-09 12:42:39,769 INFO    WriterThread:149175 [datastore.py:open_for_write():75] open: /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/run-tkalepck.wandb
+2022-06-09 12:42:39,778 INFO    MainThread:149175 [wandb_init.py:init():627] communicating run to backend with 30 second timeout
+2022-06-09 12:42:39,983 INFO    SenderThread:149175 [dir_watcher.py:__init__():197] watching files in: /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/files
+2022-06-09 12:42:39,983 INFO    SenderThread:149175 [sender.py:_start_run_threads():811] run started: tkalepck with start time 1654771359
+2022-06-09 12:42:39,985 INFO    MainThread:149175 [wandb_run.py:_on_init():1924] communicating current version
+2022-06-09 12:42:39,985 INFO    SenderThread:149175 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-06-09 12:42:40,033 INFO    MainThread:149175 [wandb_run.py:_on_init():1928] got version response 
+2022-06-09 12:42:40,033 INFO    MainThread:149175 [wandb_init.py:init():662] starting run threads in backend
+2022-06-09 12:42:40,985 INFO    Thread-10 :149175 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/files/requirements.txt
+2022-06-09 12:42:40,985 INFO    Thread-10 :149175 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/files/wandb-summary.json
+2022-06-09 12:42:40,985 INFO    Thread-10 :149175 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/files/conda-environment.yaml
+2022-06-09 12:42:40,985 INFO    Thread-10 :149175 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/files/code/train.py
+2022-06-09 12:42:40,985 INFO    Thread-10 :149175 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/files/diff.patch
+2022-06-09 12:42:40,986 INFO    Thread-10 :149175 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/files/code
+2022-06-09 12:42:41,484 INFO    SenderThread:149175 [sender.py:_save_file():948] saving file wandb-metadata.json with policy now
+2022-06-09 12:42:41,485 INFO    SenderThread:149175 [sender.py:_save_file():948] saving file code/train.py with policy now
+2022-06-09 12:42:41,485 INFO    SenderThread:149175 [sender.py:_save_file():948] saving file diff.patch with policy now
+2022-06-09 12:42:41,495 INFO    MainThread:149175 [wandb_run.py:_console_start():1898] atexit reg
+2022-06-09 12:42:41,497 INFO    MainThread:149175 [wandb_run.py:_redirect():1771] redirect: SettingsConsole.WRAP
+2022-06-09 12:42:41,497 INFO    MainThread:149175 [wandb_run.py:_redirect():1808] Wrapping output streams.
+2022-06-09 12:42:41,498 INFO    MainThread:149175 [wandb_run.py:_redirect():1832] Redirects installed.
+2022-06-09 12:42:41,498 INFO    MainThread:149175 [wandb_init.py:init():688] run started, returning control to user process
+2022-06-09 12:42:41,504 INFO    MainThread:149175 [wandb_run.py:_config_callback():1136] config_cb None None {'workers': 0, 'print_freq': 5, 'checkpoint_dir': 'checkpoint', 'vg_img_path': '/home/aneesh/datasets/gqa_imgs/images/', 'gqa_ann_path': '/home/aneesh/datasets/gqa_ann/OpenSource/', 'gqa_split_type': 'balanced', 'mask_model': 'none', 'masks': False, 'epochs': 10, 'imset': 'train', 'batch_size': 16, 'learning_rate': 0.2, 'dropout': 0.01, 'weight_decay': 1e-06, 'momentum': 0.9, 'clip': 1, 'betas': [0.9, 0.98], 'eps': 1e-09, 'loss_fn': 'cross_entropy', 'optimizer': 'adam', 'simg': 5, 'itersimg': 3, 'slotdimimg': 128, 'stext': 5, 'iterstext': 3, 'slotdimtext': 128, 'nhead': 6, 'tdim': 128, 'nlayers': 3, 'text_encoder_type': 'openai/clip-vit-base-patch32', 'rank': 0, 'dist_url': 'tcp://localhost:58472', 'world_size': 1, 'ngpus_per_node': 1}
+2022-06-09 12:42:54,303 INFO    Thread-14 :149175 [upload_job.py:push():132] Uploaded file /tmp/tmp4ouz8yd3wandb/39zmlix3-wandb-metadata.json
+2022-06-09 12:42:54,305 INFO    Thread-15 :149175 [upload_job.py:push():132] Uploaded file /tmp/tmp4ouz8yd3wandb/hy9mivv0-code/train.py
+2022-06-09 12:42:54,307 INFO    Thread-18 :149175 [upload_job.py:push():132] Uploaded file /tmp/tmp4ouz8yd3wandb/2i1s2uni-diff.patch
+2022-06-09 12:42:54,384 INFO    Thread-10 :149175 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/files/conda-environment.yaml
+2022-06-09 12:42:54,394 INFO    Thread-10 :149175 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/files/output.log
+2022-06-09 12:42:54,410 INFO    Thread-10 :149175 [dir_watcher.py:_on_file_created():244] file/dir created: /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/files/wandb-metadata.json
+2022-06-09 12:42:56,837 INFO    Thread-10 :149175 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/files/output.log
+2022-06-09 12:42:58,904 INFO    Thread-10 :149175 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/files/output.log
+2022-06-09 12:42:59,985 WARNING MsgRouterThr:149175 [router.py:message_loop():73] EOFError seen in message_loop
+2022-06-09 12:43:00,615 INFO    WriterThread:149175 [datastore.py:close():279] close: /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/run-tkalepck.wandb
+2022-06-09 12:43:00,615 INFO    MainThread:149175 [wandb_run.py:_atexit_cleanup():1867] got exitcode: 1
+2022-06-09 12:43:00,616 INFO    MainThread:149175 [wandb_run.py:_restore():1839] restore
+2022-06-09 12:43:00,621 INFO    SenderThread:149175 [sender.py:finish():1110] shutting down sender
+2022-06-09 12:43:00,621 INFO    SenderThread:149175 [dir_watcher.py:finish():312] shutting down directory watcher
+2022-06-09 12:43:00,905 INFO    SenderThread:149175 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/files/output.log
+2022-06-09 12:43:00,905 INFO    SenderThread:149175 [dir_watcher.py:finish():342] scan: /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/files
+2022-06-09 12:43:00,905 INFO    SenderThread:149175 [dir_watcher.py:finish():356] scan save: /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/files/requirements.txt requirements.txt
+2022-06-09 12:43:00,905 INFO    SenderThread:149175 [dir_watcher.py:finish():356] scan save: /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/files/output.log output.log
+2022-06-09 12:43:00,907 INFO    SenderThread:149175 [dir_watcher.py:finish():356] scan save: /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/files/conda-environment.yaml conda-environment.yaml
+2022-06-09 12:43:00,908 INFO    SenderThread:149175 [dir_watcher.py:finish():356] scan save: /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/files/wandb-metadata.json wandb-metadata.json
+2022-06-09 12:43:00,908 INFO    SenderThread:149175 [dir_watcher.py:finish():356] scan save: /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/files/config.yaml config.yaml
+2022-06-09 12:43:00,910 INFO    SenderThread:149175 [dir_watcher.py:finish():356] scan save: /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/files/wandb-summary.json wandb-summary.json
+2022-06-09 12:43:00,910 INFO    SenderThread:149175 [dir_watcher.py:finish():356] scan save: /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/files/diff.patch diff.patch
+2022-06-09 12:43:00,916 INFO    SenderThread:149175 [dir_watcher.py:finish():356] scan save: /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/files/code/train.py code/train.py
+2022-06-09 12:43:00,916 INFO    SenderThread:149175 [file_pusher.py:finish():145] shutting down file pusher
+2022-06-09 12:43:00,917 INFO    SenderThread:149175 [file_pusher.py:join():150] waiting for file pusher
+2022-06-09 12:43:01,443 INFO    Thread-23 :149175 [upload_job.py:push():132] Uploaded file /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/files/requirements.txt
+2022-06-09 12:43:01,452 INFO    Thread-24 :149175 [upload_job.py:push():132] Uploaded file /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/files/output.log
+2022-06-09 12:43:01,502 INFO    Thread-27 :149175 [upload_job.py:push():132] Uploaded file /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/files/wandb-summary.json
+2022-06-09 12:43:01,519 INFO    Thread-26 :149175 [upload_job.py:push():132] Uploaded file /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/files/config.yaml
+2022-06-09 12:43:01,675 INFO    Thread-25 :149175 [upload_job.py:push():132] Uploaded file /home/aneesh/github/slot_vqa/wandb/run-20220609_124239-tkalepck/files/conda-environment.yaml
+2022-06-09 12:43:02,137 ERROR   BackendThr:149175 [internal.py:wandb_internal():165] Thread HandlerThread:
+Traceback (most recent call last):
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/internal/internal_util.py", line 51, in run
+    self._run()
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/site-packages/wandb/sdk/internal/internal_util.py", line 98, in _run
+    record = self._input_record_q.get(timeout=1)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/multiprocessing/queues.py", line 117, in get
+    res = self._recv_bytes()
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/multiprocessing/connection.py", line 221, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/multiprocessing/connection.py", line 419, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/aneesh/.conda/envs/slotvqa/lib/python3.9/multiprocessing/connection.py", line 388, in _recv
+    raise EOFError
+EOFError
+2022-06-09 12:43:06,117 INFO    MainThread:149175 [wandb_run.py:_on_finish():1996] got exit ret: None
+2022-06-09 12:43:06,218 INFO    MainThread:149175 [wandb_run.py:_restore():1839] restore
