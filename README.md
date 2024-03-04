@@ -59,6 +59,9 @@ Rename and extract annotations folder:
 mv 'mdetr_annotations.tar.gz?download=1' ann.tar.gz
 tar -xvzf ann.tar.gz
 ```
+#### Phrasecut: 
+
+follow the instructions in this [LINK](https://github.com/ChenyunWu/PhraseCutDataset) and download the dataset in `~/datasets/`. 
 
 ### 3. Running the code on a single GPU system: 
 
